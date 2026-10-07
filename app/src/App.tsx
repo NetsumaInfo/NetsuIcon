@@ -54,7 +54,8 @@ export function App() {
         <main className="flex min-h-0 flex-1 gap-2">
           <IconList icons={icons} packs={packs} current={current} onSelect={pick} />
           {doc && drawn ? (
-            <Stage doc={drawn} pack={current.pack} manner={manner} onManner={setManner} />
+            // Another icon starts on a fresh stage: what was played or stopped belonged to the one before.
+            <Stage key={`${current.pack ?? ''}/${doc.name}`} doc={drawn} pack={current.pack} manner={manner} onManner={setManner} />
           ) : (
             owner && <PackSheet {...owner} manner={manner} onManner={setManner} onOpen={(icon) => pick({ pack: owner.pack.name, icon })} />
           )}

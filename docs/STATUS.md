@@ -188,6 +188,7 @@ Four flaws found along the way, fixed:
 - `server`: 13 tests pass; the new one covers `set_language` (English by default, the file written, a language the app does not speak refused).
 - On screenshots: the app opens in English; after `set_language` with `fr` it is in French; a click on EN in the header puts it back in English. A request to `/api/language` from a foreign origin gets 403, an unknown language 400.
 - The README pictures and the two screenshots were made again with the app in English.
+- A black screen, reported by the user: stopping a clip at a moment with the scrubber, then opening another icon, asked the new icon for a clip it does not have, and React emptied the window. Fixed: a clip that is gone puts the stage back to live while rendering, each icon gets a fresh stage, and an error boundary now shows the error and a reload button instead of nothing. Replayed in the browser: scrub, change icon, scrub, change icon, play a clip, change manner, open a pack; no error.
 
 ## 4. Written but not verified
 

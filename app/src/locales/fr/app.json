@@ -85,6 +85,11 @@
     "no_hover": "réagit au clic mais pas au survol.",
     "no_click": "réagit au survol mais pas au clic."
   },
+  "crash": {
+    "title": "Quelque chose a cassé l'affichage",
+    "body": "Vos icônes ne sont pas touchées : elles sont dans leurs fichiers. Rechargez la page ; si cela revient, voici l'erreur à signaler.",
+    "reload": "Recharger"
+  },
   "empty": {
     "title": "Aucune icône pour l'instant",
     "offlineTitle": "Le serveur ne répond pas",

@@ -85,6 +85,11 @@
     "no_hover": "reacts to a click but not to a hover.",
     "no_click": "reacts to a hover but not to a click."
   },
+  "crash": {
+    "title": "Something broke the display",
+    "body": "Your icons are untouched: they are in their files. Reload the page; if it comes back, this is the error to report.",
+    "reload": "Reload"
+  },
   "empty": {
     "title": "No icon yet",
     "offlineTitle": "The server does not answer",

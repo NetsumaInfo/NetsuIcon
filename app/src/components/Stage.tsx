@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { Play } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { exportCss, forManner, mannersOf, sample, toSvg, typeOf, type IconDoc, type Manner } from '@netsuicon/core';
 import { CopyButton } from './CopyButton';
@@ -39,16 +39,15 @@ interface StageProps {
 export function Stage({ doc, pack, manner, onManner }: StageProps) {
   const { t } = useTranslation();
   const [paper, setPaper] = useState<Paper>('dark');
-  const [view, setView] = useState<View>({ kind: 'live' });
+  const [chosen, setView] = useState<View>({ kind: 'live' });
   // An icon animated in one manner only is shown in that one, whatever the switch says.
   const manners = mannersOf(doc);
   const playing = manners.includes(manner) ? manner : manners[0]!;
   const clips = useMemo(() => forManner(doc, playing).clips, [doc, playing]);
 
-  // Another icon, another manner, or a clip that is gone: back to the live view.
-  useEffect(() => {
-    setView((current) => (current.kind !== 'live' && !clips.some((clip) => clip.id === current.clip) ? { kind: 'live' } : current));
-  }, [clips]);
+  // A clip that is gone (the agent removed it, or the manner changed) cannot be played or stopped at a
+  // moment: the stage is live again. Decided while rendering, so that no frame asks for a clip that is not there.
+  const view: View = chosen.kind !== 'live' && !clips.some((clip) => clip.id === chosen.clip) ? { kind: 'live' } : chosen;
 
   const svg = useMemo(() => markup(doc, view, playing), [doc, view, playing]);
   const live = useMemo(() => exportCss(doc, { manner: playing }), [doc, playing]);
