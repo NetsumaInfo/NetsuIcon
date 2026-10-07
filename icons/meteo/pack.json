@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "name": "meteo",
+  "mode": "micro",
+  "size": 24,
+  "style": {
+    "fill": "none",
+    "stroke": "currentColor",
+    "strokeWidth": 1.75,
+    "linecap": "round",
+    "linejoin": "round"
+  },
+  "palette": {
+    "warm": "#f59e0b",
+    "cool": "#3b9cf5"
+  },
+  "motion": {
+    "feel": "Calm and airy. Things drift, sway and settle; nothing snaps. One movement per icon.",
+    "ease": [
+      0.4,
+      0,
+      0.2,
+      1
+    ],
+    "hover": {
+      "duration": [
+        500,
+        900
+      ],
+      "maxTranslate": 2.5,
+      "maxRotate": 45,
+      "scale": [
+        0.7,
+        1.15
+      ]
+    },
+    "click": {
+      "duration": [
+        600,
+        1200
+      ],
+      "maxTranslate": 5,
+      "maxRotate": 90,
+      "scale": [
+        0.6,
+        1.3
+      ]
+    },
+    "expressive": {
+      "hover": {
+        "duration": [
+          600,
+          1200
+        ],
+        "maxTranslate": 4,
+        "maxRotate": 60,
+        "scale": [
+          0.6,
+          1.3
+        ]
+      },
+      "click": {
+        "duration": [
+          1000,
+          2200
+        ],
+        "maxTranslate": 36,
+        "maxRotate": 360,
+        "scale": [
+          0.3,
+          1.5
+        ]
+      }
+    }
+  },
+  "brief": "The icons of a weather app. Quiet, light, read at a glance. Lines in the colour of the text, one warm or one cool accent per icon."
+}

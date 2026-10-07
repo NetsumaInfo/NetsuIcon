@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "name": "settings",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "teeth",
+      "d": "M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.28 5.28l1.77 1.77M16.95 16.95l1.77 1.77M5.28 18.72l1.77-1.77M16.95 7.05l1.77-1.77",
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "circle",
+      "id": "rim",
+      "cx": 12,
+      "cy": 12,
+      "r": 6
+    },
+    {
+      "type": "circle",
+      "id": "hub",
+      "cx": 12,
+      "cy": 12,
+      "r": 2,
+      "stroke": "$brand"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "notch",
+      "tracks": [
+        {
+          "node": "teeth",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 45
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "turn",
+      "tracks": [
+        {
+          "node": "teeth",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": -3
+            },
+            {
+              "t": 0.8,
+              "v": 90
+            }
+          ]
+        },
+        {
+          "node": "hub",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.75,
+              "v": 1
+            },
+            {
+              "t": 0.85,
+              "v": 1.1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "hover",
+      "duration": 600,
+      "id": "crank",
+      "tracks": [
+        {
+          "node": "teeth",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 45
+            }
+          ]
+        },
+        {
+          "node": "hub",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.72,
+              "v": 1
+            },
+            {
+              "t": 0.84,
+              "v": 1.1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 1200,
+      "id": "spin",
+      "tracks": [
+        {
+          "node": "teeth",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "hub",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.12,
+              "v": 0.85
+            },
+            {
+              "t": 0.66,
+              "v": 0.85
+            },
+            {
+              "t": 0.78,
+              "v": 1.15
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    }
+  ]
+}

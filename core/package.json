@@ -1,0 +1,15 @@
+{
+  "name": "@netsuicon/core",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

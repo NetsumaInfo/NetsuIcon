@@ -1,0 +1,40 @@
+name: Suggest a feature
+description: An idea to make icons, or their animation, better
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: >
+        What slows you down today? Describe the real situation, not the solution:
+        that is what lets a better one be found.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you have in mind
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Icon format and operations
+        - The agent's tools
+        - Guide and animation skill
+        - Packs
+        - The app
+        - Exports
+        - Application icons
+        - Something else
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you do in the meantime
+      description: Another tool, a manual step, a script.

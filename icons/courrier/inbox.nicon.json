@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "name": "inbox",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "tray",
+      "d": "M3 13v5a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18v-5M3 13h5l1.5 3h5l1.5-3h5"
+    },
+    {
+      "type": "path",
+      "id": "arrow",
+      "d": "M12 3.5V11M9 8l3 3 3-3",
+      "stroke": "$brand"
+    },
+    {
+      "type": "path",
+      "id": "letter",
+      "d": "M2 2h6v4.2h-6zl3 2.3l3-2.3",
+      "stroke": "$brand",
+      "strokeWidth": 1.5,
+      "origin": [
+        5,
+        4.1
+      ],
+      "opacity": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "dip",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                1
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 850,
+      "id": "receive",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.56,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.9,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.08,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.2,
+              "v": 0.25,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": 0.25,
+              "ease": "linear"
+            },
+            {
+              "t": 0.78,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "tray",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.58,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 0.92,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.36,
+              "v": [
+                4.2,
+                1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.62,
+              "v": [
+                7,
+                9.6
+              ]
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": -12,
+              "ease": "linear"
+            },
+            {
+              "t": 0.62,
+              "v": 10
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.14,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.54,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.64,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "hover",
+      "duration": 600,
+      "id": "tap",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 1400,
+      "id": "deliver",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                -1
+              ]
+            },
+            {
+              "t": 0.62,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.72,
+              "v": [
+                0,
+                1.8
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.92,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.1,
+              "v": 0.25,
+              "ease": "linear"
+            },
+            {
+              "t": 0.64,
+              "v": 0.25,
+              "ease": "linear"
+            },
+            {
+              "t": 0.78,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                -9,
+                3
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.33,
+              "v": [
+                -2.5,
+                0.8
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.46,
+              "v": [
+                3.5,
+                0.3
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                7,
+                9.6
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.68,
+              "v": [
+                7,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": -360,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.19,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.68,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "tray",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.67,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                -0.4
+              ]
+            },
+            {
+              "t": 0.83,
+              "v": [
+                0,
+                0.3
+              ]
+            },
+            {
+              "t": 0.92,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    }
+  ]
+}

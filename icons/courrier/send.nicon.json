@@ -1,0 +1,561 @@
+{
+  "version": 1,
+  "name": "send",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "craft",
+      "children": [
+        {
+          "type": "path",
+          "id": "plane",
+          "d": "M21 3L3 10.5l7 3.5 3.5 7zM10 14L21 3",
+          "stroke": "$brand",
+          "origin": [
+            21,
+            3
+          ]
+        }
+      ],
+      "origin": [
+        10,
+        14
+      ]
+    },
+    {
+      "type": "path",
+      "id": "trail",
+      "d": "M3.5 20.5L8 16",
+      "stroke": "$brand",
+      "strokeWidth": 1.5,
+      "opacity": 0
+    },
+    {
+      "type": "path",
+      "id": "speed",
+      "d": "M9.2 9.8l2.8-2.8M14.9 14.1l2.1-2.1",
+      "stroke": "$brand",
+      "strokeWidth": 1.5,
+      "opacity": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "aim",
+      "tracks": [
+        {
+          "node": "plane",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.4,
+                -1.4
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "fly",
+      "tracks": [
+        {
+          "node": "plane",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.12,
+              "v": [
+                -0.5,
+                0.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                2.5,
+                -2.5
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                -2.1,
+                2.1
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "plane",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "plane",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.45,
+              "v": 0.7,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "hover",
+      "duration": 700,
+      "id": "bank",
+      "tracks": [
+        {
+          "node": "craft",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.35,
+              "v": -5
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "craft",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1,
+                -1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "trail",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.85,
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "trail",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.19,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.86,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 1500,
+      "id": "takeoff",
+      "tracks": [
+        {
+          "node": "craft",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                -1.4,
+                1.4
+              ]
+            },
+            {
+              "t": 0.18,
+              "v": [
+                -1.4,
+                1.4
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": [
+                4,
+                -7
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                15,
+                -15
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.58,
+              "v": [
+                -18,
+                18
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                -6,
+                9
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.9,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "craft",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": -6
+            },
+            {
+              "t": 0.18,
+              "v": -6,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": -12,
+              "ease": "linear"
+            },
+            {
+              "t": 0.42,
+              "v": 6,
+              "ease": "linear"
+            },
+            {
+              "t": 0.44,
+              "v": 10,
+              "ease": "linear"
+            },
+            {
+              "t": 0.58,
+              "v": 10,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 4
+            },
+            {
+              "t": 0.9,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "craft",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.18,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": 0.85,
+              "ease": "linear"
+            },
+            {
+              "t": 0.42,
+              "v": 0.6,
+              "ease": "linear"
+            },
+            {
+              "t": 0.58,
+              "v": 0.6,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 0.85
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "trail",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.32,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.46,
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "trail",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.19,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.46,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.47,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "speed",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.26,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.36,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "speed",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.25,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.26,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.51,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    }
+  ]
+}

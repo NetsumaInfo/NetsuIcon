@@ -1,0 +1,61 @@
+name: Report a bug
+description: Something does not work as expected
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where it happens
+      options:
+        - The agent's tools (MCP server)
+        - What the agent is told (guide, animation skill)
+        - The app
+        - Exported code (animated SVG, React, page of a pack)
+        - An example icon
+        - Install or start
+        - I do not know
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens?
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce it
+      description: >
+        For a tool, the call and its arguments. For an icon, attach its `.nicon.json`.
+        For an animation, say which clip and in which browser you watched it.
+      placeholder: |
+        1. Ask the agent for ...
+        2. Open ... in the app
+        3. The bug shows
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Error or output
+      description: The answer of the tool, or the browser console. Read it before pasting, it may hold file paths.
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Commit
+      description: "`git rev-parse --short HEAD`"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: System, Node, browser, agent
+      placeholder: "Windows 11, Node 22.16, Chrome 141, Claude Code"

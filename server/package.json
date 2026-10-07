@@ -1,0 +1,27 @@
+{
+  "name": "@netsuicon/server",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --import tsx src/main.ts",
+    "start": "tsx src/main.ts",
+    "seed": "tsx scripts/seed.ts",
+    "mcp": "tsx scripts/mcp.ts",
+    "readme": "tsx scripts/readme.ts",
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@netsuicon/core": "workspace:^",
+    "@resvg/resvg-js": "^2.6.2",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

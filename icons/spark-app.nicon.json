@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "name": "spark-app",
+  "mode": "app",
+  "size": 1024,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "plate",
+      "x": 64,
+      "y": 64,
+      "width": 896,
+      "height": 896,
+      "rx": 200,
+      "fill": "url(#sky)"
+    },
+    {
+      "type": "path",
+      "id": "spark",
+      "fill": "#ffffff",
+      "d": "M512 232 L578 446 L792 512 L578 578 L512 792 L446 578 L232 512 L446 446 Z"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "loop",
+      "duration": 2400,
+      "id": "breathe",
+      "tracks": [
+        {
+          "node": "spark",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "spark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 90
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gradients": [
+    {
+      "id": "sky",
+      "type": "linear",
+      "from": [
+        0,
+        0
+      ],
+      "to": [
+        1,
+        1
+      ],
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#6c9af9"
+        },
+        {
+          "offset": 1,
+          "color": "#2a3f8f"
+        }
+      ]
+    }
+  ]
+}

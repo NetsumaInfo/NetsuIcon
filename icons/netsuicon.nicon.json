@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "name": "netsuicon",
+  "mode": "app",
+  "size": 1024,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "plate",
+      "x": 64,
+      "y": 64,
+      "width": 896,
+      "height": 896,
+      "rx": 208,
+      "fill": "url(#plate)"
+    },
+    {
+      "type": "rect",
+      "id": "frame",
+      "x": 264,
+      "y": 264,
+      "width": 496,
+      "height": 496,
+      "rx": 120,
+      "fill": "none",
+      "stroke": "#ffffff",
+      "strokeWidth": 60,
+      "linecap": "round",
+      "linejoin": "round"
+    },
+    {
+      "type": "path",
+      "id": "play",
+      "d": "M458 418 L458 606 L618 512 Z",
+      "fill": "#ffffff",
+      "stroke": "#ffffff",
+      "strokeWidth": 44,
+      "linejoin": "round",
+      "origin": [
+        512,
+        512
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "in",
+      "duration": 1100,
+      "id": "arrive",
+      "tracks": [
+        {
+          "node": "frame",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 0,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "hover",
+      "duration": 500,
+      "id": "nudge",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                36,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 0.8,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": 1.15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "frame",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 90
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gradients": [
+    {
+      "id": "plate",
+      "type": "linear",
+      "from": [
+        0,
+        0
+      ],
+      "to": [
+        1,
+        1
+      ],
+      "stops": [
+        {
+          "offset": 0,
+          "color": "#8b6bff"
+        },
+        {
+          "offset": 1,
+          "color": "#4f86f7"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+node_modules/
+# The language someone chose for the app on this machine.
+icons/settings.json
+dist/
+target/
+.claude/settings.local.json
+.DS_Store
+Thumbs.db

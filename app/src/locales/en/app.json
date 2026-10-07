@@ -1,0 +1,136 @@
+{
+  "title": "NetsuIcon",
+  "language": "Language of the app",
+  "status": {
+    "connecting": "Connecting to the server…",
+    "offline": "Server stopped",
+    "online": "Server running"
+  },
+  "connect": {
+    "open": "Link an agent",
+    "close": "Close",
+    "body": "Icons are made by talking to the agent of your code editor. Link it to NetsuIcon with this command.",
+    "ask": "Then ask it, for instance: \"make a bell icon that rings on hover\".",
+    "folder": "Icons folder: {{dir}}"
+  },
+  "list": {
+    "title": "Icons",
+    "micro": "Interface",
+    "app": "Application",
+    "loose": "Outside the packs",
+    "filter": "Filter by name",
+    "none": "No icon has that name."
+  },
+  "type": {
+    "action": "Action",
+    "switch": "Switch",
+    "state": "State",
+    "arrival": "Arrival",
+    "still": "Still"
+  },
+  "typeHint": {
+    "action": "Hover, then click: the action plays and the icon comes back to rest.",
+    "switch": "Hover, then click: the icon goes on and stays on. A second click turns it off.",
+    "state": "It moves by itself for as long as the state lasts.",
+    "arrival": "It plays once, when it appears.",
+    "still": "This icon has no animation yet."
+  },
+  "reaction": {
+    "hover": "Hover",
+    "click": "Click"
+  },
+  "pack": {
+    "title": "Pack {{name}}",
+    "count_one": "{{count}} icon",
+    "count_other": "{{count}} icons",
+    "frame": "{{mode}}, view box {{size}}",
+    "replay": {
+      "hover": "Every hover",
+      "click": "Every click"
+    },
+    "empty": "This pack has no icon yet.",
+    "rules": "Rules",
+    "palette": "Palette",
+    "noPalette": "No named colour",
+    "style": "Style",
+    "motion": "Motion",
+    "ease": "Default easing: {{ease}}",
+    "inUse": "used by the application",
+    "limits": {
+      "duration": "Duration",
+      "translate": "Travel",
+      "rotate": "Angle",
+      "scale": "Scale",
+      "ms": "{{min}}–{{max}} ms",
+      "units": "{{n}} u.",
+      "degrees": "{{n}}°",
+      "range": "{{low}}–{{high}}"
+    },
+    "harmony": "Harmony",
+    "advice": "Advice, not errors: an icon may depart from its pack on purpose.",
+    "fits": "Every icon follows the pack.",
+    "findings_one": "{{count}} departure from the pack",
+    "findings_other": "{{count}} departures from the pack",
+    "open": "Open {{name}}"
+  },
+  "lint": {
+    "frame": "is {{got}}; the pack is {{want}}.",
+    "own_style": "is {{got}}; the pack sets {{want}}.",
+    "off_palette": "{{got}} is not in the palette. Use {{want}}.",
+    "stroke_width": "stroke of {{got}}; the pack draws with {{want}}.",
+    "duration": "lasts {{got}} ms; for this reaction the pack asks for {{want}} ms.",
+    "translate": "moves {{got}} units; the pack stops at {{want}}.",
+    "rotate": "turns {{got}}°; the pack stops at {{want}}°.",
+    "scale": "scale {{got}}; the pack stays within {{want}}.",
+    "no_hover": "reacts to a click but not to a hover.",
+    "no_click": "reacts to a hover but not to a click."
+  },
+  "empty": {
+    "title": "No icon yet",
+    "offlineTitle": "The server does not answer",
+    "offlineBody": "Start it from the project folder with this command."
+  },
+  "stage": {
+    "live": "Live",
+    "liveHint": "The icon answers the pointer and the click, as in a real page.",
+    "play": "Play this animation again",
+    "noClip": "No animation yet",
+    "scrub": "Move through the animation by hand",
+    "time": "{{at}} / {{of}} ms",
+    "paper": "Background",
+    "dark": "Dark",
+    "light": "Light",
+    "sizes": "Real sizes",
+    "copyRef": "Copy the reference of this icon, to paste to the agent"
+  },
+  "trigger": {
+    "hover": "Hover",
+    "click": "Click",
+    "loop": "Loop",
+    "in": "Arrival",
+    "on": "Switching on",
+    "off": "Switching off"
+  },
+  "manner": {
+    "label": "Manner",
+    "subtle": "Subtle",
+    "expressive": "Expressive",
+    "both": "In both manners"
+  },
+  "outline": {
+    "layers": "Shapes",
+    "clips": "Animations",
+    "noLayer": "No shape",
+    "noClip": "No animation",
+    "duration": "{{ms}} ms",
+    "unseen": "unseen at rest"
+  },
+  "code": {
+    "title": "Code",
+    "svg": "Animated SVG",
+    "react": "React",
+    "json": "Document",
+    "copy": "Copy",
+    "copied": "Copied"
+  }
+}

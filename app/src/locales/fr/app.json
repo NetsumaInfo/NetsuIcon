@@ -1,0 +1,136 @@
+{
+  "title": "NetsuIcon",
+  "language": "Langue de l'application",
+  "status": {
+    "connecting": "Connexion au serveur…",
+    "offline": "Serveur arrêté",
+    "online": "Serveur en marche"
+  },
+  "connect": {
+    "open": "Relier un agent",
+    "close": "Fermer",
+    "body": "Les icônes se créent en parlant à l'agent de votre éditeur de code. Reliez-le à NetsuIcon avec cette commande.",
+    "ask": "Puis demandez-lui, par exemple : « crée une icône de cloche qui sonne au survol ».",
+    "folder": "Dossier des icônes : {{dir}}"
+  },
+  "list": {
+    "title": "Icônes",
+    "micro": "Interface",
+    "app": "Application",
+    "loose": "Hors pack",
+    "filter": "Filtrer par nom",
+    "none": "Aucune icône ne porte ce nom."
+  },
+  "type": {
+    "action": "Action",
+    "switch": "Interrupteur",
+    "state": "État",
+    "arrival": "Apparition",
+    "still": "Fixe"
+  },
+  "typeHint": {
+    "action": "Survolez, puis cliquez : l'action se joue et l'icône revient au repos.",
+    "switch": "Survolez, puis cliquez : l'icône s'active et le reste. Un second clic la désactive.",
+    "state": "Elle bouge seule tant que l'état dure.",
+    "arrival": "Elle se joue une fois, à l'apparition.",
+    "still": "Cette icône n'a pas encore d'animation."
+  },
+  "reaction": {
+    "hover": "Survol",
+    "click": "Clic"
+  },
+  "pack": {
+    "title": "Pack {{name}}",
+    "count_one": "{{count}} icône",
+    "count_other": "{{count}} icônes",
+    "frame": "{{mode}}, boîte de {{size}}",
+    "replay": {
+      "hover": "Tous les survols",
+      "click": "Tous les clics"
+    },
+    "empty": "Ce pack n'a pas encore d'icône.",
+    "rules": "Règles",
+    "palette": "Palette",
+    "noPalette": "Aucune couleur nommée",
+    "style": "Style",
+    "motion": "Mouvement",
+    "ease": "Courbe par défaut : {{ease}}",
+    "inUse": "utilisée par l'application",
+    "limits": {
+      "duration": "Durée",
+      "translate": "Trajet",
+      "rotate": "Angle",
+      "scale": "Échelle",
+      "ms": "{{min}}–{{max}} ms",
+      "units": "{{n}} u.",
+      "degrees": "{{n}}°",
+      "range": "{{low}}–{{high}}"
+    },
+    "harmony": "Harmonie",
+    "advice": "Des conseils, pas des erreurs : une icône peut s'écarter du pack exprès.",
+    "fits": "Toutes les icônes suivent le pack.",
+    "findings_one": "{{count}} écart avec le pack",
+    "findings_other": "{{count}} écarts avec le pack",
+    "open": "Ouvrir {{name}}"
+  },
+  "lint": {
+    "frame": "est en {{got}} ; le pack est en {{want}}.",
+    "own_style": "vaut {{got}} ; le pack fixe {{want}}.",
+    "off_palette": "{{got}} n'est pas dans la palette. Utiliser {{want}}.",
+    "stroke_width": "trait de {{got}} ; le pack dessine en {{want}}.",
+    "duration": "dure {{got}} ms ; pour cette réaction le pack demande {{want}} ms.",
+    "translate": "bouge de {{got}} unités ; le pack s'arrête à {{want}}.",
+    "rotate": "tourne de {{got}}° ; le pack s'arrête à {{want}}°.",
+    "scale": "échelle {{got}} ; le pack reste dans {{want}}.",
+    "no_hover": "réagit au clic mais pas au survol.",
+    "no_click": "réagit au survol mais pas au clic."
+  },
+  "empty": {
+    "title": "Aucune icône pour l'instant",
+    "offlineTitle": "Le serveur ne répond pas",
+    "offlineBody": "Lancez-le depuis le dossier du projet avec cette commande."
+  },
+  "stage": {
+    "live": "En direct",
+    "liveHint": "L'icône répond au pointeur et au clic, comme dans une vraie page.",
+    "play": "Rejouer cette animation",
+    "noClip": "Pas encore d'animation",
+    "scrub": "Avancer à la main dans l'animation",
+    "time": "{{at}} / {{of}} ms",
+    "paper": "Fond",
+    "dark": "Sombre",
+    "light": "Clair",
+    "sizes": "Tailles réelles",
+    "copyRef": "Copier la référence de cette icône, à coller à l'agent"
+  },
+  "trigger": {
+    "hover": "Survol",
+    "click": "Clic",
+    "loop": "Boucle",
+    "in": "Apparition",
+    "on": "Activation",
+    "off": "Désactivation"
+  },
+  "manner": {
+    "label": "Manière",
+    "subtle": "Discrète",
+    "expressive": "Expressive",
+    "both": "Dans les deux manières"
+  },
+  "outline": {
+    "layers": "Formes",
+    "clips": "Animations",
+    "noLayer": "Aucune forme",
+    "noClip": "Aucune animation",
+    "duration": "{{ms}} ms",
+    "unseen": "invisible au repos"
+  },
+  "code": {
+    "title": "Code",
+    "svg": "SVG animé",
+    "react": "React",
+    "json": "Document",
+    "copy": "Copier",
+    "copied": "Copié"
+  }
+}

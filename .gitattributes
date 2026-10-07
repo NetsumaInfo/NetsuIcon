@@ -1,0 +1,13 @@
+# Line-ending normalisation. Without this file, a contributor on another system rewrites the whole
+# repository on their first commit and the diff becomes unreadable.
+* text=auto eol=lf
+
+# Binaries: never converted, never diffed as text.
+*.png binary
+*.ico binary
+*.icns binary
+*.jpg binary
+
+# Generated files: excluded from GitHub language stats and collapsed in reviews.
+pnpm-lock.yaml linguist-generated=true
+docs/images/*.svg linguist-generated=true

@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+/* Tokens: the dark palette shared by the Netsu apps. Tailwind's own palette, radii and shadows are
+   removed, so a component can only use these. */
+@theme {
+  --color-*: initial;
+  --color-bg: #0a0b0e;
+  --color-surface: #111319;
+  --color-surface-2: #1a1d25;
+  --color-border: #262a34;
+  --color-border-strong: #636a7c;
+  --color-fg: #e3e4e8;
+  --color-muted: #888d99;
+  --color-primary: #4f86f7;
+  --color-primary-hover: #6c9af9;
+  --color-primary-fg: #0a0b0e;
+  --color-accent: #1a2030;
+  --color-danger: #ef4444;
+  --color-ok: #10b981;
+  --color-warn: #e0a13a;
+  /* The two papers an icon is tried on. */
+  --color-paper-light: #f4f5f7;
+  --color-ink-light: #16181d;
+
+  --font-sans: "Inter Variable", system-ui, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.75rem;
+  --text-sm--line-height: 1rem;
+  --text-base: 0.875rem;
+  --text-base--line-height: 1.25rem;
+  --spacing-control: 1.75rem;
+  --spacing-row: 1.5rem;
+  --spacing-bar: 2rem;
+
+  --radius-*: initial;
+  --radius-control: 8px;
+  --radius-inner: 6px;
+  --radius-panel: 12px;
+
+  --shadow-*: initial;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 8px;
+  }
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* An icon is injected as markup: it fills the box that holds it. */
+.icon-box > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

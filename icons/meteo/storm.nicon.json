@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "name": "storm",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "cloud",
+      "d": "M7 15h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 6.1 4.5 4.5 0 0 0 7 15z"
+    },
+    {
+      "type": "path",
+      "id": "bolt",
+      "d": "M12.5 17.5l-1.75 2h3l-1.75 2",
+      "stroke": "$warm",
+      "origin": [
+        12,
+        19.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 700,
+      "id": "flicker",
+      "tracks": [
+        {
+          "node": "bolt",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0.6
+            },
+            {
+              "t": 0.46,
+              "v": 0.6,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.54,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 900,
+      "id": "strike",
+      "tracks": [
+        {
+          "node": "bolt",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.24,
+              "v": 0
+            },
+            {
+              "t": 0.36,
+              "v": 0,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.46,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "bolt",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.46,
+              "v": 1
+            },
+            {
+              "t": 0.56,
+              "v": 0.3
+            },
+            {
+              "t": 0.72,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "hover",
+      "duration": 800,
+      "id": "rumble",
+      "tracks": [
+        {
+          "node": "bolt",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0.3
+            },
+            {
+              "t": 0.42,
+              "v": 0.3,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "bolt",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.62,
+              "v": 0.35,
+              "ease": "linear"
+            },
+            {
+              "t": 0.76,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "cloud",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0.55
+            },
+            {
+              "t": 0.42,
+              "v": 0.55,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 1400,
+      "id": "thunder",
+      "tracks": [
+        {
+          "node": "bolt",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.1,
+              "v": 0
+            },
+            {
+              "t": 0.22,
+              "v": 0,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.27,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "bolt",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.27,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.34,
+              "v": 0.2,
+              "ease": "linear"
+            },
+            {
+              "t": 0.41,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.48,
+              "v": 0.2,
+              "ease": "linear"
+            },
+            {
+              "t": 0.56,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "bolt",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.22,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.27,
+              "v": 1.2
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "cloud",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.1,
+              "v": 0.5
+            },
+            {
+              "t": 0.22,
+              "v": 0.5,
+              "ease": "linear"
+            },
+            {
+              "t": 0.27,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.34,
+              "v": 0.75,
+              "ease": "linear"
+            },
+            {
+              "t": 0.41,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "cloud",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.05,
+              "v": [
+                -0.8,
+                0
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0.8,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                -0.6,
+                0
+              ]
+            },
+            {
+              "t": 0.19,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.22,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                -0.7
+              ]
+            },
+            {
+              "t": 0.44,
+              "v": [
+                0,
+                0.35
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                -0.15
+              ]
+            },
+            {
+              "t": 0.78,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    }
+  ]
+}
