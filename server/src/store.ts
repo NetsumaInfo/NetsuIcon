@@ -133,6 +133,19 @@ export class Store {
     saveJson(this.file(doc.name, pack), doc);
   }
 
+  /** Writes the files of an exported icon in `exports/<name>/` (git-ignored), after emptying it. Returns the folder. */
+  writeExport(name: string, files: Map<string, Uint8Array | string>): string {
+    if (!NAME.test(name)) throw new IconError('bad_name', 'The name of an icon is lowercase letters, digits and dashes.');
+    const folder = path.join(this.dir, 'exports', name);
+    fs.rmSync(folder, { recursive: true, force: true });
+    for (const [inside, data] of files) {
+      const file = path.join(folder, inside);
+      fs.mkdirSync(path.dirname(file), { recursive: true });
+      fs.writeFileSync(file, data);
+    }
+    return folder;
+  }
+
   /** The language the app shows its words in: the one that was chosen, or else English. */
   language(): Language {
     try {

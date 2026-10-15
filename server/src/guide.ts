@@ -16,9 +16,10 @@ Every icon tool takes an optional "pack".
 
 DOCUMENT
 - mode "micro": interface icon, view box 24; shapes inherit fill none, stroke currentColor, strokeWidth 2, round caps and joins. 1 unit of padding, strokes on whole or half units.
-- mode "app": application icon, view box 1024, no inherited style: set fill on each shape. Gradients for depth.
+- mode "app": application icon, view box 1024, no inherited style: set fill on each shape. See APPLICATION ICONS.
 - Nodes: path {d} | rect {x,y,width,height,rx?} | circle {cx,cy,r} | ellipse {cx,cy,rx,ry} | line {x1,y1,x2,y2} | group {children:[]}
 - Every node: id (lowercase, digits, dashes; unique), name?, hidden?, fill?, stroke?, strokeWidth?, linecap?, linejoin?,
+  fillRule? ("evenodd": where the sub-paths of one path overlap, a hole: cut a shape out of another),
   opacity?, draw? (0..1: the part of the stroke drawn from its start), trim? ([from,to], each 0..1: the stretch drawn),
   translate? [x,y], rotate? (degrees), scale?, origin? [x,y].
 - rotate and scale turn around "origin" (view box units; default: the centre of the view box). Set it to the pivot.
@@ -95,6 +96,14 @@ application picks one. A clip that names none plays in both.
 IN A PAGE: hover is CSS :hover. A press needs the page: an action plays whole when the page sets data-play="<clip id>"
 on the <svg> (the id is in its data-click); a switch (it carries data-switch) goes on with data-state="on" and back
 with data-state="off". export_pack writes a page that does it; the React export does it by itself.
+
+APPLICATION ICONS (mode "app")
+- Full bleed: the first node is the background, a rect over the whole view box, no rx. Each platform cuts its own
+  shape from it: iOS a squircle, macOS the same smaller, Android a circle of the middle 72 of 108 units.
+- The mark stays within 313 units of the centre [512,512] (Android cuts the rest), and its centre sits 0 to 40 units
+  above 512. edit_icon answers "app checks": advice on the safe circle, thin strokes, tiny parts, colours, centring.
+- proof: the icon on each platform, without colour, blurred, at 64, 32 and 16 px, and the logos of the library it
+  looks like. search_library: what a category already looks like. export_app: the files of every platform.
 
 PACKS: the icons of one application, and what makes them look and move alike.
 {name, brief?, mode, size, style:{fill?,stroke?,strokeWidth?,linecap?,linejoin?}, palette:{name:"#hex"},

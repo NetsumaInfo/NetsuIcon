@@ -70,12 +70,12 @@ export function Stage({ doc, pack, manner, onManner }: StageProps) {
 
       <div className={clsx('relative flex min-h-0 flex-1 items-center justify-center rounded-inner', PAPERS[paper])}>
         {/* The key replays a forced clip: a new element starts its animations again. */}
-        <IconBox key={`${playing} ${view.kind === 'play' ? view.run : 0}`} svg={svg} label={doc.name} alive={view.kind === 'live'} className="aspect-square h-3/5 max-h-80" />
+        <IconBox key={`${playing} ${view.kind === 'play' ? view.run : 0}`} svg={svg} label={doc.name} alive={view.kind === 'live'} app={doc.mode === 'app'} className="aspect-square h-3/5 max-h-80" />
         {view.kind === 'live' && clips.length > 0 && <p className="absolute bottom-3 opacity-60">{t(`typeHint.${type}`)}</p>}
         <div className="absolute right-3 bottom-3 flex items-end gap-3" title={t('stage.sizes')}>
           {realSizes(doc).map((size) => (
             <div key={size} style={{ width: size, height: size }}>
-              <IconBox svg={live} className="size-full" />
+              <IconBox svg={live} app={doc.mode === 'app'} className="size-full" />
             </div>
           ))}
         </div>

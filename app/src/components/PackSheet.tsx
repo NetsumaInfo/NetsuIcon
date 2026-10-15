@@ -55,7 +55,7 @@ export function PackSheet({ pack, icons, manner, onManner, onOpen }: PackSheetPr
           {tiles.map((tile) => (
             <div key={tile.name} className="flex flex-col items-center gap-2 p-3">
               {/* The key replays a forced clip: a new element starts its animations again. */}
-              <IconBox key={`${manner} ${replay?.run ?? 0}`} svg={tile.svg} label={tile.name} alive={replay === undefined} className={pack.mode === 'micro' ? 'size-14' : 'size-28'} />
+              <IconBox key={`${manner} ${replay?.run ?? 0}`} svg={tile.svg} label={tile.name} alive={replay === undefined} app={pack.mode === 'app'} className={pack.mode === 'micro' ? 'size-14' : 'size-28'} />
               <button
                 type="button"
                 title={t('pack.open', { name: tile.name })}

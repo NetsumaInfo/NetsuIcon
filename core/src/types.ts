@@ -59,6 +59,8 @@ export interface Style {
   strokeWidth?: number;
   linecap?: 'butt' | 'round' | 'square';
   linejoin?: 'miter' | 'round' | 'bevel';
+  /** `evenodd`: where shapes of one path overlap, a hole. The way to cut a shape out of another. */
+  fillRule?: 'nonzero' | 'evenodd';
 }
 
 export interface NodeBase extends Style {

@@ -99,9 +99,15 @@ function lineEnd(kind: string, args: number[], here: Pair, start: Pair, origin: 
   return [args[0]! + origin[0], args[1]! + origin[1]];
 }
 
-/** The length of a path, every sub-path added up. */
-export function pathLength(d: string): number {
-  let total = 0;
+/** One drawn command of a path: a point at each fraction of it, and its length when it is straight. */
+interface Piece {
+  at: (t: number) => Pair;
+  straight?: number;
+}
+
+/** Each drawn command of a path. Moves draw nothing and are left out. */
+function pieces(d: string): Piece[] {
+  const out: Piece[] = [];
   let here: Pair = [0, 0];
   let start: Pair = [0, 0];
   // The last control point, which a smooth curve (S, T) mirrors. Forgotten after any other command.
@@ -113,19 +119,33 @@ export function pathLength(d: string): number {
     const from = here;
     const curve = controls(kind, here, control ? [2 * here[0] - control[0], 2 * here[1] - control[1]] : here, at);
     here = curve ? curve[curve.length - 1]! : kind === 'a' ? at(5) : lineEnd(kind, args, here, start, origin);
-    const chord = Math.hypot(here[0] - from[0], here[1] - from[1]);
+    const to = here;
+    const chord = Math.hypot(to[0] - from[0], to[1] - from[1]);
     if (curve) {
-      total += curveLength((t) => bezier(curve, t));
+      out.push({ at: (t) => bezier(curve, t) });
     } else if (kind === 'a' && args[0] !== 0 && args[1] !== 0 && chord > 0) {
-      const ends = [...args.slice(0, 5), ...here];
-      total += curveLength((t) => arc(from, ends, t));
+      const ends = [...args.slice(0, 5), ...to];
+      out.push({ at: (t) => arc(from, ends, t) });
     } else if (kind !== 'm') {
-      total += chord;
+      out.push({ at: (t) => [from[0] + (to[0] - from[0]) * t, from[1] + (to[1] - from[1]) * t], straight: chord });
     }
     control = curve?.[curve.length - 2];
     if (kind === 'm') start = here;
   }
-  return total;
+  return out;
+}
+
+/** The length of a path, every sub-path added up. */
+export function pathLength(d: string): number {
+  return pieces(d).reduce((total, piece) => total + (piece.straight ?? curveLength(piece.at)), 0);
+}
+
+/** Points along a path, ends included, close enough to find its box. */
+export function pathPoints(d: string): Pair[] {
+  return pieces(d).flatMap((piece) => {
+    const steps = piece.straight === undefined ? STEPS : 1;
+    return Array.from({ length: steps + 1 }, (_, step) => piece.at(step / steps));
+  });
 }
 
 /** The length of the outline of a shape: what a stroke drawn in part is a fraction of. A group has none. */

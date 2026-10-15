@@ -52,6 +52,7 @@ export function paint(style: Style, prefix: string): Attr[] {
     ['stroke-width', style.strokeWidth],
     ['stroke-linecap', style.linecap],
     ['stroke-linejoin', style.linejoin],
+    ['fill-rule', style.fillRule],
   ];
 }
 

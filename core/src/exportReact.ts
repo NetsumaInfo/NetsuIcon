@@ -8,6 +8,7 @@ const CAMEL: Record<string, string> = {
   'stroke-width': 'strokeWidth',
   'stroke-linecap': 'strokeLinecap',
   'stroke-linejoin': 'strokeLinejoin',
+  'fill-rule': 'fillRule',
 };
 
 const MOTION_EASE: Record<string, string> = {

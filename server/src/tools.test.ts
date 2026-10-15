@@ -4,6 +4,7 @@ import path from 'node:path';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { Library } from './library';
 import { Store } from './store';
 import { buildServer } from './tools';
 
@@ -22,7 +23,7 @@ async function call(name: string, args: Record<string, unknown> = {}): Promise<R
 beforeEach(async () => {
   dir = fs.mkdtempSync(path.join(os.tmpdir(), 'netsuicon-'));
   const [near, far] = InMemoryTransport.createLinkedPair();
-  await buildServer(new Store(dir)).connect(far);
+  await buildServer(new Store(dir), new Library(path.join(dir, 'no-library'))).connect(far);
   client = new Client({ name: 'test', version: '0' });
   await client.connect(near);
 });
@@ -41,6 +42,7 @@ describe('the MCP tools', () => {
       'create_pack',
       'edit_icon',
       'edit_pack',
+      'export_app',
       'export_icon',
       'export_pack',
       'get_icon',
@@ -49,6 +51,8 @@ describe('the MCP tools', () => {
       'list_icons',
       'look',
       'look_pack',
+      'proof',
+      'search_library',
       'set_language',
     ]);
   });

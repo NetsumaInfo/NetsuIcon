@@ -4,6 +4,7 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { IconError } from '@netsuicon/core';
+import { Library } from './library';
 import { Store } from './store';
 import { buildServer } from './tools';
 
@@ -11,6 +12,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const dir = path.resolve(process.env.NETSUICON_DIR ?? path.join(here, '../../icons'));
 const port = Number(process.env.NETSUICON_PORT ?? 6210);
 const store = new Store(dir);
+const library = new Library(path.resolve(process.env.NETSUICON_LIBRARY ?? path.join(here, '../../library')));
 
 const LOCAL = /^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$/;
 
@@ -44,7 +46,7 @@ async function mcp(req: IncomingMessage, res: ServerResponse): Promise<void> {
     json(res, 405, { jsonrpc: '2.0', error: { code: -32000, message: 'Method not allowed.' }, id: null });
     return;
   }
-  const server = buildServer(store);
+  const server = buildServer(store, library);
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined });
   res.on('close', () => {
     void transport.close();

@@ -117,6 +117,24 @@ Asked: the app in English by default, easy to change, and set by the agent; ever
 | Language of the repository | Everything written in the repository is in English: README, this file (it was `SUIVI.md`, in French), the contribution files. Only the conversation with the maintainer is in French. |
 | Contribution files | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `.github/` (funding, issue templates, pull request template, CI: types, locales, tests), `.gitattributes`. Modelled on NetsuRush. |
 
+### Application icons (2026-10-15)
+
+Asked: use `kaankiziltug/logo-design-skill` (MIT) to improve how application icons are made, and keep its logo library to make icons unique. Taken from it: the method (brief, clichés of the category, many one-line concepts, three built, the user chooses before polishing), the construction rules, the tests (sizes, one colour, blur, platforms, the shelf of neighbours) and the library. Left: its Python scripts (the server already draws with resvg), mockups and presentation boards, wordmarks and lockups (an application icon is a symbol alone).
+
+| Topic | Decision |
+|---|---|
+| Full bleed | An application icon covers its whole view box; its first node is the background, a rect with no `rx`. Each platform cuts its own shape: iOS a squircle (superellipse of exponent 5), macOS the same at 824 of 1024, Android a circle of the middle 72 of 108 units. This replaces the plate with a margin of the first two icons, which were redrawn. |
+| Safe zone | A circle of radius 33/108 of the view box (313 of 1024): the part Android keeps whole, the strictest platform. |
+| Background and mark | Told apart by geometry: a shape whose box covers the view box is background, the rest is the mark. Android's layers and the likeness check use that split. |
+| App checks | Advice, like a pack's: no background, a part past the safe circle, a stroke or a part under a 48th of the icon, more than three colours, a mark under 36% of the icon, a mark off centre (up to 4% high is the optical centre). Measured on the shapes at rest, transforms and groups included, animations not. `edit_icon` adds them to its answer for an icon in mode `app`. |
+| `fillRule` | New style field, `nonzero` or `evenodd`: holes in one path, the way to cut a shape out of another. |
+| `proof` | One picture: the three platforms, a dark screen, no colour, blur, two tones, 64/32/16 px at their true size, 32 and 16 px with enlarged pixels, and the three library logos closest in shape. |
+| Library | The 1,432 logos of logo-design-skill, each the trademark of its owner. Not committed: `pnpm --filter @netsuicon/server library` fetches a pinned commit with git into `library/` (git-ignored) with the licence and the trademark notice. `search_library` filters its catalog, sums up a category, shows logos, reads one logo's SVG. |
+| Likeness | A print of 32 × 32 cells of the ink, cropped and centred; two prints compared by shared ink times shared outline, each way. Chosen among four measures on the library (below). 0.6 or more is called "that logo drawn again". |
+| Exports | `export_app` writes, at rest: iOS 1024 PNG, macOS 1024 PNG and `.icns`, Windows `.ico` (16 to 256), Android adaptive layers (background, foreground, monochrome, 432 px) with their XML and two legacy PNGs, the web (favicon `.ico` and `.svg`, apple-touch, 192/512, maskable, manifest, `<head>` lines). In `icons/exports/<name>/`, git-ignored. The `.ico` and `.icns` are written in core, without a dependency. |
+| In the app | An application icon is shown cut to a rounded square (CSS `clip-path`), as a launcher would. |
+| Method | A second skill, `netsu-app-icon`. The guide holds the format (full bleed, safe circle, tools); the skill holds the method. |
+
 ## 3. Done and verified (2026-10-07)
 
 - `core`: 57 tests pass (operations, errors, sampling, CSS export, React export, page, packs, harmony, sheet, path length, switches, `trim`, manners, `hold`, icon type, self-playing icon).
@@ -190,10 +208,23 @@ Four flaws found along the way, fixed:
 - The README pictures and the two screenshots were made again with the app in English.
 - A black screen, reported by the user: stopping a clip at a moment with the scrubber, then opening another icon, asked the new icon for a clip it does not have, and React emptied the window. Fixed: a clip that is gone puts the stage back to live while rendering, each icon gets a fresh stage, and an error boundary now shows the error and a reload button instead of nothing. Replayed in the browser: scrub, change icon, scrub, change icon, play a clip, change manner, open a pack; no error.
 
+### Application icons: trials (2026-10-15)
+
+- Tests: core 73, server 19, all passing; `pnpm check` clean. New tests cover the shapes as seen (transforms, round corners, props left out), every app check, the platforms, the layers, `fillRule` in every output, prints and likeness, the `.ico` and `.icns` tables, `proof`, `search_library` on a small fake library, and the files of `export_app`.
+- Likeness, measured on the library (square and tall logos, one in nine against all): of four measures, shared ink times shared outline separated best. The same logo drawn again at another size scores 0.89 (median; 0.58 at the tenth lowest); the closest logo of another brand 0.30 (median; 0.63 at the tenth highest). Ink alone gave 0.74 to the closest other brand.
+- The library downloads with git in a few seconds; its 1,432 prints take 5 s. They took minutes at first: resvg loaded every system font for each picture. Fonts are now off wherever the server draws, `look` included (icons hold no text).
+- `proof` looked at by me on four icons: platforms, blur, two tones, true sizes, pixels and neighbours read as intended. The blur first did nothing (its radius was in pixels, applied in the units of the icon); fixed.
+- Every recipe of the skill's reference rendered and passed the app checks; two were wrong at first (a bubble whose points were off the circle, an A whose slopes did not match) and the leaf was too small.
+- Three blind runs (Sonnet, only the skill and the shell form): Brindille and Relaypost on the first text, Ondes on the corrected one. About 100k tokens each; 21 to 32 tool calls. Results and the flaws they found are in NetsuSkills' journal; the flaws were fixed in the guide, the tools and the skill.
+- Routing: shown only the five skill descriptions, a subagent sent 10 sentences out of 10 to the right skill or to none.
+- Exports: `file` recognises the `.icns` and both `.ico` (7 and 3 PNG pictures). The README logo, now cut as a platform cuts it, rendered and looked at.
+- The guide grew from 9,396 characters to 10,191 (+8%): the APPLICATION ICONS section and `fillRule`. The new skill loads 136 + 85 lines, the reference only at the first build.
+
 ## 4. Written but not verified
 
 - **Nobody has yet watched the redone icons move.** They are judged on still images, by the agents, then by me on a few strips. The rhythm, the `hold` jumps, the key before the shackle: to be said by watching the application.
-- **The application icons (`app` mode).** They work if asked: the project's logo is made that way, with the tools. But the guide gives them two lines, the skill does not mention them, no blind run has touched them, and the harmony check was only designed for the stroke.
+- **Application icons.** Nobody has loaded the exported files into Xcode, Windows or Android Studio. No person has judged the three icons of the blind runs, and no real user has answered the checkpoint. The corrected skill ran once. The squircle is a superellipse of exponent 5, close to Apple's shape, not Apple's own. Animated application icons were not tried with the new rules. The app shows an application icon cut by CSS: its computed style checked in the browser (14 boxes cut), not seen as a picture.
+- The likeness score sees shapes, not ideas: an R scored 0.21 against another R. Said in the skill; nothing measures an idea.
 - The skill and the guide corrected after the fifth run were not replayed. The skill's description is still not re-routed.
 - Interface: not clicked by hand. The filter, the button that copies the reference, the Escape key on "Connect an agent", the scrubber: written and typed, not tried. Not seen in English, nor on a narrow screen.
 - README images: seen in Chrome locally, not on GitHub.
@@ -236,13 +267,13 @@ Four flaws found along the way, fixed:
 ## 6. To do
 
 1. Watch the 16 redone icons move, in the application, and say what is wrong; fix the guide and the skill from those remarks. Then replay the skill blind, this time through a real MCP connection.
-1 bis. **Application icons**: say what is expected of them (volume, light, animation on opening?), write their part of the guide and the skill, make a test pack, run a blind run. Then the `.ico`, `.icns` and PNG sets (item 5).
+1 bis. **Application icons**: have a person judge the blind runs' icons and answer a real checkpoint; load the exports into Xcode and Android Studio; try an animated application icon (`in`, `hover`) with both skills. A choice remains open: flat or with volume and light (the skill goes flat first, a gradient on the background at most).
 1 ter. Skill: split it so that an agent reads only the family of its object. Harmony check: flag a visible part outside the view box. Skill: say what to do with a drop that must reappear in the middle of the image.
 2. Edit by hand in the application: selection, inspector, timeline with keys, undo. For a pack: palette, stroke and motion.
 2 bis. Packs: export a whole pack at once (folder of components, SVG sprite sheet), export with CSS variables for the theme, rename and delete a pack or an icon.
 3. Reference image: import it, show it under the icon, give it to the agent.
 4. Lottie export.
-5. Sets of application icons: `.ico`, `.icns`, PNG, adaptive Android. Per-platform masks in the preview.
+5. Per-platform masks in the app's preview (only a rounded square today), and the platform of each export chosen by the user.
 6. Tauri shell and chat in the application (reuse `nf-agent` and `nf-mcp` from NetsuFlow).
 7. Path morphing, masks, cutouts.
 8. Choose the name.

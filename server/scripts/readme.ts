@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { demo, exportCss, resolve, type DemoOptions, type IconDoc } from '@netsuicon/core';
+import { demo, exportCss, onPlatform, resolve, type DemoOptions, type IconDoc } from '@netsuicon/core';
 import { Store } from '../src/store';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -99,8 +99,9 @@ const FIGURES: Record<string, { cells: Cell[]; columns: number }> = {
 };
 
 fs.mkdirSync(out, { recursive: true });
-// The icon of the project, drawn with the project: as a file it plays its arrival once.
-fs.writeFileSync(path.join(out, 'logo.svg'), exportCss(store.read('netsuicon')));
+// The icon of the project, drawn with the project: as a file it plays its arrival once, cut as a platform cuts it.
+const logo = store.read('netsuicon');
+fs.writeFileSync(path.join(out, 'logo.svg'), onPlatform(logo, 'round', exportCss(logo)));
 for (const [name, { cells, columns }] of Object.entries(FIGURES)) {
   const file = path.join(out, `${name}.svg`);
   fs.writeFileSync(file, figure(cells, columns));

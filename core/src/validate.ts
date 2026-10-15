@@ -61,6 +61,9 @@ function checkNode(node: IconNode): void {
   for (const key of PAIRS) {
     if (fields[key] !== undefined && !isPair(fields[key])) fail('bad_node', `"${key}" of node "${node.id}" must be [x, y].`);
   }
+  if (node.fillRule !== undefined && node.fillRule !== 'nonzero' && node.fillRule !== 'evenodd') {
+    fail('bad_node', `"fillRule" of node "${node.id}" is "nonzero" or "evenodd".`);
+  }
   if (node.type === 'path' && (typeof node.d !== 'string' || node.d.trim() === '')) {
     fail('bad_node', `Path "${node.id}" needs path data in "d".`);
   }

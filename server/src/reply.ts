@@ -73,6 +73,6 @@ export function harmony(doc: IconDoc, pack: Pack): string {
 }
 
 export function png(svg: string, width: number, background: string | undefined): Buffer {
-  const resvg = new Resvg(svg, { fitTo: { mode: 'width', value: width }, background });
+  const resvg = new Resvg(svg, { fitTo: { mode: 'width', value: width }, background, font: { loadSystemFonts: false } });
   return Buffer.from(resvg.render().asPng());
 }

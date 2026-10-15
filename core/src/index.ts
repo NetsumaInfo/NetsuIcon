@@ -3,7 +3,7 @@ export { applyOps, OP_NAMES, type Op } from './ops';
 export { validate } from './validate';
 export { keyMoments, mainClip, sample, valueAt } from './sample';
 export { toSvg } from './svg';
-export { lengthOf, pathLength } from './length';
+export { lengthOf, pathLength, pathPoints } from './length';
 export { exportCss, type CssOptions } from './exportCss';
 export { exportReact } from './exportReact';
 export { exportPage, REACT_SCRIPT, type PageGroup, type PageOptions } from './exportPage';
@@ -13,3 +13,8 @@ export { forManner, ICON_TYPES, isSwitch, mannersOf, pressClip, reactionClip, re
 export { demo, type DemoOptions } from './demo';
 export { FINDING_CODES, findingText, lint, type Finding, type FindingCode } from './lint';
 export { sheet, type SheetOptions } from './sheet';
+export { appFindingText, appLint, layers, markMeasures, onPlatform, PLATFORMS, SAFE_RADIUS, silhouette, squircle, APP_FINDING_CODES, type AppFinding, type AppFindingCode, type Platform } from './appIcon';
+export { partsOf, union, type Box, type Part } from './parts';
+export { proof, type Picture, type ProofOptions } from './proof';
+export { fingerprint, likeness, PRINT } from './print';
+export { ICNS_TYPES, icns, ico, type Png } from './iconFiles';

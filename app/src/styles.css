@@ -90,3 +90,8 @@
   width: 100%;
   height: 100%;
 }
+
+/* An application icon is drawn full bleed: shown cut, as iOS and most launchers cut it. */
+.icon-box-app > svg {
+  clip-path: inset(0 round 22.4%);
+}

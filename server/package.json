@@ -10,7 +10,8 @@
     "mcp": "tsx scripts/mcp.ts",
     "readme": "tsx scripts/readme.ts",
     "check": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "library": "tsx scripts/library.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.1",

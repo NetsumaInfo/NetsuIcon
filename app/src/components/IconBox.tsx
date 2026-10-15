@@ -8,15 +8,17 @@ interface IconBoxProps {
   label?: string;
   /** The icon answers a press: an action plays to its end, a switch goes on and off. Its hover needs nothing: it is CSS. */
   alive?: boolean;
+  /** An application icon: drawn full bleed, it is shown cut to a rounded square, as a platform would. */
+  app?: boolean;
 }
 
 /** Shows an icon from its markup. The SVG fills the box; its colour is the text colour of the box. */
-export function IconBox({ svg, className, label, alive = false }: IconBoxProps) {
+export function IconBox({ svg, className, label, alive = false, app = false }: IconBoxProps) {
   return (
     <div
       role="img"
       aria-label={label}
-      className={clsx('icon-box', alive && 'cursor-pointer', className)}
+      className={clsx('icon-box', app && 'icon-box-app', alive && 'cursor-pointer', className)}
       onClick={alive ? (event) => playClick(event.currentTarget) : undefined}
       onPointerLeave={alive ? (event) => pointerLeft(event.currentTarget) : undefined}
       // The markup is ours: core escapes every attribute it writes.

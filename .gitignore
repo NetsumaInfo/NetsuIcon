@@ -6,3 +6,7 @@ target/
 .claude/settings.local.json
 .DS_Store
 Thumbs.db
+# The logo library: trademarks of their owners, downloaded for study, never committed.
+library/
+# Files written by export_app.
+icons/exports/

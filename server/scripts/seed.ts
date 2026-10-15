@@ -46,7 +46,7 @@ await call('edit_icon', {
   name: 'spark-app',
   ops: [
     { op: 'set_gradient', gradient: { id: 'sky', type: 'linear', from: [0, 0], to: [1, 1], stops: [{ offset: 0, color: '#6c9af9' }, { offset: 1, color: '#2a3f8f' }] } },
-    { op: 'add_node', node: { type: 'rect', id: 'plate', x: 64, y: 64, width: 896, height: 896, rx: 200, fill: 'url(#sky)' } },
+    { op: 'add_node', node: { type: 'rect', id: 'plate', x: 0, y: 0, width: 1024, height: 1024, fill: 'url(#sky)' } },
     {
       op: 'add_node',
       node: { type: 'path', id: 'spark', fill: '#ffffff', d: 'M512 232 L578 446 L792 512 L578 578 L512 792 L446 578 L232 512 L446 446 Z' },

@@ -98,6 +98,16 @@ Icons copy none of it. Change a colour or the stroke width in the pack and every
 
 There are also two modes. The interface mode draws with strokes in a view box of 24: everything above is in that mode. The application mode draws with fills and gradients in a view box of 1024; the icon at the top of this page is made that way.
 
+### Application icons
+
+An application icon is drawn full bleed, and each platform cuts its own shape from it: a squircle on iOS, the same with a margin on macOS, a circle on Android. The mark stays in the circle that Android keeps whole. The agent puts an icon to the test in one picture, `proof`: on each platform, on a dark screen, without colour, blurred, at 64, 32 and 16 pixels, and beside the three logos it looks most like in a library of 1,432 real logos. `export_app` then writes the files of every platform: PNG for iOS, `.icns` for macOS, `.ico` for Windows, the adaptive layers for Android, the favicons and the manifest for the web.
+
+The library is the reference collection of [kaankiziltug/logo-design-skill](https://github.com/kaankiziltug/logo-design-skill). Its logos are trademarks of their owners: they are studied, never copied, and they are not in this repository. Download them once, with git:
+
+```bash
+pnpm --filter @netsuicon/server library
+```
+
 ## The exported code
 
 - **Animated SVG**: one file, CSS `@keyframes`, no script. The hover works by itself. For the click, the page sets an attribute on the `<svg>`: `data-play` plays an action whole, `data-state="on"` then `"off"` holds a switch.
@@ -109,12 +119,13 @@ The colours and the style of the pack are written into the code: it no longer de
 
 ## The agent's tools
 
-The server exposes thirteen MCP tools. The first, `guide`, gives the agent the format and the advice; it is all the agent knows, and it reads it once.
+The server exposes sixteen MCP tools. The first, `guide`, gives the agent the format and the advice; it is all the agent knows, and it reads it once.
 
 - Read: `list_icons`, `get_icon`, `get_pack`.
 - See: `look` renders an icon as a PNG, at rest or at several moments of a clip; `look_pack` shows a whole pack in one picture.
 - Write: `create_icon`, `edit_icon`, `create_pack`, `edit_pack`.
-- Take away: `export_icon`, `export_pack`.
+- Application icons: `proof` puts one to the test; `search_library` shows what a category already looks like.
+- Take away: `export_icon`, `export_pack`, `export_app`.
 - `set_language` sets the language of the app.
 
 Without an MCP connection, the same tools can be called from a terminal:
@@ -123,11 +134,13 @@ Without an MCP connection, the same tools can be called from a terminal:
 pnpm --filter @netsuicon/server mcp look_pack '{"pack":"meteo"}' meteo.png
 ```
 
-## The animation skill
+## The skills
 
 The server's guide gives the format. The method for animating is apart, in a skill: [`skills/netsu-icon-motion`](skills/netsu-icon-motion). Before touching the icon, the agent writes eight lines about the thing it draws: its parts, where the moving part is held, what drives it (a hand, gravity, a spring, a motor, wind), what it is made of. The movement follows. A plastic lid lifted by a hand does not start like a steel padlock let go by a spring.
 
-To use it, give that folder to your agent like any other skill; with Claude Code, copy it into the `.claude/skills/` folder of your project.
+The method for an application icon is a second skill, [`skills/netsu-app-icon`](skills/netsu-app-icon): a short brief, the clichés of the category found in the library and set aside, eight ideas in one sentence each, three of them drawn and proved, and the user chooses before the chosen one is refined and exported.
+
+To use them, give those folders to your agent like any other skill; with Claude Code, copy them into the `.claude/skills/` folder of your project.
 
 ## Where the project stands
 
@@ -135,7 +148,7 @@ To use it, give that folder to your agent like any other skill; with Claude Code
 - [x] **Packs**: shared style, palette and motion; departures reported.
 - [x] **Exports**: animated SVG, React component, still SVG, page of a pack. The React component is tested, but has not yet been mounted in a real project.
 - [x] **Animation skill**, for interface icons.
-- [ ] **Application icons.** The agent can draw one and animate it when asked; the icon of this project is made that way. But neither the guide nor the skill has been worked on for them, and no trial has been run. No export to `.ico`, `.icns` or PNG.
+- [x] **Application icons**: full bleed, `proof`, the logo library, exports for iOS, macOS, Windows, Android and the web, and a skill. Tried by agents that had only the skill; nobody has yet loaded the exported files into Xcode or Android Studio.
 - [ ] **Drawing by hand** in the app, or talking to the agent there: for now everything is done from the code editor.
 - [ ] Lottie export, morphing one path into another.
 

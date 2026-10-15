@@ -25,7 +25,7 @@ function IconRow({ icon, pack, current, onSelect }: IconRowProps) {
   const findings = pack ? lint(icon, pack).length : 0;
   return (
     <button type="button" aria-current={current} onClick={onSelect} className={clsx(ROW, rowTone(current))}>
-      <IconBox svg={toSvg(resolve(icon, pack))} className="size-5 shrink-0 text-fg" />
+      <IconBox svg={toSvg(resolve(icon, pack))} app={icon.mode === 'app'} className="size-5 shrink-0 text-fg" />
       <span className="min-w-0 flex-1 truncate">{icon.name}</span>
       {pack === undefined && <span className="shrink-0 text-muted">{t(`list.${icon.mode}`)}</span>}
       {findings > 0 && (

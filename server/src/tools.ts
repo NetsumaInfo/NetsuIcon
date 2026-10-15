@@ -1,7 +1,9 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { applyOps, exportCss, exportReact, forManner, IconError, keyMoments, MANNERS, MODES, newDoc, newDocIn, OP_NAMES, sample, sheet, toSvg, type IconDoc, type Op } from '@netsuicon/core';
 import { z } from 'zod';
+import { appAdvice, registerApp as registerAppIcons } from './appTools';
 import { GUIDE } from './guide';
+import type { Library } from './library';
 import { registerPacks } from './packTools';
 import { guarded, harmony, outline, packOutline, png, text } from './reply';
 import { LANGUAGES, type Store } from './store';
@@ -12,7 +14,8 @@ const pack = z.string().optional().describe('Name of the pack the icon is in. Le
 /** The outline of an icon and, in a pack, what it does that the pack does not. */
 function after(store: Store, icon: string, owner: string | undefined): string {
   const doc = store.read(icon, owner);
-  return owner === undefined ? outline(doc) : `${outline(doc)}\n${harmony(doc, store.readPack(owner))}`;
+  const said = [outline(doc), ...(owner === undefined ? [] : [harmony(doc, store.readPack(owner))]), appAdvice(store.drawn(icon, owner))];
+  return said.filter(Boolean).join('\n');
 }
 
 /** The most frames one strip holds. */
@@ -206,11 +209,12 @@ function registerApp(server: McpServer, store: Store): void {
   );
 }
 
-export function buildServer(store: Store): McpServer {
+export function buildServer(store: Store, library: Library): McpServer {
   const server = new McpServer({ name: 'netsuicon', version: '0.0.1' }, { instructions: GUIDE });
   registerRead(server, store);
   registerWrite(server, store);
   registerPacks(server, store);
   registerApp(server, store);
+  registerAppIcons(server, store, library);
   return server;
 }
