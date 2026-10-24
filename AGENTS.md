@@ -32,6 +32,7 @@ app/src/       # components/ (Header, IconList, Stage, PackSheet, IconPanel, Pac
 icons/         # <name>.nicon.json, one per icon; <pack>/pack.json and the icons of that pack. meteo and courrier are the examples; netsuicon is the icon of the project
 skills/        # netsu-icon-motion (animating) and netsu-app-icon (designing an application icon). Written for an agent that has only its folder and the guide
 library/       # git-ignored: the logo library, downloaded by `pnpm --filter @netsuicon/server library`
+mascot/        # the mascot of the Netsu icons and the icon of this app, hand-written SVG
 docs/          # STATUS.md, images/
 .github/       # issue and pull request templates, CI (types, locales, tests)
 ```

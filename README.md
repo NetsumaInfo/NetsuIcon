@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/images/logo.svg" width="96" alt="The NetsuIcon icon: an icon frame with a play triangle inside">
+  <img src="mascot/netsuicon-app-icon.svg" width="128" alt="The NetsuIcon icon: the mascot, a character with spiky cyan hair and a grey visor, framed in a neon icon tile with anchor points on its edge">
   <h1>NetsuIcon</h1>
 </div>
 
@@ -96,7 +96,7 @@ A pack holds the icons of one application: a folder `icons/<pack>/` with a `pack
 
 Icons copy none of it. Change a colour or the stroke width in the pack and every icon changes at once. An icon that departs from its pack is reported to the agent and in the app. That is advice, not an error: it may depart on purpose.
 
-There are also two modes. The interface mode draws with strokes in a view box of 24: everything above is in that mode. The application mode draws with fills and gradients in a view box of 1024; the icon at the top of this page is made that way.
+There are also two modes. The interface mode draws with strokes in a view box of 24: everything above is in that mode. The application mode draws with fills and gradients in a view box of 1024.
 
 ### Application icons
 
@@ -107,6 +107,12 @@ The library is the reference collection of [kaankiziltug/logo-design-skill](http
 ```bash
 pnpm --filter @netsuicon/server library
 ```
+
+### The mascot
+
+<img src="mascot/netsu-mascot.svg" width="96" alt="The mascot: spiky cyan hair, big eyes, a grey visor and headphones, a thick black outline">
+
+The icons of the Netsu apps share one character, in [`mascot/netsu-mascot.svg`](mascot/netsu-mascot.svg). An application icon starts from it and adds the object of the app: here an icon tile, with anchor points on its edge. Its parts are named (`hair`, `eye-l`, `visor`, `glow`…), so that it can be animated. It is drawn by hand in SVG, not yet as a `.nicon.json`, and it has not been through `proof`: its checks were made by a script outside the app.
 
 ## The exported code
 
@@ -149,6 +155,7 @@ To use them, give those folders to your agent like any other skill; with Claude 
 - [x] **Exports**: animated SVG, React component, still SVG, page of a pack. The React component is tested, but has not yet been mounted in a real project.
 - [x] **Animation skill**, for interface icons.
 - [x] **Application icons**: full bleed, `proof`, the logo library, exports for iOS, macOS, Windows, Android and the web, and a skill. Tried by agents that had only the skill; nobody has yet loaded the exported files into Xcode or Android Studio.
+- [x] **Mascot** and the icon of this app, drawn by hand in SVG. Weak at 16 px; no platform files exported yet.
 - [ ] **Drawing by hand** in the app, or talking to the agent there: for now everything is done from the code editor.
 - [ ] Lottie export, morphing one path into another.
 
