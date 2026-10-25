@@ -4,7 +4,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { demo, exportCss, onPlatform, resolve, type DemoOptions, type IconDoc } from '@netsuicon/core';
+import { Resvg } from '@resvg/resvg-js';
+import { demo, exportCss, resolve, type DemoOptions, type IconDoc } from '@netsuicon/core';
 import { Store } from '../src/store';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -98,10 +99,31 @@ const FIGURES: Record<string, { cells: Cell[]; columns: number }> = {
   },
 };
 
+/** Pixels fainter than this are not counted in the edge of the logo. */
+const FAINT = 8;
+
+/**
+ * The icon of the project for the README: its background taken away, so that the page shows through, and its view
+ * box cut to its visible pixels, glow included, so that it fills the frame it is given.
+ */
+function readmeLogo(): string {
+  const source = fs.readFileSync(path.join(here, '../../mascot/netsuicon-app-icon.svg'), 'utf8');
+  const clear = source.replace(/<rect id="background"[^>]*\/>/, '');
+  const picture = new Resvg(clear, { fitTo: { mode: 'width', value: 1024 } }).render();
+  const [width, height, pixels] = [picture.width, picture.height, picture.pixels];
+  let [left, top, right, bottom] = [width, height, 0, 0];
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      if (pixels[(y * width + x) * 4 + 3]! < FAINT) continue;
+      [left, top, right, bottom] = [Math.min(left, x), Math.min(top, y), Math.max(right, x + 1), Math.max(bottom, y + 1)];
+    }
+  }
+  const box = `${left} ${top} ${right - left} ${bottom - top}`;
+  return clear.replace(/viewBox="[^"]*" width="\d+" height="\d+"/, `viewBox="${box}" width="${right - left}" height="${bottom - top}"`);
+}
+
 fs.mkdirSync(out, { recursive: true });
-// The icon of the project, drawn with the project: as a file it plays its arrival once, cut as a platform cuts it.
-const logo = store.read('netsuicon');
-fs.writeFileSync(path.join(out, 'logo.svg'), onPlatform(logo, 'round', exportCss(logo)));
+fs.writeFileSync(path.join(out, 'logo.svg'), readmeLogo());
 for (const [name, { cells, columns }] of Object.entries(FIGURES)) {
   const file = path.join(out, `${name}.svg`);
   fs.writeFileSync(file, figure(cells, columns));
