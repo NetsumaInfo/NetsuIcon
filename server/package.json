@@ -9,6 +9,8 @@
     "seed": "tsx scripts/seed.ts",
     "mcp": "tsx scripts/mcp.ts",
     "readme": "tsx scripts/readme.ts",
+    "bundle": "tsx scripts/bundle.ts",
+    "compose": "tsx scripts/compose.ts",
     "check": "tsc --noEmit",
     "test": "vitest run",
     "library": "tsx scripts/library.ts"

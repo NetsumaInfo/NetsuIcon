@@ -106,7 +106,10 @@
     "dark": "Sombre",
     "light": "Clair",
     "sizes": "Tailles réelles",
-    "copyRef": "Copier la référence de cette icône, à coller à l'agent"
+    "copyRef": "Copier la référence de cette icône, à coller à l'agent",
+    "modes": "Modes",
+    "modeBase": "par défaut",
+    "openMode": "Ouvrir ce mode"
   },
   "trigger": {
     "hover": "Survol",

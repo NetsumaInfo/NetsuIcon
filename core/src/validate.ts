@@ -122,12 +122,20 @@ function checkClip(clip: Clip, nodes: Set<string>): void {
 }
 
 /** Throws an `IconError` on the first thing that is wrong. A document that passes can be rendered and exported. */
+function checkVariant(doc: IconDoc): void {
+  const { of, mode } = doc.variant ?? {};
+  if (typeof of !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(of)) fail('bad_variant', 'variant.of is the name of another icon.');
+  if (of === doc.name) fail('bad_variant', 'An icon cannot be a mode of itself.');
+  if (typeof mode !== 'string' || !ID.test(mode)) fail('bad_variant', 'variant.mode is lowercase letters, digits and dashes.');
+}
+
 export function validate(doc: IconDoc): void {
   if (typeof doc.name !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(doc.name)) {
     fail('bad_name', 'The name of an icon is lowercase letters, digits and dashes.');
   }
   if (!MODES.includes(doc.mode)) fail('bad_mode', `mode is one of ${MODES.join(', ')}.`);
   if (!isNumber(doc.size) || doc.size <= 0) fail('bad_size', 'size is the side of the view box, above 0.');
+  if (doc.variant !== undefined) checkVariant(doc);
   const ids = new Set<string>();
   walk(doc.nodes, (node) => {
     checkNode(node);

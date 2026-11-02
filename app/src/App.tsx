@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { resolve, type Manner } from '@netsuicon/core';
+import { modesOf, resolve, type Manner } from '@netsuicon/core';
 import { ConnectHelp, Header } from './components/Header';
 import { IconList } from './components/IconList';
 import { IconPanel } from './components/IconPanel';
@@ -39,6 +39,12 @@ export function App() {
   const { owner, doc } = shown(icons, packs, picked);
   const drawn = useMemo(() => doc && resolve(doc, owner?.pack), [doc, owner]);
   const current = { pack: owner?.pack.name, icon: doc?.name };
+  // The modes of the button this icon belongs to: its siblings in the same pack, or among the loose icons.
+  const modes = useMemo(() => {
+    const siblings = owner ? owner.icons : icons;
+    if (!doc) return [];
+    return modesOf(siblings, doc.name).map((entry) => ({ entry, doc: resolve(siblings.find((icon) => icon.name === entry.icon)!, owner?.pack) }));
+  }, [doc, owner, icons]);
 
   // One manner for the whole window; opening a pack starts on the one its application uses.
   const [manner, setManner] = useState<Manner>('subtle');
@@ -55,7 +61,15 @@ export function App() {
           <IconList icons={icons} packs={packs} current={current} onSelect={pick} />
           {doc && drawn ? (
             // Another icon starts on a fresh stage: what was played or stopped belonged to the one before.
-            <Stage key={`${current.pack ?? ''}/${doc.name}`} doc={drawn} pack={current.pack} manner={manner} onManner={setManner} />
+            <Stage
+              key={`${current.pack ?? ''}/${doc.name}`}
+              doc={drawn}
+              pack={current.pack}
+              manner={manner}
+              onManner={setManner}
+              modes={modes}
+              onMode={(icon) => pick({ pack: current.pack, icon })}
+            />
           ) : (
             owner && <PackSheet {...owner} manner={manner} onManner={setManner} onOpen={(icon) => pick({ pack: owner.pack.name, icon })} />
           )}

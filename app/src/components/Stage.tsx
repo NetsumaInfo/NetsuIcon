@@ -2,10 +2,11 @@ import clsx from 'clsx';
 import { Play } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { exportCss, forManner, mannersOf, sample, toSvg, typeOf, type IconDoc, type Manner } from '@netsuicon/core';
+import { exportCss, forManner, mannersOf, sample, toSvg, typeOf, type IconDoc, type Manner, type ModeEntry } from '@netsuicon/core';
 import { CopyButton } from './CopyButton';
 import { IconBox } from './IconBox';
 import { MannerSwitch } from './MannerSwitch';
+import { ModeStrip } from './ModeStrip';
 import { PAPERS, PaperSwitch, type Paper } from './PaperSwitch';
 import { ToolButton } from './ToolButton';
 
@@ -33,10 +34,13 @@ interface StageProps {
   pack?: string;
   manner: Manner;
   onManner(manner: Manner): void;
+  /** The other modes of the same button, when it has some. */
+  modes?: { entry: ModeEntry; doc: IconDoc }[];
+  onMode?(icon: string): void;
 }
 
 /** One icon, large: alive under the pointer, or one clip played, or stopped at a moment. */
-export function Stage({ doc, pack, manner, onManner }: StageProps) {
+export function Stage({ doc, pack, manner, onManner, modes = [], onMode }: StageProps) {
   const { t } = useTranslation();
   const [paper, setPaper] = useState<Paper>('dark');
   const [chosen, setView] = useState<View>({ kind: 'live' });
@@ -67,6 +71,8 @@ export function Stage({ doc, pack, manner, onManner }: StageProps) {
         {manners.length > 1 && <MannerSwitch manner={playing} onChange={onManner} />}
         <PaperSwitch paper={paper} onChange={setPaper} />
       </div>
+
+      {modes.length > 1 && onMode && <ModeStrip modes={modes} current={doc.name} manner={playing} onPick={onMode} />}
 
       <div className={clsx('relative flex min-h-0 flex-1 items-center justify-center rounded-inner', PAPERS[paper])}>
         {/* The key replays a forced clip: a new element starts its animations again. */}

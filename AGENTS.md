@@ -6,7 +6,7 @@ An app to make animated icons with an AI agent: small interface icons (hover, cl
 
 ## Status (2026-10-15, first slice, packs, reactions, switches, two manners, interface redone, application icons)
 
-- `core/`: the icon document, the operations, sampling, and three outputs (still SVG, animated SVG with CSS keyframes, React component on `motion/react`). Packs: shared style, palette and motion, `resolve` (what an icon inherits), `lint` (where it departs), `sheet` (all icons in one picture), `exportPage` (a pack alive on one HTML page). An icon reacts to the pointer (a `hover` clip) and to a press: an action has a `click` clip and comes back to rest, a switch has an `on` clip, stays in its other state and goes back at the next press (`core/src/clips.ts`). A clip may belong to one of two manners, `subtle` or `expressive`; an icon can carry both and an export writes one. A pack limits hover and press separately, in each manner. Unit tested.
+- `core/`: the icon document, the operations, sampling, and three outputs (still SVG, animated SVG with CSS keyframes, React component on `motion/react`). Packs: shared style, palette and motion, `resolve` (what an icon inherits), `lint` (where it departs), `sheet` (all icons in one picture), `exportPage` (a pack alive on one HTML page). An icon reacts to the pointer (a `hover` clip) and to a press: an action has a `click` clip and comes back to rest, a switch has an `on` clip, stays in its other state and goes back at the next press (`core/src/clips.ts`). A clip may belong to one of two manners, `subtle` or `expressive`; an icon can carry both and an export writes one. A pack limits hover and press separately, in each manner. An icon may be one mode of another (`variant`: same button, another insertion or export mode, `core/src/variants.ts`); the stage shows the modes of a button side by side. Unit tested.
 - `server/`: local HTTP server. `/mcp` is the MCP endpoint (stateless streamable HTTP) for the agent of an IDE; `/api/icons` and `/api/events` feed the app. Icons are files in `icons/`; a pack is a sub-folder with a `pack.json`.
 - `app/`: web front (Vite, React, Tailwind v4). Read only. Three columns: the list (packs, icons, a filter by name), the middle (the sheet of a pack, or the stage of one icon: live, one clip replayed, a scrubber, two backgrounds, real sizes), the panel (for an icon, tabs: animations, shapes, code; for a pack: rules, harmony). The choice is in the address (`#/courrier/send`). One manner for the whole window. An icon answers the pointer and plays its click clip whole.
 - The method for animating an icon after how the thing it draws works is a skill, `netsu-icon-motion`, in `skills/`. `server/src/guide.ts` holds the format; the skill holds the method. The NetsuSkills repository publishes a copy.
@@ -23,16 +23,16 @@ An app to make animated icons with an AI agent: small interface icons (hover, cl
 ## Structure
 
 ```
-core/src/      # pure TypeScript, no DOM, no Node: types, ops, validate, sample, clips, demo, svg, length, exportCss, exportReact, exportPage, pack, lint, sheet;
+core/src/      # pure TypeScript, no DOM, no Node: types, ops, validate, sample, clips, demo, svg, length, exportCss, exportReact, exportCompose, exportPage, pack, lint, sheet;
                # application icons: parts (shapes as seen), appIcon (platforms, layers, app checks), proof, print, iconFiles (.ico, .icns)
 server/src/    # store.ts and library.ts (only code that touches the disk), tools.ts, packTools.ts and appTools.ts (MCP tools), librarySearch.ts, appExport.ts,
                # pictures.ts (resvg), reply.ts (what a tool answers), guide.ts (what the agent is told), main.ts (HTTP)
-server/scripts/  # seed.ts (two example icons), mcp.ts (one tool call from a shell), agent.ts (their client), readme.ts (the pictures of the README), library.ts (downloads the logo library)
+server/scripts/  # appIcons.mjs (the SVG icons of NetsuRush and NetsuBoard), seed.ts (two example icons), mcp.ts (one tool call from a shell), agent.ts (their client), readme.ts (the pictures of the README), library.ts (downloads the logo library)
 app/src/       # components/ (Header, IconList, Stage, PackSheet, IconPanel, PackPanel, and the small ones they share), lib/ (useIcons, events, picked, reactions), locales/ (fr is the source, en)
 icons/         # <name>.nicon.json, one per icon; <pack>/pack.json and the icons of that pack. meteo and courrier are the examples; netsuicon is the icon of the project
 skills/        # netsu-icon-motion (animating) and netsu-app-icon (designing an application icon). Written for an agent that has only its folder and the guide
 library/       # git-ignored: the logo library, downloaded by `pnpm --filter @netsuicon/server library`
-mascot/        # the mascot of the Netsu icons and the icon of this app, hand-written SVG
+mascot/        # the mascot of the Netsu icons, the icon of this app (hand-written SVG), and the icons of NetsuRush and NetsuBoard (written by appIcons.mjs)
 docs/          # STATUS.md, images/
 .github/       # issue and pull request templates, CI (types, locales, tests)
 ```
@@ -47,6 +47,9 @@ pnpm test       # vitest: core and the MCP tools
 pnpm --filter @netsuicon/server seed        # example icons, needs the server running
 pnpm --filter @netsuicon/server mcp look_pack '{"pack":"meteo"}' out.png   # any tool, from a shell
 pnpm --filter @netsuicon/server readme      # the animated pictures of the README, after an icon changed
+pnpm --filter @netsuicon/server bundle netsurush ../NetsuRush/src/components/ui/netsu-icons.generated.ts   # a pack as one TS module for an app
+pnpm --filter @netsuicon/server compose netsurush-mobile ../NetsuRush\ Mobile/composeApp/src/commonMain/kotlin/com/netsuma/netsurush/ui/theme/Icons.kt   # a still pack as Kotlin ImageVectors for Compose
+node server/scripts/appIcons.mjs             # the SVG icons of NetsuRush and NetsuBoard, into mascot/
 pnpm --filter @netsuicon/server library     # downloads the logo library (needs git) and takes the print of each logo
 ```
 

@@ -140,9 +140,18 @@ export interface Gradient {
 export const MODES = ['micro', 'app'] as const;
 export type Mode = (typeof MODES)[number];
 
+/** This icon is one mode of another: same button, the press shows what that mode does. */
+export interface Variant {
+  /** The name of the icon it is a mode of, in the same pack. */
+  of: string;
+  /** The name of the mode, as the application calls it. */
+  mode: string;
+}
+
 export interface IconDoc {
   version: 1;
   name: string;
+  variant?: Variant;
   /** `micro`: a small interface icon. `app`: an application icon. */
   mode: Mode;
   /** Side of the square view box. */

@@ -106,7 +106,10 @@
     "dark": "Dark",
     "light": "Light",
     "sizes": "Real sizes",
-    "copyRef": "Copy the reference of this icon, to paste to the agent"
+    "copyRef": "Copy the reference of this icon, to paste to the agent",
+    "modes": "Modes",
+    "modeBase": "default",
+    "openMode": "Open this mode"
   },
   "trigger": {
     "hover": "Hover",

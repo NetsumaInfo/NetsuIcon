@@ -31,7 +31,8 @@ OPS (edit_icon)
 {op:"add_node", node:{...}, parent?:"group-id", index?:n}
 {op:"update_node", id, set:{field:value, other:null}}   null removes a field; id, type, children cannot change
 {op:"remove_node", id} (its tracks go too)   {op:"move_node", id, parent?:"group-id"|null, index?:n}
-{op:"set_meta", mode?, size?, defaults?:{fill?,stroke?,strokeWidth?,linecap?,linejoin?}}
+{op:"set_meta", mode?, size?, defaults?:{fill?,stroke?,strokeWidth?,linecap?,linejoin?}, variant?:{of:"icon", mode:"name"}|null}
+   variant: this icon is one mode of the icon "of" (same button, another mode); the app shows them side by side
 {op:"set_gradient", gradient:{id, type:"linear"|"radial", from?:[x,y], to?:[x,y], center?:[x,y], radius?, stops:[{offset,color,opacity?}]}}
    coordinates are fractions of the shape's box; use it with fill:"url(#id)"
 {op:"remove_gradient", id}

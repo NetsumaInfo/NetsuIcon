@@ -1,6 +1,6 @@
 # Expressive: the same verb, played out
 
-Load `verbs.md` first: the mover, the type and your eight lines do not change. This page says
+Load `verbs.md` first: the mover, the type and your nine lines do not change. This page says
 what to add; what drives the thing and what it is made of still set every start and end. Tag
 every clip `"manner": "expressive"`; a new clip takes a new id, a revised one keeps its own.
 Leave the subtle clips and the pack's `manner` as they are. The pack's `expressive` limits apply. The user's request sets how

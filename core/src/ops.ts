@@ -11,12 +11,13 @@ import {
   type Mode,
   type Style,
   type Trigger,
+  type Variant,
 } from './types';
 import { validate } from './validate';
 
 /** One targeted edit. An agent sends a list of these instead of rewriting the whole icon. */
 export type Op =
-  | { op: 'set_meta'; mode?: Mode; size?: number; defaults?: Style | null }
+  | { op: 'set_meta'; mode?: Mode; size?: number; defaults?: Style | null; variant?: Variant | null }
   | { op: 'add_node'; node: IconNode; parent?: string | null; index?: number }
   | { op: 'update_node'; id: string; set: Record<string, unknown> }
   | { op: 'remove_node'; id: string }
@@ -115,6 +116,8 @@ function applyOne(doc: IconDoc, op: Op): void {
       if (op.size !== undefined) doc.size = op.size;
       if (op.defaults === null) delete doc.defaults;
       else if (op.defaults !== undefined) doc.defaults = op.defaults;
+      if (op.variant === null) delete doc.variant;
+      else if (op.variant !== undefined) doc.variant = op.variant;
       return;
     case 'add_node':
       if (!op.node || typeof op.node !== 'object') throw new IconError('bad_node', 'add_node needs a "node".');

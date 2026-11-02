@@ -2,7 +2,7 @@
 
 Numbers are for a view box of 24 and no pack; a pack's limits win, another view box scales the
 moves. Press = a `click` for an action, an `on` for a switch. Each row is the usual build of
-the thing; your eight lines say when this one is built another way.
+the thing; your nine lines say when this one is built another way.
 
 ## 0. Signs
 

@@ -135,6 +135,14 @@ Asked: use `kaankiziltug/logo-design-skill` (MIT) to improve how application ico
 | In the app | An application icon is shown cut to a rounded square (CSS `clip-path`), as a launcher would. |
 | Method | A second skill, `netsu-app-icon`. The guide holds the format (full bleed, safe circle, tools); the skill holds the method. |
 
+### Icons of NetsuRush and NetsuBoard (2026-10-28)
+
+- The mascot is placed whole, never redrawn. Two passes that rebuilt it in icon shapes lost its likeness. The format has no blur, so these two icons are not `.nicon.json` files: `server/scripts/appIcons.mjs` writes them as SVG in `mascot/`.
+- Same head, same size, same place in both (scale 3.4). Each app owns a symbol and a colour behind it, running to the edges: a black and yellow film strip for NetsuRush, a pink and a coral polaroid tied by a yellow thread for NetsuBoard. Warm colours because they oppose the cyan hair.
+- Transparent, no background square. Installed with `tauri icon` in `src-tauri/icons/` of each app.
+- Judged in the real Windows taskbar, with the `netsu-taskbar-preview` skill (NetsuSkills), by the maintainer.
+- Not verified: `proof` and Android's safe circle on these two (the symbols are cut by the frame on purpose); a rebuilt app. The website of NetsuRush and the Discord assets still have the old icon.
+
 ## 3. Done and verified (2026-10-07)
 
 - `core`: 57 tests pass (operations, errors, sampling, CSS export, React export, page, packs, harmony, sheet, path length, switches, `trim`, manners, `hold`, icon type, self-playing icon).

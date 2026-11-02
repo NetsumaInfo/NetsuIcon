@@ -1,6 +1,7 @@
 ---
 name: netsu-icon-motion
 description: Use when the user asks to animate an icon, add a hover, click, on/off, loading or entrance animation to an icon, make an icon move, react, switch on and off or come alive, make an animation subtler or more expressive, redo, fix or retime an icon's animation, or animate every icon of a pack, in NetsuIcon (the netsuicon MCP server). Do NOT use for drawing, redrawing or recolouring an icon or a pack, for motion of interface parts such as menus, buttons, spinners, dialogs and page transitions (netsu-peccable), or for Lottie, After Effects and video.
+argument-hint: "<icon or pack> [subtle|expressive]"
 ---
 
 # NetsuIconMotion
@@ -21,16 +22,18 @@ that hints, a press that does.
 
 1. **Read.** `list_icons` with the `pack`: its `feel`, limits and manner in use win over every
    number here. Then `get_icon`; with `"clips":"ids"` when you only add clips. Clips already
-   there: `look` with `clip: "*"` before editing, and judge each against your eight lines, not
+   there: `look` with `clip: "*"` before editing, and judge each against your nine lines, not
    against its row. A clip fits when its frames show what drives the thing; keep it, with its
-   id. Rewrite the others.
+   id. Rewrite the others; there is no undo, so when the user did not ask to redo them, name
+   those clips and what will change, and wait for a yes.
 
-2. **Say how the thing works, before the first edit.** Eight lines, from the nodes and the
+2. **Say how the thing works, before the first edit.** Nine lines, from the nodes and the
    picture, not from the name:
 
    ```
    Thing:   a padlock
    Parts:   case, fixed · shackle, moves · keyhole, rides on the case
+   Depth:   back to front: shackle legs · case · keyhole; the legs go down inside the case
    Held:    the shackle in the case by its right leg [16,11]: it slides up, then turns on that leg
    Driven:  a spring, let go by the key: sudden, past its end, one settle
    Made of: steel: heavy, stiff; small moves, the case takes the kick
@@ -38,6 +41,11 @@ that hints, a press that does.
    Hover:   the shackle rises a notch, and drops
    Press:   it lifts, swings open, stays open; the case hops
    ```
+
+   **Depth** sees the thing in space: each part from back to front, and every part that goes
+   inside, under or behind another during a clip (a sheet in a bin, a card in a folder, a
+   blade through paper, a hand behind a lid). Node order follows this line; step 4 says how to
+   hide what goes in.
 
    **Held** says what the mover can do, and its pivot.
 
@@ -78,13 +86,20 @@ that hints, a press that does.
      Thing itself cannot be told.
 
 3. **Take the numbers from the verb.** Load `references/verbs.md`; find the row and take its
-   sizes and shapes. Your eight lines win over the row: Held says which movement (a lid that
+   sizes and shapes. Your nine lines win over the row: Held says which movement (a lid that
    lifts off does not turn), Driven and Made of say which of a shape's pull back, overshoot
    and settle stay. No row: write the keys from the tables above. Never a `scale` of the whole
    icon, unless the thing itself swells.
 
 4. **Free the mover.** Drawn in one path with what stays: split it into two nodes that look the
    same. Parts moving together: a group. `origin` from the Held table.
+   **Depth.** Find, before the first edit, every container the press uses: a box, a bin, a
+   folder, a tray, a drive, a pocket. What goes into it passes behind its front lines. Order is
+   not enough: a line icon has no fill, so its front hides nothing, and the mover shows through.
+   The mover must therefore never be seen below the opening: it reaches the lip, then shrinks
+   into it (`scale` to 0, `origin` on the lip) or fades out on it, in a few hundredths. What
+   comes out starts at the lip the same way. Then split the container into back and front
+   nodes and keep the mover between them, for the frames where both touch.
 
 5. **Write the clips**, all in one `edit_icon`.
 
@@ -121,7 +136,12 @@ that hints, a press that does.
    4. Hover and click end on the first frame; no prop is left.
    5. After its pull back the press goes the hover's way, further, with a phase it lacks.
    6. One frame of the prop is enough to name it.
-   7. The frames show your eight lines: someone who sees them could say what drives the thing.
+   7. The frames show your nine lines: someone who sees them could say what drives the thing.
+   8. The press does what the button does, on screen: a swap shows both things in each
+      other's place, a send leaves, a delete removes. A jump back (`hold`, `steps`) is hidden
+      (faded out, out of the box), never one that cancels the move before it is seen.
+   9. Mid-press, nothing is seen inside a container or across its front lines: `frames: 10`
+      on every press that puts something in or takes it out.
 
    Fix in one `edit_icon`, look again. A turn or a long travel: `frames: 10` on that clip.
 
@@ -133,7 +153,8 @@ that hints, a press that does.
    the thing win over the feel for its own icon.
 
 8. **Report**, six lines an icon at most: Driven and Made of in a few words, the type and what
-   you assumed, the clips, departures kept. Frames are not motion: the user watches it move.
+   you assumed, the clips, departures kept. On their own lines: what the frames of `look` showed,
+   then `Not verified: the motion itself`. Frames are not motion: the user watches it move.
 
 ## Budget
 
@@ -181,10 +202,15 @@ So the lid pulls back, flips fast, swings past and back once; the pack's click a
 | A dot or a ball as the thing that goes in | A sheet, an envelope: an object with a name |
 | Lines of wind that fade in and out | Lines that run along their path with `trim` |
 | A press that is the hover with larger numbers | Another shape: phases, an answer, a prop |
+| A swap that goes halfway and jumps back | Both land in each other's place, then a hidden return |
+| A letter that slides over the front of its box | Back, mover, front: it goes in behind the wall |
 | Expressive made of decoration: sparkles, a glow | More of what the thing does |
 | A `look` per clip, before and after every edit | One `look` with `clip: "*"` per icon |
+| "The animation feels snappy", from frames alone | What the frames show; the motion marked `Not verified` |
 
 ## References
 
 - `references/verbs.md` — step 3, always: key shapes, props, and each verb's mover, hover, press.
 - `references/expressive.md` — step 5, only for the expressive manner.
+- `references/modes.md` — step 2, when the button acts in a mode picked elsewhere (insert,
+  overwrite, at the end…): one icon per mode, same rest, a press per mode.

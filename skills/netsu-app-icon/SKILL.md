@@ -1,6 +1,7 @@
 ---
 name: netsu-app-icon
 description: Use when the user asks for an application icon, app icon, app logo, launcher icon, favicon or the icon of a project or product in NetsuIcon (the netsuicon MCP server) — to find ideas for it, design or redesign it, make it unique, refine it, test it at small sizes and on iOS, macOS and Android, or export its .ico, .icns, PNG and Android files. Do NOT use for interface icons (toolbar, buttons, 24 units), for animating an icon (netsu-icon-motion), or for wordmarks, letterheads and brand guidelines.
+argument-hint: "<app name or brief>"
 ---
 
 # NetsuAppIcon
@@ -17,7 +18,7 @@ every platform and 16 pixels, and let the user choose before polishing.
 - Its `guide` holds the format and the rules of an application icon (full bleed, safe circle).
   Read it once. This page does not repeat it.
 - The logo library, for `search_library` and the likeness in `proof`. If a tool answers
-  `no_library`, give the user its command, carry on, and say that distinction was not checked.
+  `no_library`, give the user its command, carry on, and report `Not verified: distinction`.
 
 ## Procedure
 
@@ -67,8 +68,9 @@ every platform and 16 pixels, and let the user choose before polishing.
    the drawing: say so and replace it.
 
 6. **Checkpoint.** The user watches the app: name the three icons to open, one line per idea,
-   the risk of each, your pick. Then stop and wait for their choice. Go on without asking
-   only when the user said not to check in.
+   the risk of each, your pick. Per icon, on separate lines: what `proof` measured (contrast,
+   closest logo, app checks), then what you judge from its picture. Then stop and wait for their
+   choice. Go on without asking only when the user said not to check in.
 
 7. **Refine the chosen one** under the app's own name: `create_icon` `<app>`, then one
    `edit_icon` with the ops file of the chosen build and the refinements. Then:
@@ -77,8 +79,29 @@ every platform and 16 pixels, and let the user choose before polishing.
    - The optical pass of `references/construction.md` §4.
    - `proof` once more. Show it, with what changed and why.
 
-8. **Deliver.** `export_app`: give the folder and what is in it. Animated, on request or as an
+8. **Deliver.** `export_app`: give the folder and what is in it. It empties `exports/<name>/`
+   first: if that folder holds files from an earlier export, say they will be replaced and wait
+   for a yes. Animated, on request or as an
    offer: `in` (the icon builds itself on opening) and `hover`, through netsu-icon-motion.
+
+## A mascot, or an icon to improve
+
+When the icon is built on a character, or the user asks to improve an existing icon, its idea
+is given: skip steps 2 and 3, but still build three variants that differ in layout (step 4)
+and stop at step 6.
+
+- The character is the mark, not a sticker on it: its head alone fills the safe circle
+  (width or height at least 55% of the view box). The second symbol (play, card, note) sits
+  behind or around it, partly hidden, and may be cut by the safe circle where nothing is lost.
+- The second symbol is one silhouette: a triangle, not three cards. Repeated objects merge
+  into one shape at 16 px; draw one that reads as the idea.
+- Never redraw the character: place its own SVG whole (`<use>` of `mascot/netsu-mascot.svg`),
+  glow, gradients and shading included. A redrawn mascot in primitives loses its likeness;
+  at 16 px the hair colour and the visor carry it, and that is enough.
+- Its palette counts as one colour of identity; anything outside it (the symbol, the
+  background) takes one colour more at most.
+- At 16 px, the blurred cell shows two things you could name: the head and the symbol. Only
+  one: enlarge the symbol's visible part or simplify the head.
 
 ## Budget
 
@@ -129,6 +152,7 @@ at 16 px the arcs still blur together, the fan shape reads — said to the user 
 | A gradient, a glow or a shadow to save a weak form | A form that works flat and in two tones |
 | Judging the icon alone on white | `proof`: platforms, dark, small, and its neighbours |
 | Copying a library logo because it scored well | Library logos are studied, never traced |
+| "Unique" with no library to check against | `Not verified: distinction`, and the command that fetches it |
 
 ## References
 
