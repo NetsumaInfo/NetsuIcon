@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "help",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s21",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "path",
+      "id": "s22",
+      "d": "M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"
+    },
+    {
+      "type": "circle",
+      "id": "s23",
+      "cx": 12,
+      "cy": 17,
+      "r": 0.5,
+      "fill": "$ink"
+    }
+  ],
+  "clips": []
+}

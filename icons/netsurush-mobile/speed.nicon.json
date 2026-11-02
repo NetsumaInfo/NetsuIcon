@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "speed",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s230",
+      "d": "M4 18a8 8 0 1 1 16 0"
+    },
+    {
+      "type": "path",
+      "id": "s231",
+      "d": "M12 18l-3.5-4.5"
+    },
+    {
+      "type": "circle",
+      "id": "s232",
+      "cx": 12,
+      "cy": 18,
+      "r": 0.5,
+      "fill": "$ink"
+    }
+  ],
+  "clips": []
+}

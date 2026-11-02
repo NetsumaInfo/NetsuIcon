@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "shuffle",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s39",
+      "d": "M2 18h3c4 0 6-12 10-12h7"
+    },
+    {
+      "type": "path",
+      "id": "s40",
+      "d": "m19 3 3 3-3 3"
+    },
+    {
+      "type": "path",
+      "id": "s41",
+      "d": "M2 6h3c1.7 0 3 2 4 4"
+    },
+    {
+      "type": "path",
+      "id": "s42",
+      "d": "M22 18h-7c-1.6 0-3-1.8-4-4"
+    },
+    {
+      "type": "path",
+      "id": "s43",
+      "d": "m19 15 3 3-3 3"
+    }
+  ],
+  "clips": []
+}

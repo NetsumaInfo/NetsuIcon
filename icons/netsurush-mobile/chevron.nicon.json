@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "chevron",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s144",
+      "d": "m6 9 6 6 6-6"
+    }
+  ],
+  "clips": []
+}

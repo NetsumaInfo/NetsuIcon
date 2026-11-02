@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "replace",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s33",
+      "x": 3,
+      "y": 3,
+      "width": 7,
+      "height": 7,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s34",
+      "x": 14,
+      "y": 14,
+      "width": 7,
+      "height": 7,
+      "rx": 1.5
+    },
+    {
+      "type": "path",
+      "id": "s35",
+      "d": "M14 5h3a2 2 0 0 1 2 2v3"
+    },
+    {
+      "type": "path",
+      "id": "s36",
+      "d": "m17 8.5 2 2 2-2"
+    },
+    {
+      "type": "path",
+      "id": "s37",
+      "d": "M10 19H7a2 2 0 0 1-2-2v-3"
+    },
+    {
+      "type": "path",
+      "id": "s38",
+      "d": "m3 15.5 2-2 2 2"
+    }
+  ],
+  "clips": []
+}

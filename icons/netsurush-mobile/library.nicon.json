@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "library",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s6",
+      "d": "M3 10a2 2 0 0 1 2-2h3l2 2h9a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+    },
+    {
+      "type": "path",
+      "id": "s7",
+      "d": "M7 8V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"
+    }
+  ],
+  "clips": []
+}

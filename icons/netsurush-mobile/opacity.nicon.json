@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "name": "opacity",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s302",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "path",
+      "id": "s303",
+      "d": "M12 3a9 9 0 0 1 0 18z",
+      "fill": "$ink"
+    }
+  ],
+  "clips": []
+}

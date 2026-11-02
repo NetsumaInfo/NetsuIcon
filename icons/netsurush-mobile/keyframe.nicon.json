@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "keyframe",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s240",
+      "d": "M12 3l9 9-9 9-9-9z"
+    }
+  ],
+  "clips": []
+}

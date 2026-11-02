@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "name": "ban",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s119",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "path",
+      "id": "s120",
+      "d": "m5.6 5.6 12.8 12.8"
+    }
+  ],
+  "clips": []
+}

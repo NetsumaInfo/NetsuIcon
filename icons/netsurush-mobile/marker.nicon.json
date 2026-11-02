@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "marker",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s24",
+      "d": "M6 21V4"
+    },
+    {
+      "type": "path",
+      "id": "s25",
+      "d": "M6 4h12l-3 4.5 3 4.5H6"
+    }
+  ],
+  "clips": []
+}

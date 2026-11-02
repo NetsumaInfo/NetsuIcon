@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "battery",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s52",
+      "x": 2,
+      "y": 7,
+      "width": 17,
+      "height": 10,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "s53",
+      "d": "M22 11v2"
+    },
+    {
+      "type": "path",
+      "id": "s54",
+      "d": "M6 11v2"
+    }
+  ],
+  "clips": []
+}

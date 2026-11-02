@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "name": "grid",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s97",
+      "x": 3,
+      "y": 3,
+      "width": 7,
+      "height": 7,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s98",
+      "x": 14,
+      "y": 3,
+      "width": 7,
+      "height": 7,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s99",
+      "x": 3,
+      "y": 14,
+      "width": 7,
+      "height": 7,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s100",
+      "x": 14,
+      "y": 14,
+      "width": 7,
+      "height": 7,
+      "rx": 1.5
+    }
+  ],
+  "clips": []
+}

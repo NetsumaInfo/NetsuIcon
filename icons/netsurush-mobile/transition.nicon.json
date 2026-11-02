@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "transition",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s237",
+      "x": 3,
+      "y": 3,
+      "width": 11,
+      "height": 11,
+      "rx": 2
+    },
+    {
+      "type": "rect",
+      "id": "s238",
+      "x": 10,
+      "y": 10,
+      "width": 11,
+      "height": 11,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "s239",
+      "d": "M10 14l4-4"
+    }
+  ],
+  "clips": []
+}

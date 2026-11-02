@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "wand",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s327",
+      "d": "M3.5 20.5l12-12"
+    },
+    {
+      "type": "path",
+      "id": "s328",
+      "d": "M18 3v4M16 5h4"
+    },
+    {
+      "type": "path",
+      "id": "s329",
+      "d": "M20 10v2M19 11h2"
+    },
+    {
+      "type": "path",
+      "id": "s330",
+      "d": "M11 3v2M10 4h2"
+    }
+  ],
+  "clips": []
+}

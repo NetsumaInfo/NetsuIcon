@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "theme",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s252",
+      "d": "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"
+    },
+    {
+      "type": "path",
+      "id": "s253",
+      "d": "M19 3v4"
+    },
+    {
+      "type": "path",
+      "id": "s254",
+      "d": "M17 5h4"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "name": "exports",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s184",
+      "d": "M3 5h6"
+    },
+    {
+      "type": "path",
+      "id": "s185",
+      "d": "M3 10h6"
+    },
+    {
+      "type": "path",
+      "id": "s186",
+      "d": "M3 15h6"
+    },
+    {
+      "type": "path",
+      "id": "s187",
+      "d": "M12.5 17v2a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-2"
+    },
+    {
+      "type": "path",
+      "id": "s188",
+      "d": "M17 15V3.5"
+    },
+    {
+      "type": "path",
+      "id": "s189",
+      "d": "m13.5 7 3.5-3.5L20.5 7"
+    }
+  ],
+  "clips": []
+}

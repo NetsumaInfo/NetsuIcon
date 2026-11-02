@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "name": "search",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s117",
+      "cx": 11,
+      "cy": 11,
+      "r": 8
+    },
+    {
+      "type": "path",
+      "id": "s118",
+      "d": "m21 21-4.3-4.3"
+    }
+  ],
+  "clips": []
+}

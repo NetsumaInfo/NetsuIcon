@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "storage",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "ellipse",
+      "id": "s273",
+      "cx": 12,
+      "cy": 5,
+      "rx": 8,
+      "ry": 3
+    },
+    {
+      "type": "path",
+      "id": "s274",
+      "d": "M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"
+    },
+    {
+      "type": "path",
+      "id": "s275",
+      "d": "M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"
+    }
+  ],
+  "clips": []
+}

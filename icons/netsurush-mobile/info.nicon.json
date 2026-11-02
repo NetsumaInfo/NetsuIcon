@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "info",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s141",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "path",
+      "id": "s142",
+      "d": "M12 16v-4"
+    },
+    {
+      "type": "circle",
+      "id": "s143",
+      "cx": 12,
+      "cy": 8,
+      "r": 0.5,
+      "fill": "$ink"
+    }
+  ],
+  "clips": []
+}

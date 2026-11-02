@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "similar",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p0",
+      "d": "M8 8h12v12H8Z"
+    },
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M4 16V4h12"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "m8 18 4-4 3 3 2-2 3 3"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "name": "gallery",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s193",
+      "x": 3,
+      "y": 3,
+      "width": 8,
+      "height": 10,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s194",
+      "x": 13,
+      "y": 3,
+      "width": 8,
+      "height": 6,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s195",
+      "x": 13,
+      "y": 11,
+      "width": 8,
+      "height": 10,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s196",
+      "x": 3,
+      "y": 15,
+      "width": 8,
+      "height": 6,
+      "rx": 1.5
+    }
+  ],
+  "clips": []
+}

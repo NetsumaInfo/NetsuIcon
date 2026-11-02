@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "name": "share",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s157",
+      "cx": 18,
+      "cy": 5,
+      "r": 3
+    },
+    {
+      "type": "circle",
+      "id": "s158",
+      "cx": 6,
+      "cy": 12,
+      "r": 3
+    },
+    {
+      "type": "circle",
+      "id": "s159",
+      "cx": 18,
+      "cy": 19,
+      "r": 3
+    },
+    {
+      "type": "path",
+      "id": "s160",
+      "d": "m8.6 13.5 6.8 4"
+    },
+    {
+      "type": "path",
+      "id": "s161",
+      "d": "m15.4 6.5-6.8 4"
+    }
+  ],
+  "clips": []
+}

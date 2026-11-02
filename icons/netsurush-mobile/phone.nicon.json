@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "phone",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s294",
+      "x": 7,
+      "y": 2,
+      "width": 10,
+      "height": 20,
+      "rx": 2.5
+    },
+    {
+      "type": "path",
+      "id": "s295",
+      "d": "M11 18h2"
+    }
+  ],
+  "clips": []
+}

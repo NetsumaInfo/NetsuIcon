@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "name": "transform",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s241",
+      "x": 6,
+      "y": 6,
+      "width": 12,
+      "height": 12
+    },
+    {
+      "type": "rect",
+      "id": "s242",
+      "x": 4,
+      "y": 4,
+      "width": 4,
+      "height": 4,
+      "rx": 0.5,
+      "fill": "$ink"
+    },
+    {
+      "type": "rect",
+      "id": "s243",
+      "x": 16,
+      "y": 4,
+      "width": 4,
+      "height": 4,
+      "rx": 0.5,
+      "fill": "$ink"
+    },
+    {
+      "type": "rect",
+      "id": "s244",
+      "x": 4,
+      "y": 16,
+      "width": 4,
+      "height": 4,
+      "rx": 0.5,
+      "fill": "$ink"
+    },
+    {
+      "type": "rect",
+      "id": "s245",
+      "x": 16,
+      "y": 16,
+      "width": 4,
+      "height": 4,
+      "rx": 0.5,
+      "fill": "$ink"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "name": "zoom-out",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s30",
+      "cx": 11,
+      "cy": 11,
+      "r": 8
+    },
+    {
+      "type": "path",
+      "id": "s31",
+      "d": "m21 21-4.3-4.3"
+    },
+    {
+      "type": "path",
+      "id": "s32",
+      "d": "M8 11h6"
+    }
+  ],
+  "clips": []
+}

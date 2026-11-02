@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "pause",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s69",
+      "x": 6,
+      "y": 4,
+      "width": 4,
+      "height": 16,
+      "rx": 1
+    },
+    {
+      "type": "rect",
+      "id": "s70",
+      "x": 14,
+      "y": 4,
+      "width": 4,
+      "height": 16,
+      "rx": 1
+    }
+  ],
+  "clips": []
+}

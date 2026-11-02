@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "name": "palette",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s248",
+      "d": "M12 21a9 9 0 1 1 9-9c0 2-1.5 3.5-3.5 3.5H15a2 2 0 0 0-1.5 3.3A1.7 1.7 0 0 1 12 21z"
+    },
+    {
+      "type": "circle",
+      "id": "s249",
+      "cx": 7.5,
+      "cy": 11,
+      "r": 0.5,
+      "fill": "$ink"
+    },
+    {
+      "type": "circle",
+      "id": "s250",
+      "cx": 10,
+      "cy": 7.5,
+      "r": 0.5,
+      "fill": "$ink"
+    },
+    {
+      "type": "circle",
+      "id": "s251",
+      "cx": 14.5,
+      "cy": 7.5,
+      "r": 0.5,
+      "fill": "$ink"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "name": "resume",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s318",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "path",
+      "id": "s319",
+      "d": "M10 8.5v7l6-3.5z"
+    }
+  ],
+  "clips": []
+}

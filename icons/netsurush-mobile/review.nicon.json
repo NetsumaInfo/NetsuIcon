@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "name": "review",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s2",
+      "d": "M7 5h11a3 3 0 0 1 3 3v8"
+    },
+    {
+      "type": "rect",
+      "id": "s3",
+      "x": 3,
+      "y": 9,
+      "width": 14,
+      "height": 12,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "s4",
+      "d": "M7 15h6"
+    },
+    {
+      "type": "path",
+      "id": "s5",
+      "d": "m10.5 12.5 2.5 2.5-2.5 2.5"
+    }
+  ],
+  "clips": []
+}

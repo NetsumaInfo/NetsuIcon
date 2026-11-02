@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "timeline-add",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p0",
+      "d": "M3 6h12"
+    },
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M3 12h8"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "M3 18h12"
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M19 9v6"
+    },
+    {
+      "type": "path",
+      "id": "p4",
+      "d": "M16 12h6"
+    }
+  ],
+  "clips": []
+}

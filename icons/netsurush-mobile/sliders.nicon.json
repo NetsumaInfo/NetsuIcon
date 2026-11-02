@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "sliders",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s148",
+      "d": "M3 6h3"
+    },
+    {
+      "type": "path",
+      "id": "s149",
+      "d": "M10 6h11"
+    },
+    {
+      "type": "circle",
+      "id": "s150",
+      "cx": 8,
+      "cy": 6,
+      "r": 2
+    },
+    {
+      "type": "path",
+      "id": "s151",
+      "d": "M3 12h10"
+    },
+    {
+      "type": "path",
+      "id": "s152",
+      "d": "M17 12h4"
+    },
+    {
+      "type": "circle",
+      "id": "s153",
+      "cx": 15,
+      "cy": 12,
+      "r": 2
+    },
+    {
+      "type": "path",
+      "id": "s154",
+      "d": "M3 18h4"
+    },
+    {
+      "type": "path",
+      "id": "s155",
+      "d": "M11 18h10"
+    },
+    {
+      "type": "circle",
+      "id": "s156",
+      "cx": 9,
+      "cy": 18,
+      "r": 2
+    }
+  ],
+  "clips": []
+}

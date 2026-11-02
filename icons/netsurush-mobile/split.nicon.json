@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "split",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s221",
+      "x": 3,
+      "y": 7,
+      "width": 7.5,
+      "height": 10,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s222",
+      "x": 13.5,
+      "y": 7,
+      "width": 7.5,
+      "height": 10,
+      "rx": 1.5
+    },
+    {
+      "type": "path",
+      "id": "s223",
+      "d": "M12 3v18"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "queue",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s48",
+      "d": "M3 6h14"
+    },
+    {
+      "type": "path",
+      "id": "s49",
+      "d": "M3 12h9"
+    },
+    {
+      "type": "path",
+      "id": "s50",
+      "d": "M3 18h7"
+    },
+    {
+      "type": "path",
+      "id": "s51",
+      "d": "M15 13.5v7l6-3.5z"
+    }
+  ],
+  "clips": []
+}

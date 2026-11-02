@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "name": "position",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s304",
+      "d": "M12 3v18"
+    },
+    {
+      "type": "path",
+      "id": "s305",
+      "d": "M3 12h18"
+    },
+    {
+      "type": "path",
+      "id": "s306",
+      "d": "m9 6 3-3 3 3"
+    },
+    {
+      "type": "path",
+      "id": "s307",
+      "d": "m9 18 3 3 3-3"
+    },
+    {
+      "type": "path",
+      "id": "s308",
+      "d": "m6 9-3 3 3 3"
+    },
+    {
+      "type": "path",
+      "id": "s309",
+      "d": "m18 9 3 3-3 3"
+    }
+  ],
+  "clips": []
+}

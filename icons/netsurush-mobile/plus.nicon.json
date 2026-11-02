@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "plus",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s64",
+      "d": "M5 12h14"
+    },
+    {
+      "type": "path",
+      "id": "s65",
+      "d": "M12 5v14"
+    }
+  ],
+  "clips": []
+}

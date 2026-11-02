@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "name": "projects",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s180",
+      "x": 3,
+      "y": 9,
+      "width": 18,
+      "height": 12,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "s181",
+      "d": "M10.5 12.5v5l4.5-2.5z"
+    },
+    {
+      "type": "path",
+      "id": "s182",
+      "d": "M6 5.5h12"
+    },
+    {
+      "type": "path",
+      "id": "s183",
+      "d": "M9 2.5h6"
+    }
+  ],
+  "clips": []
+}

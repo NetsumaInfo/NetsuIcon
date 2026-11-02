@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "fade",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s233",
+      "d": "M3 19h18V5z"
+    },
+    {
+      "type": "path",
+      "id": "s234",
+      "d": "M10 16.5V19"
+    },
+    {
+      "type": "path",
+      "id": "s235",
+      "d": "M14 13.5V19"
+    },
+    {
+      "type": "path",
+      "id": "s236",
+      "d": "M18 10.5V19"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "filter",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s15",
+      "d": "M4 5h16l-6 7.5V19l-4-2v-4.5z"
+    }
+  ],
+  "clips": []
+}

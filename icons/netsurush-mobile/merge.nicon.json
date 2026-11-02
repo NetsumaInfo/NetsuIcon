@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "merge",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s78",
+      "x": 3,
+      "y": 7,
+      "width": 7,
+      "height": 10,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s79",
+      "x": 14,
+      "y": 7,
+      "width": 7,
+      "height": 10,
+      "rx": 1.5
+    },
+    {
+      "type": "path",
+      "id": "s80",
+      "d": "M10 12h4"
+    }
+  ],
+  "clips": []
+}

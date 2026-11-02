@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "name": "scissors",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "s74",
+      "cx": 6,
+      "cy": 6,
+      "r": 3
+    },
+    {
+      "type": "path",
+      "id": "s75",
+      "d": "M8.12 8.12 20 20"
+    },
+    {
+      "type": "circle",
+      "id": "s76",
+      "cx": 6,
+      "cy": 18,
+      "r": 3
+    },
+    {
+      "type": "path",
+      "id": "s77",
+      "d": "M8.12 15.88 20 4"
+    }
+  ],
+  "clips": []
+}

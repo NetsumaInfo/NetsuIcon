@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "note",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s11",
+      "d": "M6 3h12a2 2 0 0 1 2 2v9l-6 6H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
+    },
+    {
+      "type": "path",
+      "id": "s12",
+      "d": "M20 14h-4a2 2 0 0 0-2 2v4"
+    },
+    {
+      "type": "path",
+      "id": "s13",
+      "d": "M8 8h8"
+    },
+    {
+      "type": "path",
+      "id": "s14",
+      "d": "M8 12h4"
+    }
+  ],
+  "clips": []
+}

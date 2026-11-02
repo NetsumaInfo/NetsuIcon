@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "fullscreen",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s127",
+      "d": "M4 9V5a1 1 0 0 1 1-1h4"
+    },
+    {
+      "type": "path",
+      "id": "s128",
+      "d": "M15 4h4a1 1 0 0 1 1 1v4"
+    },
+    {
+      "type": "path",
+      "id": "s129",
+      "d": "M20 15v4a1 1 0 0 1-1 1h-4"
+    },
+    {
+      "type": "path",
+      "id": "s130",
+      "d": "M9 20H5a1 1 0 0 1-1-1v-4"
+    }
+  ],
+  "clips": []
+}

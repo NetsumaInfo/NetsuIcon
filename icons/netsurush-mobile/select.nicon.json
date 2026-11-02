@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "select",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s207",
+      "x": 4,
+      "y": 4,
+      "width": 16,
+      "height": 16,
+      "rx": 3
+    },
+    {
+      "type": "path",
+      "id": "s208",
+      "d": "m8.5 12.5 2.5 2.5 4.5-5"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "aspect",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s246",
+      "x": 3,
+      "y": 5,
+      "width": 7,
+      "height": 13,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s247",
+      "x": 13,
+      "y": 9,
+      "width": 9,
+      "height": 5,
+      "rx": 1.5
+    }
+  ],
+  "clips": []
+}

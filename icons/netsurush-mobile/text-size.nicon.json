@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "text-size",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s255",
+      "d": "M11.5 20 16.5 6l5 14"
+    },
+    {
+      "type": "path",
+      "id": "s256",
+      "d": "M13.3 15h6.4"
+    },
+    {
+      "type": "path",
+      "id": "s257",
+      "d": "M2.5 20 5.5 12l3 8"
+    },
+    {
+      "type": "path",
+      "id": "s258",
+      "d": "M3.7 17h3.6"
+    }
+  ],
+  "clips": []
+}

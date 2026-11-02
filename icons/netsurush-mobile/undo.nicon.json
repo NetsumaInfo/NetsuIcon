@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "undo",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s111",
+      "d": "M4 9h10.5a5.5 5.5 0 0 1 0 11H11"
+    },
+    {
+      "type": "path",
+      "id": "s112",
+      "d": "M9 4 4 9l5 5"
+    }
+  ],
+  "clips": []
+}

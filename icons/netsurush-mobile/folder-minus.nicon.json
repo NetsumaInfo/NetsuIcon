@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "folder-minus",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s165",
+      "d": "M5 20a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2z"
+    },
+    {
+      "type": "path",
+      "id": "minus",
+      "d": "M9 13h6"
+    }
+  ],
+  "clips": []
+}

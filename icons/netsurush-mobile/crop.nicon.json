@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "crop",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s323",
+      "d": "M6 3v13a2 2 0 0 0 2 2h13"
+    },
+    {
+      "type": "path",
+      "id": "s324",
+      "d": "M18 21V8a2 2 0 0 0-2-2H3"
+    }
+  ],
+  "clips": []
+}

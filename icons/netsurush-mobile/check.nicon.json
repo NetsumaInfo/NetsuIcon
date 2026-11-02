@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "check",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s101",
+      "d": "M20 6 9 17l-5-5"
+    }
+  ],
+  "clips": []
+}

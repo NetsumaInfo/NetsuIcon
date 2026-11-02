@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "copy",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s145",
+      "x": 5,
+      "y": 4,
+      "width": 14,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "rect",
+      "id": "s146",
+      "x": 9,
+      "y": 2,
+      "width": 6,
+      "height": 4,
+      "rx": 1
+    },
+    {
+      "type": "path",
+      "id": "s147",
+      "d": "M9 12h6M9 16h4"
+    }
+  ],
+  "clips": []
+}

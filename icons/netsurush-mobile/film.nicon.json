@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "name": "film",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s85",
+      "x": 3,
+      "y": 3,
+      "width": 18,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "s86",
+      "d": "M7 3v18"
+    },
+    {
+      "type": "path",
+      "id": "s87",
+      "d": "M17 3v18"
+    },
+    {
+      "type": "path",
+      "id": "s88",
+      "d": "M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4"
+    }
+  ],
+  "clips": []
+}

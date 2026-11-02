@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "report",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p0",
+      "d": "M14 3H6v18h12V7Z"
+    },
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M14 3v4h4"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "M12 10v4"
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M12 17h.01"
+    }
+  ],
+  "clips": []
+}

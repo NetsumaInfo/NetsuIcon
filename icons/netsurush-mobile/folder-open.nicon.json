@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "folder-open",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s201",
+      "d": "M4 19.5V6a1 1 0 0 1 1-1h4l2 2h7a1 1 0 0 1 1 1v2.5"
+    },
+    {
+      "type": "path",
+      "id": "s202",
+      "d": "M4 19.5l2.6-7.8a1 1 0 0 1 1-.7H21l-2.7 7.8a1 1 0 0 1-1 .7z"
+    }
+  ],
+  "clips": []
+}

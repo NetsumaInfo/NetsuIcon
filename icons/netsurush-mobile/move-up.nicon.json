@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "move-up",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s296",
+      "d": "M6 20.5h12"
+    },
+    {
+      "type": "path",
+      "id": "s297",
+      "d": "M12 16V4"
+    },
+    {
+      "type": "path",
+      "id": "s298",
+      "d": "m7 9 5-5 5 5"
+    }
+  ],
+  "clips": []
+}

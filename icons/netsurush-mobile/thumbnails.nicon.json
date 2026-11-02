@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "name": "thumbnails",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "s262",
+      "x": 3,
+      "y": 3,
+      "width": 8,
+      "height": 8,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s263",
+      "x": 13,
+      "y": 3,
+      "width": 8,
+      "height": 8,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s264",
+      "x": 3,
+      "y": 13,
+      "width": 8,
+      "height": 8,
+      "rx": 1.5
+    },
+    {
+      "type": "rect",
+      "id": "s265",
+      "x": 13,
+      "y": 13,
+      "width": 8,
+      "height": 8,
+      "rx": 1.5
+    },
+    {
+      "type": "path",
+      "id": "s266",
+      "d": "M14.5 19 17 16l1.8 2.2L20 17",
+      "strokeWidth": 1.5
+    }
+  ],
+  "clips": []
+}

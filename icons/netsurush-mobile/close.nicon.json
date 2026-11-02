@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "close",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s66",
+      "d": "M18 6 6 18"
+    },
+    {
+      "type": "path",
+      "id": "s67",
+      "d": "m6 6 12 12"
+    }
+  ],
+  "clips": []
+}

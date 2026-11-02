@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "adjust",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "s216",
+      "d": "M12 3v18"
+    },
+    {
+      "type": "path",
+      "id": "s217",
+      "d": "M9 12H3"
+    },
+    {
+      "type": "path",
+      "id": "s218",
+      "d": "m6 8-4 4 4 4"
+    },
+    {
+      "type": "path",
+      "id": "s219",
+      "d": "M15 12h6"
+    },
+    {
+      "type": "path",
+      "id": "s220",
+      "d": "m18 8 4 4-4 4"
+    }
+  ],
+  "clips": []
+}
