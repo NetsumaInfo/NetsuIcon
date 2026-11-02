@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "name": "denoise",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M4 10v4"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "M8 7v10"
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M12 9v6"
+    },
+    {
+      "type": "path",
+      "id": "p4",
+      "d": "M16 5v14"
+    },
+    {
+      "type": "path",
+      "id": "p5",
+      "d": "M20 10v4"
+    },
+    {
+      "type": "path",
+      "id": "p6",
+      "d": "M3 3l18 18"
+    }
+  ],
+  "clips": []
+}

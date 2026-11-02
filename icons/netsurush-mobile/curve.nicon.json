@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "curve",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M3 3v18h18"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "M7 17c5 0 5-10 12-10"
+    }
+  ],
+  "clips": []
+}

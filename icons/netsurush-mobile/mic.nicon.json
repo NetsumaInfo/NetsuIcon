@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "mic",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "p1",
+      "x": 9,
+      "y": 2,
+      "width": 6,
+      "height": 12,
+      "rx": 3
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "M5 11a7 7 0 0 0 14 0"
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M12 18v4"
+    }
+  ],
+  "clips": []
+}

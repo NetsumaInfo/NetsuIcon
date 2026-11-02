@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "versions",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M7 7V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"
+    },
+    {
+      "type": "rect",
+      "id": "p2",
+      "x": 3,
+      "y": 7,
+      "width": 14,
+      "height": 14,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M8.5 13l2-1.5V18"
+    }
+  ],
+  "clips": []
+}

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "name": "safe-zone",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "p1",
+      "x": 5,
+      "y": 2,
+      "width": 14,
+      "height": 20,
+      "rx": 3
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "M8.5 10V6h2"
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M15.5 10V6h-2"
+    },
+    {
+      "type": "path",
+      "id": "p4",
+      "d": "M8.5 14v4h2"
+    },
+    {
+      "type": "path",
+      "id": "p5",
+      "d": "M15.5 14v4h-2"
+    }
+  ],
+  "clips": []
+}
