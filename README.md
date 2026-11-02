@@ -11,7 +11,7 @@ NetsuIcon is an editor of animated SVG icons that an AI agent drives through MCP
 
 <img src="docs/images/packs.svg" alt="Sixteen example icons, for a mail app and a weather app, each playing its click animation">
 
-The sixteen example icons in `icons/` play their click on their own here. In a page, they answer the pointer.
+The sixteen icons of the `courrier` and `meteo` packs play their click on their own here. In a page, they answer the pointer. `icons/` also holds the packs of real applications (NetsuRush, NetsuBoard and others): about nine hundred icons in seven packs.
 
 > [!NOTE]
 > First milestone, provisional name. There is no drawing by hand: everything goes through the agent.
@@ -77,9 +77,15 @@ Before animating, the agent says how the real thing works: where the moving part
 
 A pack holds the icons of one application, in `icons/<pack>/` with a `pack.json`. It sets their style (stroke width, ends), a palette of named colours that icons write as `$brand`, and their motion: its character in one sentence, the default easing, and how long and how far a hover or a click may go, in each manner. Icons copy none of it, so changing the pack changes every icon at once. An icon that departs from its pack is reported, as advice: it may do so on purpose.
 
+### Modes of a button
+
+Some buttons do their action in a mode picked elsewhere: insert or overwrite, an export target, a loop mode. Each mode is an icon of the same pack, marked with `variant` (`{"of": "insert", "mode": "overwrite"}`). They share the same rest picture and hover, and only the press differs. The stage shows the modes of a button side by side.
+
 ### Application icons
 
 Two modes share the app. **Interface** icons are strokes in a view box of 24. **Application** icons are fills and gradients in a view box of 1024, drawn full bleed: iOS, macOS and Android each cut their own shape from them. The agent tests one with `proof`, in one picture: on every platform, on a dark screen, without colour, blurred, at 64, 32 and 16 px, and next to the three logos it looks most like in a library of 1,432 real logos. `export_app` writes the files of iOS, macOS (PNG and `.icns`), Windows (`.ico`), Android (adaptive layers, round and monochrome) and the web (favicons, touch icon, `site.webmanifest`).
+
+The icons of NetsuRush and NetsuBoard are built from the Netsu mascot placed whole, with a symbol and a colour of their own behind it. The format has no blur, so they are SVG files in [`mascot/`](mascot), written by `server/scripts/appIcons.mjs`.
 
 The library is the reference collection of [kaankiziltug/logo-design-skill](https://github.com/kaankiziltug/logo-design-skill). Its logos are trademarks of their owners: studied, never copied, and not in this repository. `pnpm --filter @netsuicon/server library` downloads them.
 
@@ -107,6 +113,13 @@ From the agent only:
 - **Still SVG**: the icon at rest.
 - **Page of a pack**: one self-contained HTML file where every icon of a pack answers the pointer.
 - **Application icon files**, with `export_app`.
+
+From the command line, without the server:
+
+```bash
+pnpm --filter @netsuicon/server bundle <pack> <out.ts> [subtle|expressive]   # a pack as one TypeScript module of animated SVG
+pnpm --filter @netsuicon/server compose <pack> <out.kt>                       # a still pack as Kotlin ImageVectors for Jetpack Compose
+```
 
 The colours and style of the pack are written into the code, which no longer needs the pack. When the reader's system asks for reduced motion, the SVG stops moving and a switch still changes state.
 
@@ -142,9 +155,11 @@ The example icons were animated by agents, which judge movement on still frames:
 ## Where the project stands
 
 - [x] Interface icons: hover and click, five types, two manners. Sixteen examples, animated and reviewed by agents that had only the skill and the tools.
-- [x] Packs, with their departures reported.
-- [x] Exports. The React component is tested but has not been mounted in a real project.
+- [x] Packs, with their departures reported. Seven packs, two of them examples; the others are the icons of real applications.
+- [x] Modes of a button (`variant`), shown side by side on the stage.
+- [x] Exports. The React component is tested but has not been mounted in a real project. The Compose output is covered by a unit test only.
 - [x] Application icons: `proof`, the logo library, the files of five platforms, a skill. No exported file has been loaded into Xcode or Android Studio yet.
+- [x] The icons of NetsuRush and NetsuBoard, from the same mascot. Not rebuilt in the apps yet.
 - [x] The icon of this app, from the Netsu mascot in [`mascot/`](mascot), drawn by hand in SVG. Weak at 16 px.
 - [ ] Drawing by hand in the app, a chat inside the app, Lottie, path morphing.
 
