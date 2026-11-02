@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "invert",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M3 8h18"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "m17 4 4 4-4 4"
+    },
+    {
+      "type": "path",
+      "id": "p3",
+      "d": "M21 16H3"
+    },
+    {
+      "type": "path",
+      "id": "p4",
+      "d": "m7 12-4 4 4 4"
+    }
+  ],
+  "clips": []
+}

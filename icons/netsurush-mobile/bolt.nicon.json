@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "bolt",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M13 2 4 14h7l-1 8 9-12h-7z"
+    }
+  ],
+  "clips": []
+}

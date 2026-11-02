@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "name": "check-all",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "p1",
+      "d": "M18 6 7 17l-5-5"
+    },
+    {
+      "type": "path",
+      "id": "p2",
+      "d": "m22 10-7.5 7.5L13 16"
+    }
+  ],
+  "clips": []
+}
