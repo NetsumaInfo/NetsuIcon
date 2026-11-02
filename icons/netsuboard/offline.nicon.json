@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "name": "offline",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "far",
+      "d": "M4 10.5a11.5 11.5 0 0 1 16 0"
+    },
+    {
+      "type": "path",
+      "id": "near",
+      "d": "M7.5 14.5a6 6 0 0 1 9 0"
+    },
+    {
+      "type": "path",
+      "id": "dot",
+      "d": "M12 18.5h.01"
+    },
+    {
+      "type": "path",
+      "id": "slash",
+      "d": "M4 4l16 16",
+      "stroke": "$accent"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "far",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0.2
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "near",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.45,
+              "v": 0.3
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "far",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0.2
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "near",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.45,
+              "v": 0.3
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "in",
+      "duration": 450,
+      "id": "in",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

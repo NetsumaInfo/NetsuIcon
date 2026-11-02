@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "name": "erase",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "trail",
+      "d": "M21 21H8.5"
+    },
+    {
+      "type": "group",
+      "id": "eraser",
+      "origin": [
+        8.5,
+        21
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "body",
+          "d": "M3 15.5L9.5 9l5.5 5.5L8.5 21z"
+        },
+        {
+          "type": "path",
+          "id": "divider",
+          "d": "M5.6 12.9l5.5 5.5"
+        },
+        {
+          "type": "path",
+          "id": "rubber",
+          "d": "M3 15.5l2.6-2.6 5.5 5.5-2.6 2.6z",
+          "stroke": "$accent",
+          "opacity": 0
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "eraser",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                2.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "eraser",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 950,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "eraser",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                -0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                6,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                6,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                6,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "eraser",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.25,
+              "v": -3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.4,
+              "v": 3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": -2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "trail",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.52
+            },
+            {
+              "t": 0.8,
+              "v": 0.52
+            },
+            {
+              "t": 1,
+              "v": 0.52
+            }
+          ]
+        },
+        {
+          "node": "rubber",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 620,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "eraser",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                -0.3,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                3,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                3,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                3,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "eraser",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": -1.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "trail",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.74
+            },
+            {
+              "t": 0.8,
+              "v": 0.76
+            },
+            {
+              "t": 1,
+              "v": 0.76
+            }
+          ]
+        },
+        {
+          "node": "rubber",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

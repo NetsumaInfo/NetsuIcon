@@ -1,0 +1,299 @@
+{
+  "version": 1,
+  "name": "collections-empty",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "rim",
+      "d": "M3 10l2.5-5h13L21 10"
+    },
+    {
+      "type": "rect",
+      "id": "card",
+      "x": 8,
+      "y": 2,
+      "width": 8,
+      "height": 5,
+      "rx": 1,
+      "stroke": "$accent",
+      "opacity": 0,
+      "origin": [
+        12,
+        10
+      ]
+    },
+    {
+      "type": "path",
+      "id": "box",
+      "d": "M3 10v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-9h-6l-1 2h-4l-1-2z"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "rim",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 280,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "rim",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.12,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "node": "card",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.42,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.55,
+              "v": 0.2
+            }
+          ]
+        },
+        {
+          "node": "box",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0.8
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 525,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.12,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -0.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                1.5
+              ]
+            }
+          ]
+        },
+        {
+          "node": "card",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.42,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.55,
+              "v": 0.6
+            }
+          ]
+        },
+        {
+          "node": "box",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0.4
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "name": "underline",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "letter",
+      "d": "M7 4v6a5 5 0 0 0 10 0V4"
+    },
+    {
+      "type": "path",
+      "id": "bar",
+      "d": "M5 20h14",
+      "trim": [
+        0.3,
+        0.7
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0.3,
+                0.7
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.15,
+                0.85
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0.3,
+                0.7
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 280,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0.3,
+                0.7
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.21,
+                0.7899999999999999
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0.3,
+                0.7
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 620,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0.3,
+                0.7
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 480,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0.3,
+                0.7
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "letter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

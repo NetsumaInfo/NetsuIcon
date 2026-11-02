@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "name": "file-question",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "page",
+      "children": [
+        {
+          "type": "path",
+          "id": "body",
+          "d": "M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"
+        },
+        {
+          "type": "path",
+          "id": "fold",
+          "d": "M14 3v5h5"
+        },
+        {
+          "type": "path",
+          "id": "mark",
+          "d": "M10 12.5a2 2 0 1 1 2.8 1.8c-.5.3-.8.7-.8 1.2M12 18h.01",
+          "origin": [
+            12,
+            18
+          ]
+        }
+      ],
+      "origin": [
+        12,
+        21
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": 12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": -6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": 7.2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": -3.6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

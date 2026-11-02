@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "user-check",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "body",
+      "d": "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+    },
+    {
+      "type": "circle",
+      "id": "head",
+      "cx": 9,
+      "cy": 7,
+      "r": 4
+    },
+    {
+      "type": "path",
+      "id": "tick",
+      "d": "M16 11l2 2 4-4"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "tick",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.02,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "tick",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.02,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

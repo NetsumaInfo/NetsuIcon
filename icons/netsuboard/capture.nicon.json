@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "name": "capture",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "body",
+      "d": "M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+    },
+    {
+      "type": "circle",
+      "id": "lens",
+      "cx": 12,
+      "cy": 13.5,
+      "r": 3.5,
+      "origin": [
+        12,
+        13.5
+      ]
+    },
+    {
+      "type": "path",
+      "id": "flash",
+      "d": "M12 4.5V2.5 M8 4.5L7 3 M16 4.5L17 3",
+      "stroke": "$accent",
+      "opacity": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0.9
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0.94
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "shoot",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.72
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "body",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "flash",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 488,
+      "id": "shoot-s",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.72
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "body",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "flash",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

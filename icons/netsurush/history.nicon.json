@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "name": "history",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "arc",
+      "d": "M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"
+    },
+    {
+      "type": "path",
+      "id": "hand",
+      "d": "M12 7v5l3.5 2",
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "hand",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": -40,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "hand",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": -24,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 580,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "hand",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": -360
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 464,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "hand",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": -360
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "name": "edit-label",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "wire",
+      "d": "M2.5 12H6 M18 12h3.5"
+    },
+    {
+      "type": "rect",
+      "id": "tag",
+      "x": 6,
+      "y": 8.5,
+      "width": 12,
+      "height": 7,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "text",
+      "d": "M9 12h4"
+    },
+    {
+      "type": "path",
+      "id": "caret",
+      "d": "M15 10.2v3.6",
+      "stroke": "$accent"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "caret",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "caret",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 750,
+      "id": "edit",
+      "tracks": [
+        {
+          "node": "text",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.05,
+              "v": 0
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "caret",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.05,
+              "v": [
+                -5,
+                0
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 563,
+      "id": "edit-s",
+      "tracks": [
+        {
+          "node": "text",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.05,
+              "v": 0
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "caret",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.05,
+              "v": [
+                -5,
+                0
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

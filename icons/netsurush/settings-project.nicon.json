@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "name": "settings-project",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "top",
+      "cx": 10,
+      "cy": 5,
+      "r": 6.5
+    },
+    {
+      "type": "path",
+      "id": "db",
+      "d": "M3.5 5v12c0 1.4 2.9 2.5 6.5 2.5M16.5 5v4M3.5 11c0 1.4 2.9 2.5 6.5 2.5"
+    },
+    {
+      "type": "group",
+      "id": "cycle",
+      "children": [
+        {
+          "type": "path",
+          "id": "arc",
+          "d": "M14 17a4 4 0 1 0 1.2-2.8"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M14.5 12.5v2.5h2.5"
+        }
+      ],
+      "stroke": "$accent",
+      "origin": [
+        18,
+        17
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": -30,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 322,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": -15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": -360
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": -180
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "name": "settings-report",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "pole",
+      "d": "M5 21V3.5"
+    },
+    {
+      "type": "path",
+      "id": "flag",
+      "d": "M5 4h12l-2.5 4 2.5 4H5",
+      "origin": [
+        5,
+        4
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "flag",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": -5
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "flag",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": -3
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 750,
+      "id": "raise",
+      "tracks": [
+        {
+          "node": "flag",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                3
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                -0.5
+              ]
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 563,
+      "id": "raise-s",
+      "tracks": [
+        {
+          "node": "flag",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                3
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                -0.5
+              ]
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

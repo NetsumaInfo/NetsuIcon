@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "name": "settings-cleanup",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "brush",
+      "children": [
+        {
+          "type": "line",
+          "id": "handle",
+          "x1": 18,
+          "y1": 3,
+          "x2": 13,
+          "y2": 11
+        },
+        {
+          "type": "path",
+          "id": "bristles",
+          "d": "M9 10l6 3-2 7H5z"
+        }
+      ],
+      "origin": [
+        18,
+        3
+      ]
+    },
+    {
+      "type": "path",
+      "id": "dust",
+      "d": "M18 19h.01M21 16h.01M20.5 21h.01",
+      "stroke": "$accent"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "brush",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": -6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 322,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "brush",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": -4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "brush",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.25,
+              "v": -10,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 10,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": -3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "dust",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "brush",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.25,
+              "v": -5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": -1.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "dust",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "name": "activity",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "trace",
+      "d": "M22 12h-4l-3 9L9 3l-3 9H2"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "trace",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.02,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "trace",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.02,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

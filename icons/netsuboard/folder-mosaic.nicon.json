@@ -1,0 +1,599 @@
+{
+  "version": 1,
+  "name": "folder-mosaic",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "folder",
+      "d": "M2 6 a1 1 0 0 1 1 -1 h5 l2 2 h11 a1 1 0 0 1 1 1 v11 a1 1 0 0 1 -1 1 h-18 a1 1 0 0 1 -1 -1 z",
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "tile-1",
+      "x": 6,
+      "y": 10,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$ink",
+      "stroke": "none",
+      "opacity": 0.3
+    },
+    {
+      "type": "rect",
+      "id": "lit-1",
+      "x": 6,
+      "y": 10,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$accent",
+      "stroke": "none",
+      "opacity": 0,
+      "origin": [
+        8.5,
+        11.25
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "tile-2",
+      "x": 13,
+      "y": 10,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$ink",
+      "stroke": "none",
+      "opacity": 0.3
+    },
+    {
+      "type": "rect",
+      "id": "lit-2",
+      "x": 13,
+      "y": 10,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$accent",
+      "stroke": "none",
+      "opacity": 0,
+      "origin": [
+        15.5,
+        11.25
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "tile-3",
+      "x": 6,
+      "y": 15,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$ink",
+      "stroke": "none",
+      "opacity": 0.3
+    },
+    {
+      "type": "rect",
+      "id": "lit-3",
+      "x": 6,
+      "y": 15,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$accent",
+      "stroke": "none",
+      "opacity": 0,
+      "origin": [
+        8.5,
+        16.25
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "tile-4",
+      "x": 13,
+      "y": 15,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$ink",
+      "stroke": "none",
+      "opacity": 0.3
+    },
+    {
+      "type": "rect",
+      "id": "lit-4",
+      "x": 13,
+      "y": 15,
+      "width": 5,
+      "height": 2.5,
+      "rx": 0.5,
+      "fill": "$accent",
+      "stroke": "none",
+      "opacity": 0,
+      "origin": [
+        15.5,
+        16.25
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 500,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "lit-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.3,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "lit-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "lit-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "lit-4",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.30000000000000004,
+              "v": 0
+            },
+            {
+              "t": 0.6000000000000001,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "lit-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.3,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "lit-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "lit-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "lit-4",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.30000000000000004,
+              "v": 0
+            },
+            {
+              "t": 0.6000000000000001,
+              "v": 0.6
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 900,
+      "id": "on-x",
+      "tracks": [
+        {
+          "node": "lit-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.12,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-1",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.5
+            },
+            {
+              "t": 0.22,
+              "v": 1.25
+            },
+            {
+              "t": 0.42,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.14,
+              "v": 0
+            },
+            {
+              "t": 0.26,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-2",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.14,
+              "v": 0.5
+            },
+            {
+              "t": 0.36,
+              "v": 1.25
+            },
+            {
+              "t": 0.56,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.28,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-3",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.28,
+              "v": 0.5
+            },
+            {
+              "t": 0.5,
+              "v": 1.25
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-4",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.42000000000000004,
+              "v": 0
+            },
+            {
+              "t": 0.54,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-4",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.42000000000000004,
+              "v": 0.5
+            },
+            {
+              "t": 0.64,
+              "v": 1.25
+            },
+            {
+              "t": 0.8400000000000001,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "folder",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 0.62,
+              "v": 1.04
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 700,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "lit-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.12,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-1",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.5
+            },
+            {
+              "t": 0.22,
+              "v": 1.25
+            },
+            {
+              "t": 0.42,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.14,
+              "v": 0
+            },
+            {
+              "t": 0.26,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-2",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.14,
+              "v": 0.5
+            },
+            {
+              "t": 0.36,
+              "v": 1.25
+            },
+            {
+              "t": 0.56,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.28,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-3",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.28,
+              "v": 0.5
+            },
+            {
+              "t": 0.5,
+              "v": 1.25
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-4",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.42000000000000004,
+              "v": 0
+            },
+            {
+              "t": 0.54,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lit-4",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.42000000000000004,
+              "v": 0.5
+            },
+            {
+              "t": 0.64,
+              "v": 1.25
+            },
+            {
+              "t": 0.8400000000000001,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "folder",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 0.62,
+              "v": 1.04
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

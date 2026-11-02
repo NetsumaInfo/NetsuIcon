@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "name": "tag",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "tg",
+      "children": [
+        {
+          "type": "path",
+          "id": "shape",
+          "d": "M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"
+        },
+        {
+          "type": "circle",
+          "id": "hole",
+          "cx": 7.5,
+          "cy": 7.5,
+          "r": 1
+        }
+      ],
+      "origin": [
+        7.5,
+        7.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "tg",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": 8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": -4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "tg",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": 4.8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": -2.4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 580,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "tg",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": 14,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": -7,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 464,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "tg",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": 8.4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": -4.2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1.8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

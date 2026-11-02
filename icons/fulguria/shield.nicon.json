@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "name": "shield",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "shield",
+      "children": [
+        {
+          "type": "path",
+          "id": "outline",
+          "d": "M4 5l8-3 8 3v7l-3 6-5 4-5-4-3-6z"
+        },
+        {
+          "type": "path",
+          "id": "core",
+          "d": "M12 6.5v11"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "core",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "outline",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                2.5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                -1.25,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": [
+                0.625,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 640,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "shield",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.18,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.38,
+              "v": [
+                0,
+                -1.5
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "core",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.38,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.48,
+              "v": 0.1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5800000000000001,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6799999999999999,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.76,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 10288,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "shield",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5068040435458787,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5170101088646968,
+              "v": 0.5,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5238141524105754,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

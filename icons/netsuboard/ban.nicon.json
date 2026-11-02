@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "name": "ban",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "ring",
+      "cx": 12,
+      "cy": 12,
+      "r": 10,
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "slash",
+      "d": "m4.9 4.9 14.2 14.2"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 360,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "ring",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "slash",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.15,
+                0.85
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 270,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "ring",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "slash",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.15,
+                0.85
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 520,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "slash",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "currentColor",
+              "ease": "hold"
+            },
+            {
+              "t": 0.01,
+              "v": "$accent"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 390,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "slash",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "currentColor",
+              "ease": "hold"
+            },
+            {
+              "t": 0.01,
+              "v": "$accent"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

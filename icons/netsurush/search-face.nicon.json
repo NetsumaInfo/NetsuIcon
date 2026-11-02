@@ -1,0 +1,505 @@
+{
+  "version": 1,
+  "name": "search-face",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "corners",
+      "d": "M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3",
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "eyes",
+      "d": "M9 9v1.5M15 9v1.5"
+    },
+    {
+      "type": "path",
+      "id": "mouth",
+      "d": "M9 15a4 3 0 0 0 6 0",
+      "origin": [
+        12,
+        15.5
+      ]
+    },
+    {
+      "type": "line",
+      "id": "scan",
+      "x1": 5,
+      "y1": 12,
+      "x2": 19,
+      "y2": 12,
+      "stroke": "$accent",
+      "opacity": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 520,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 0.9,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -6
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                6
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                6
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 312,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 0.967,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -2
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                2
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 1000,
+      "id": "lock",
+      "tracks": [
+        {
+          "node": "scan",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -7
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                7
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.72,
+              "v": 0.82,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": 0.9
+            }
+          ]
+        },
+        {
+          "node": "mouth",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1.25,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 600,
+      "id": "lock-s",
+      "tracks": [
+        {
+          "node": "scan",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -3
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                3
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.72,
+              "v": 0.923,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": 0.957
+            }
+          ]
+        },
+        {
+          "node": "mouth",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1.107,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "loop",
+      "duration": 1400,
+      "id": "indexing",
+      "tracks": [
+        {
+          "node": "scan",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "scan",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -7
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                7
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -7
+              ]
+            }
+          ]
+        },
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.9,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 0.95,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0.9
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

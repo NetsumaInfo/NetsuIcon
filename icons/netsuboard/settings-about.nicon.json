@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "name": "settings-about",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "ring",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "path",
+      "id": "stem",
+      "d": "M12 11v5.5"
+    },
+    {
+      "type": "path",
+      "id": "dot",
+      "d": "M12 7.5h.01"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.6
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "open",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0.4
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                -2
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0.3
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 488,
+      "id": "open-s",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0.4
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                -2
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0.3
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

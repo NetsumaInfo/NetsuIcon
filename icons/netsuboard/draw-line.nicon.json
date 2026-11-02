@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "name": "draw-line",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "shape",
+      "origin": [
+        12,
+        12
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "ink",
+          "d": "M4 20L20 4"
+        },
+        {
+          "type": "path",
+          "id": "lit",
+          "d": "M4 20L20 4",
+          "stroke": "$accent",
+          "draw": 0
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "ink",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": 0.55,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "ink",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": 0.8,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 1000,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "lit",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "shape",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": 0.95,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.72,
+              "v": 1.06,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 650,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "lit",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

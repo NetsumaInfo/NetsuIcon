@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "name": "card-favorite",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "star",
+      "origin": [
+        12,
+        12.5
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "fill",
+          "d": "M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z",
+          "fill": "$accent",
+          "stroke": "none",
+          "opacity": 0
+        },
+        {
+          "type": "path",
+          "id": "outline",
+          "d": "M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "star",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 10,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "star",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.08,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 293,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "star",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "star",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.04,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 800,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "star",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": 0.85,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.5,
+              "v": 1.08,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 0.98,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "star",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "fill",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 500,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "star",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": 0.925,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.5,
+              "v": 1.04,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 0.99,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "star",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "fill",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

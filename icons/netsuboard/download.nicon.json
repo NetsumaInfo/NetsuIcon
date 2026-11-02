@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "name": "download",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "arrow",
+      "children": [
+        {
+          "type": "line",
+          "id": "shaft",
+          "x1": 12,
+          "y1": 3.5,
+          "x2": 12,
+          "y2": 14.5
+        },
+        {
+          "type": "path",
+          "id": "head",
+          "d": "M7.5 10l4.5 4.5 4.5-4.5"
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "id": "tray",
+      "d": "M4 15v4a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 20 19v-4"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                1.2
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.72
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                2.5
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "tray",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0.8
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "tray",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0.48
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "loop",
+      "duration": 1100,
+      "id": "loop",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -3
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                2.5
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -3
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.25,
+              "v": 1
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

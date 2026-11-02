@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "name": "wand",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "stick",
+      "d": "M3.5 20.5l12-12",
+      "origin": [
+        3.5,
+        20.5
+      ]
+    },
+    {
+      "type": "group",
+      "id": "glints",
+      "children": [
+        {
+          "type": "path",
+          "id": "g1",
+          "d": "M18 3v4M16 5h4"
+        },
+        {
+          "type": "path",
+          "id": "g2",
+          "d": "M20 10v2M19 11h2"
+        },
+        {
+          "type": "path",
+          "id": "g3",
+          "d": "M11 3v2M10 4h2"
+        }
+      ],
+      "stroke": "$accent",
+      "origin": [
+        17,
+        6
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "stick",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": -8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "stick",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": -4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "stick",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": -16,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "glints",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 1.25,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "glints",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 0.3,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 500,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "stick",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": -8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "glints",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 1.125,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "glints",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 0.3,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

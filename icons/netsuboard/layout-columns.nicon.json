@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "name": "layout-columns",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "box",
+      "x": 3,
+      "y": 3,
+      "width": 18,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "cl",
+      "d": "M9 3v18"
+    },
+    {
+      "type": "path",
+      "id": "cr",
+      "d": "M15 3v18"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 360,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "cl",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "cr",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 270,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "cl",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "cr",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 520,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "cl",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "cr",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.24,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "box",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "currentColor",
+              "ease": "hold"
+            },
+            {
+              "t": 0.01,
+              "v": "$accent"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 390,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "cl",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "cr",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.24,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "box",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "currentColor",
+              "ease": "hold"
+            },
+            {
+              "t": 0.01,
+              "v": "$accent"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

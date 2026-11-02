@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "name": "play-pause",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "play",
+      "d": "M8 5.5v13l10-6.5z",
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "group",
+      "id": "pause",
+      "children": [
+        {
+          "type": "line",
+          "id": "p1",
+          "x1": 9,
+          "y1": 6,
+          "x2": 9,
+          "y2": 18
+        },
+        {
+          "type": "line",
+          "id": "p2",
+          "x1": 15,
+          "y1": 6,
+          "x2": 15,
+          "y2": 18
+        }
+      ],
+      "opacity": 0,
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.08,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.048,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 560,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": 0.6
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "pause",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0
+            },
+            {
+              "t": 0.55,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "pause",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0.6,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 450,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": 0.6
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "pause",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0
+            },
+            {
+              "t": 0.55,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "pause",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0.6,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "name": "video-play-mode",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "arrow",
+      "origin": [
+        12,
+        12
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "arc",
+          "d": "M12 4A8 8 0 1 1 5.07 8"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M5.85 10.9L5.07 8L2.17 8.78"
+        }
+      ]
+    },
+    {
+      "type": "circle",
+      "id": "dot",
+      "cx": 12,
+      "cy": 4,
+      "r": 1.75,
+      "fill": "$accent",
+      "stroke": "$accent",
+      "strokeWidth": 1,
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 420,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 900,
+      "id": "play",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": 360
+            },
+            {
+              "t": 1,
+              "v": 720,
+              "ease": "ease-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "play-s",
+      "tracks": [
+        {
+          "node": "dot",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

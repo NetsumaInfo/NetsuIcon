@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "name": "compare",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "line",
+      "d": "M3 12h18"
+    },
+    {
+      "type": "path",
+      "id": "la",
+      "d": "m6 8-4 4 4 4"
+    },
+    {
+      "type": "path",
+      "id": "ra",
+      "d": "m18 8 4 4-4 4"
+    },
+    {
+      "type": "path",
+      "id": "knob",
+      "d": "M12 6v12"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "la",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "ra",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 285,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "la",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "ra",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 620,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "knob",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                -4,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                4,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "knob",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "$accent",
+              "ease": "hold"
+            },
+            {
+              "t": 0.99,
+              "v": "$accent",
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": "currentColor"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 465,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "knob",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                -2.4,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                2.4,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "knob",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "$accent",
+              "ease": "hold"
+            },
+            {
+              "t": 0.99,
+              "v": "$accent",
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": "currentColor"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

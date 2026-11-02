@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "name": "settings-preview",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "screen",
+      "x": 2,
+      "y": 3,
+      "width": 20,
+      "height": 14,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "stand",
+      "d": "M8 21h8M12 17v4"
+    },
+    {
+      "type": "path",
+      "id": "play",
+      "d": "M10 6.5v4l3.5-2z"
+    },
+    {
+      "type": "line",
+      "id": "progress",
+      "x1": 5,
+      "y1": 13.5,
+      "x2": 19,
+      "y2": 13.5,
+      "stroke": "$accent"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0.8,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0.8,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "progress",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 525,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "progress",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

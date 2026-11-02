@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "name": "access-pending",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "shackle",
+      "children": [
+        {
+          "type": "path",
+          "id": "arc",
+          "d": "M8 11V8a4 4 0 0 1 8 0v3"
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "case",
+      "x": 5,
+      "y": 11,
+      "width": 14,
+      "height": 10,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "hands",
+      "d": "M12 13.5V16l1.8 1.2",
+      "stroke": "$accent",
+      "origin": [
+        12,
+        16
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "shackle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                -0.8
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "hands",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 20
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "shackle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                -0.48
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "hands",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 12
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "in",
+      "duration": 500,
+      "id": "in",
+      "tracks": [
+        {
+          "node": "hands",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": -90
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "hands",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

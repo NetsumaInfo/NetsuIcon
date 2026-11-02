@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "name": "swords",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "right",
+      "children": [
+        {
+          "type": "path",
+          "id": "blade-r",
+          "d": "M14 16L3 5V3h2l11 11"
+        },
+        {
+          "type": "path",
+          "id": "guard-r",
+          "d": "M13 17l4-4"
+        },
+        {
+          "type": "path",
+          "id": "grip-r",
+          "d": "M15 15l4 4"
+        },
+        {
+          "type": "path",
+          "id": "pommel-r",
+          "d": "M19.6 19.5h2l-.6 2h-2z",
+          "fill": "$ink",
+          "stroke": "none"
+        }
+      ],
+      "origin": [
+        15,
+        15
+      ]
+    },
+    {
+      "type": "group",
+      "id": "left",
+      "children": [
+        {
+          "type": "path",
+          "id": "blade-l",
+          "d": "M15 11l6-6V3h-2l-6 6M11 15l-1 1M9 13l-1 1"
+        },
+        {
+          "type": "path",
+          "id": "guard-l",
+          "d": "M7 13l4 4"
+        },
+        {
+          "type": "path",
+          "id": "grip-l",
+          "d": "M9 15l-4 4"
+        },
+        {
+          "type": "path",
+          "id": "pommel-l",
+          "d": "M3 19.5h2l-.6 2h-2z",
+          "fill": "$ink",
+          "stroke": "none"
+        }
+      ],
+      "origin": [
+        9,
+        15
+      ]
+    },
+    {
+      "type": "path",
+      "id": "spark",
+      "d": "M12 7.5V5M9 9L7.5 7.5M15 9l1.5-1.5",
+      "opacity": 0,
+      "strokeWidth": 1.5
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "right",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": -6,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "left",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": 6,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.6,
+              "v": -1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "right",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": -12,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.42,
+              "v": 3,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": -1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "left",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": 12,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.42,
+              "v": -3,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "spark",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.3,
+              "ease": "hold"
+            },
+            {
+              "t": 0.56,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.66,
+              "v": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 9109,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "right",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5230541222966297,
+              "v": 0.35,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5537929520254693,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

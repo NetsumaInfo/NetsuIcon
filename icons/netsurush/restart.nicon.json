@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "name": "restart",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "arc",
+      "d": "M7 6.5a8 8 0 1 0 10 0"
+    },
+    {
+      "type": "line",
+      "id": "bar",
+      "x1": 12,
+      "y1": 3.5,
+      "x2": 12,
+      "y2": 11
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.6
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 560,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "arc",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -1.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 450,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "arc",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -0.8999999999999999
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "name": "chevron-down",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "echo",
+      "d": "M5 9l7 7 7-7",
+      "opacity": 0,
+      "strokeWidth": 1.5
+    },
+    {
+      "type": "path",
+      "id": "chevron",
+      "d": "M5 9l7 7 7-7"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "chevron",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                3
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.36,
+              "v": [
+                0,
+                2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.44,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.12,
+              "v": 0.75,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 520,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "chevron",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                3
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.08,
+              "v": 0.75,
+              "ease": "hold"
+            },
+            {
+              "t": 0.4,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1.5
+              ]
+            }
+          ]
+        },
+        {
+          "node": "chevron",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.4,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6799999999999999,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 9259,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "chevron",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5075602116859272,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.518900529214818,
+              "v": 0.5,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5264607409007452,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

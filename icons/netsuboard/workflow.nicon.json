@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "name": "workflow",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "a",
+      "x": 3,
+      "y": 3,
+      "width": 8,
+      "height": 8,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "wire",
+      "d": "M7 11v4a2 2 0 0 0 2 2h4"
+    },
+    {
+      "type": "rect",
+      "id": "b",
+      "x": 13,
+      "y": 13,
+      "width": 8,
+      "height": 8,
+      "rx": 2,
+      "origin": [
+        17,
+        17
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "wire",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 285,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "wire",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 560,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "wire",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "b",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.7,
+              "v": 0.8,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 420,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "wire",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        },
+        {
+          "node": "b",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.7,
+              "v": 0.88,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

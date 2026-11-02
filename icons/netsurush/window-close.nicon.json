@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "name": "window-close",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "x",
+      "origin": [
+        12,
+        12
+      ],
+      "children": [
+        {
+          "type": "line",
+          "id": "a",
+          "x1": 6,
+          "y1": 6,
+          "x2": 18,
+          "y2": 18
+        },
+        {
+          "type": "line",
+          "id": "b",
+          "x1": 18,
+          "y1": 6,
+          "x2": 6,
+          "y2": 18
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "x",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 12
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 240,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "x",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 7.199999999999999
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 420,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "x",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 90
+            }
+          ]
+        },
+        {
+          "node": "x",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 0.88
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 320,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "x",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 90
+            }
+          ]
+        },
+        {
+          "node": "x",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 0.928
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

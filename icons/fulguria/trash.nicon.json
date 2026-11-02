@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "name": "trash",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "body",
+      "d": "M5 9v12h11l3-3V9"
+    },
+    {
+      "type": "path",
+      "id": "ribs",
+      "d": "M10 12v6M14 12v6"
+    },
+    {
+      "type": "group",
+      "id": "lid",
+      "children": [
+        {
+          "type": "path",
+          "id": "bar",
+          "d": "M3 6h18"
+        },
+        {
+          "type": "path",
+          "id": "handle",
+          "d": "M9 6V4l1-1h5v3"
+        }
+      ],
+      "origin": [
+        21,
+        6
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "lid",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": 9,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "ribs",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.35,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.44999999999999996,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.53,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 780,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "lid",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": -2,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": 12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": 12,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.82,
+              "v": -1.5,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "body",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.86,
+              "v": [
+                0,
+                0.7
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "ribs",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.44999999999999996,
+              "v": [
+                3.3000000000000003,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.59,
+              "v": [
+                -1.6500000000000001,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.69,
+              "v": [
+                0.8250000000000001,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.77,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 7553,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "body",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5092678405931418,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5185356811862836,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

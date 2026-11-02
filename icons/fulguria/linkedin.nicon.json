@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "name": "linkedin",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "frame",
+      "d": "M3 6l3-3h15v15l-3 3H3z"
+    },
+    {
+      "type": "group",
+      "id": "letters",
+      "children": [
+        {
+          "type": "path",
+          "id": "i",
+          "d": "M7.5 10.5V17"
+        },
+        {
+          "type": "path",
+          "id": "dot",
+          "d": "M7.1 6.5h2l-.6 2h-2z",
+          "fill": "$ink",
+          "stroke": "none"
+        },
+        {
+          "type": "path",
+          "id": "n",
+          "d": "M11.5 17v-6.5M11.5 13l2-2.5h2l2 2V17"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "letters",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                2.64,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                -1.32,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": [
+                0.66,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 560,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "frame",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.38,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "n",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "dot",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 10509,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "frame",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5199828718241507,
+              "v": 0.35,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5466267009230183,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

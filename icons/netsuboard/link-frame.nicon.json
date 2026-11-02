@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "name": "link-frame",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "corners",
+      "d": "M3 8 V5 a2 2 0 0 1 2 -2 h3 M16 3 h3 a2 2 0 0 1 2 2 v3 M21 16 v3 a2 2 0 0 1 -2 2 h-3 M8 21 H5 a2 2 0 0 1 -2 -2 v-3",
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "group",
+      "id": "card",
+      "children": [
+        {
+          "type": "rect",
+          "id": "card-line",
+          "x": 8,
+          "y": 8,
+          "width": 8,
+          "height": 8,
+          "rx": 1.5
+        },
+        {
+          "type": "rect",
+          "id": "card-lit",
+          "x": 8,
+          "y": 8,
+          "width": 8,
+          "height": 8,
+          "rx": 1.5,
+          "stroke": "$accent",
+          "opacity": 0
+        }
+      ],
+      "translate": [
+        4,
+        -4
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                4,
+                -4
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                2.5,
+                -2.5
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                4,
+                -4
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                2,
+                -2
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                1.25,
+                -1.25
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                2,
+                -2
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 900,
+      "id": "on-x",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                4,
+                -4
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                4.5,
+                -4.5
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": [
+                -0.4,
+                0.4
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.45,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 1.06
+            },
+            {
+              "t": 0.7,
+              "v": 0.92
+            },
+            {
+              "t": 0.85,
+              "v": 0.94
+            }
+          ]
+        },
+        {
+          "node": "card-lit",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.55,
+              "v": 0
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 700,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                4,
+                -4
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                4.5,
+                -4.5
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": [
+                -0.4,
+                0.4
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "corners",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.45,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 1.06
+            },
+            {
+              "t": 0.7,
+              "v": 0.92
+            },
+            {
+              "t": 0.85,
+              "v": 0.94
+            }
+          ]
+        },
+        {
+          "node": "card-lit",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.55,
+              "v": 0
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

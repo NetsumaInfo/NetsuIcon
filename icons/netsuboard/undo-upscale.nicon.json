@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "name": "undo-upscale",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "frame",
+      "x": 3,
+      "y": 3,
+      "width": 18,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "rect",
+      "id": "inner",
+      "x": 6,
+      "y": 12,
+      "width": 6,
+      "height": 6,
+      "rx": 1,
+      "origin": [
+        6,
+        18
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arr",
+      "children": [
+        {
+          "type": "path",
+          "id": "arrow",
+          "d": "M18 6 l-5 5"
+        },
+        {
+          "type": "path",
+          "id": "arrow-head",
+          "d": "M13 7 v4 h4"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "arr",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -1.5,
+                1.5
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "inner",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.45,
+              "v": 0.9
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arr",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -0.75,
+                0.75
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "inner",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.45,
+              "v": 0.95
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1000,
+      "id": "click-x",
+      "tracks": [
+        {
+          "node": "inner",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.18,
+              "v": 1.25
+            },
+            {
+              "t": 0.55,
+              "v": 0.85
+            },
+            {
+              "t": 0.72,
+              "v": 1.04
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "arr",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.18,
+              "v": [
+                1,
+                -1
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -2,
+                2
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "inner",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.18,
+              "v": 1.125
+            },
+            {
+              "t": 0.55,
+              "v": 0.925
+            },
+            {
+              "t": 0.72,
+              "v": 1.02
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "arr",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.18,
+              "v": [
+                0.5,
+                -0.5
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -1,
+                1
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

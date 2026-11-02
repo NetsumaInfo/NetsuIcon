@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "name": "seq-revert",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "video",
+      "children": [
+        {
+          "type": "rect",
+          "id": "clip",
+          "x": 3,
+          "y": 9,
+          "width": 13,
+          "height": 10,
+          "rx": 2
+        },
+        {
+          "type": "path",
+          "id": "play",
+          "d": "M8 12 v4 l3.5 -2 z",
+          "fill": "$ink",
+          "strokeWidth": 1.5
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "back",
+      "children": [
+        {
+          "type": "path",
+          "id": "path",
+          "d": "M20 14 v-5 a3 3 0 0 0 -3 -3 h-8"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M11.5 3 l-3 3 3 3"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "back",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -1.5,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "back",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -0.75,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1000,
+      "id": "click-x",
+      "tracks": [
+        {
+          "node": "back",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                1,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -3,
+                0
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "video",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.48,
+              "v": [
+                -0.8,
+                0
+              ]
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.45,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0.2
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "back",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                0.5,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -1.5,
+                0
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "video",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.48,
+              "v": [
+                -0.4,
+                0
+              ]
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.45,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 0.2
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

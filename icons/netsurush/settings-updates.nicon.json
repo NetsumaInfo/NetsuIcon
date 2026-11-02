@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "name": "settings-updates",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "cycle",
+      "children": [
+        {
+          "type": "path",
+          "id": "arc",
+          "d": "M20 12a8 8 0 1 1-2.3-5.6"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M18 3v4h-4"
+        }
+      ],
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "group",
+      "id": "down",
+      "children": [
+        {
+          "type": "path",
+          "id": "shaft",
+          "d": "M12 8v6"
+        },
+        {
+          "type": "path",
+          "id": "head",
+          "d": "M9.5 11.5L12 14l2.5-2.5"
+        }
+      ],
+      "stroke": "$accent"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 30,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 322,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "down",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "cycle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 180
+            }
+          ]
+        },
+        {
+          "node": "down",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                0.75
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

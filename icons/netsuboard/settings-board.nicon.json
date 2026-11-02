@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "name": "settings-board",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "frame",
+      "x": 3,
+      "y": 3,
+      "width": 18,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "rect",
+      "id": "c1",
+      "x": 6.5,
+      "y": 6.5,
+      "width": 6,
+      "height": 5,
+      "rx": 1
+    },
+    {
+      "type": "rect",
+      "id": "c2",
+      "x": 11.5,
+      "y": 13,
+      "width": 6,
+      "height": 4.5,
+      "rx": 1
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "c1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.8,
+                0.8
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "c1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.48,
+                0.48
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "open",
+      "tracks": [
+        {
+          "node": "c1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                1.5,
+                1
+              ]
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "c2",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -1.5,
+                -1
+              ]
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 488,
+      "id": "open-s",
+      "tracks": [
+        {
+          "node": "c1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.3,
+              "v": [
+                1.5,
+                1
+              ]
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "c2",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -1.5,
+                -1
+              ]
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

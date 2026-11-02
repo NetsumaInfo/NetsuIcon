@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "name": "settings-account",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "head",
+      "cx": 12,
+      "cy": 8,
+      "r": 3.5
+    },
+    {
+      "type": "path",
+      "id": "body",
+      "d": "M5 20a7 7 0 0 1 14 0"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.8
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.48
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "open",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                -1.2
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 450,
+      "id": "open-s",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                -1.2
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

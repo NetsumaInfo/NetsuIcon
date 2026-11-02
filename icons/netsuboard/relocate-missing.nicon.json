@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "name": "relocate-missing",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "folder",
+      "d": "M11 19 H4 a1 1 0 0 1 -1 -1 V6 a1 1 0 0 1 1 -1 h4 l2 2 h8 a1 1 0 0 1 1 1 v3"
+    },
+    {
+      "type": "group",
+      "id": "lens",
+      "children": [
+        {
+          "type": "circle",
+          "id": "glass",
+          "cx": 16.5,
+          "cy": 16.5,
+          "r": 3.5
+        },
+        {
+          "type": "path",
+          "id": "handle",
+          "d": "M19 19 l2.5 2.5"
+        },
+        {
+          "type": "path",
+          "id": "found",
+          "d": "M15 16.5 l1 1 2 -2",
+          "stroke": "$accent",
+          "strokeWidth": 1.5,
+          "draw": 0
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 500,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -1.5,
+                -1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                -0.75,
+                -0.5
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1300,
+      "id": "click-x",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.12,
+              "v": [
+                0.5,
+                0.5
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -4,
+                -3
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "found",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.65,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.12,
+              "v": [
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -2,
+                -1.5
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "found",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.65,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "loop",
+      "duration": 2200,
+      "id": "work",
+      "tracks": [
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.25,
+              "v": [
+                -6,
+                -3
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                -2,
+                -6
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.72,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "found",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.74,
+              "v": 0
+            },
+            {
+              "t": 0.86,
+              "v": 1
+            },
+            {
+              "t": 0.96,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

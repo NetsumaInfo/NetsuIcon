@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "name": "loading",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "track",
+      "cx": 12,
+      "cy": 12,
+      "r": 8.5,
+      "opacity": 0.25
+    },
+    {
+      "type": "path",
+      "id": "arc",
+      "d": "M12 3.5a8.5 8.5 0 0 1 8.5 8.5",
+      "stroke": "$accent",
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "loop",
+      "duration": 900,
+      "id": "loop",
+      "tracks": [
+        {
+          "node": "arc",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

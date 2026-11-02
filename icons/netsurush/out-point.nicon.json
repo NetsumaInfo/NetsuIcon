@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "name": "out-point",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "bar",
+      "d": "M20 4v16",
+      "stroke": "$accent"
+    },
+    {
+      "type": "group",
+      "id": "arrow",
+      "children": [
+        {
+          "type": "path",
+          "id": "shaft",
+          "d": "M4 12h12"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M12 8l4 4-4 4"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.75,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bar",
+          "prop": "strokeWidth",
+          "keys": [
+            {
+              "t": 0,
+              "v": 2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.35,
+              "v": 2,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 2
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 500,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bar",
+          "prop": "strokeWidth",
+          "keys": [
+            {
+              "t": 0,
+              "v": 2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.35,
+              "v": 2,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 2.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 2
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

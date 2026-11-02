@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "name": "dot-bg",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "canvas",
+      "x": 3,
+      "y": 3,
+      "width": 18,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "row-1",
+      "d": "M8 8 h0 M12 8 h0 M16 8 h0",
+      "opacity": 0.35,
+      "origin": [
+        12,
+        8
+      ]
+    },
+    {
+      "type": "path",
+      "id": "row-2",
+      "d": "M8 12 h0 M12 12 h0 M16 12 h0",
+      "opacity": 0.35,
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "row-3",
+      "d": "M8 16 h0 M12 16 h0 M16 16 h0",
+      "opacity": 0.35,
+      "origin": [
+        12,
+        16
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 500,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "row-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.35
+            },
+            {
+              "t": 0.35,
+              "v": 0.85
+            },
+            {
+              "t": 1,
+              "v": 0.35
+            }
+          ]
+        },
+        {
+          "node": "row-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 0.35
+            },
+            {
+              "t": 0.47,
+              "v": 0.85
+            },
+            {
+              "t": 1,
+              "v": 0.35
+            }
+          ]
+        },
+        {
+          "node": "row-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.24,
+              "v": 0.35
+            },
+            {
+              "t": 0.59,
+              "v": 0.85
+            },
+            {
+              "t": 1,
+              "v": 0.35
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "row-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.35
+            },
+            {
+              "t": 0.35,
+              "v": 0.85
+            },
+            {
+              "t": 1,
+              "v": 0.35
+            }
+          ]
+        },
+        {
+          "node": "row-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 0.35
+            },
+            {
+              "t": 0.47,
+              "v": 0.85
+            },
+            {
+              "t": 1,
+              "v": 0.35
+            }
+          ]
+        },
+        {
+          "node": "row-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.24,
+              "v": 0.35
+            },
+            {
+              "t": 0.59,
+              "v": 0.85
+            },
+            {
+              "t": 1,
+              "v": 0.35
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 800,
+      "id": "on-x",
+      "tracks": [
+        {
+          "node": "row-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.35
+            },
+            {
+              "t": 0.2,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-1",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.2,
+              "v": 1.25
+            },
+            {
+              "t": 0.45,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": 0.35
+            },
+            {
+              "t": 0.35,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-2",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.35,
+              "v": 1.25
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0.35
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-3",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.25
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 700,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "row-1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0.35
+            },
+            {
+              "t": 0.2,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-1",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.2,
+              "v": 1.125
+            },
+            {
+              "t": 0.45,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": 0.35
+            },
+            {
+              "t": 0.35,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-2",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": 1
+            },
+            {
+              "t": 0.35,
+              "v": 1.125
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-3",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0.35
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "row-3",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 1
+            },
+            {
+              "t": 0.5,
+              "v": 1.125
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

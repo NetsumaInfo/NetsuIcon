@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "name": "settings-discord",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "bubble",
+      "d": "M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z",
+      "origin": [
+        7,
+        19
+      ]
+    },
+    {
+      "type": "path",
+      "id": "d1",
+      "d": "M8.5 10.5h.01"
+    },
+    {
+      "type": "path",
+      "id": "d2",
+      "d": "M12 10.5h.01"
+    },
+    {
+      "type": "path",
+      "id": "d3",
+      "d": "M15.5 10.5h.01"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "bubble",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": -4
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "bubble",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": -2.4
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "open",
+      "tracks": [
+        {
+          "node": "d1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                -1.5
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "d2",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.25,
+              "v": [
+                0,
+                -1.5
+              ]
+            },
+            {
+              "t": 0.44999999999999996,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "d3",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                -1.5
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 525,
+      "id": "open-s",
+      "tracks": [
+        {
+          "node": "d1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                -1.5
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "d2",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.25,
+              "v": [
+                0,
+                -1.5
+              ]
+            },
+            {
+              "t": 0.44999999999999996,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "d3",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                -1.5
+              ]
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "name": "eye-off",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "lid",
+      "d": "M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"
+    },
+    {
+      "type": "circle",
+      "id": "pupil",
+      "cx": 12,
+      "cy": 12,
+      "r": 2.5,
+      "origin": [
+        12,
+        12
+      ],
+      "scale": 0.4,
+      "opacity": 0
+    },
+    {
+      "type": "path",
+      "id": "slash",
+      "d": "M4 4l16 16"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0.15,
+                0.85
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0.15,
+                0.85
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 580,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.45,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0.4,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 464,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.45,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0.64,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "name": "settings-notifications",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "bell",
+      "children": [
+        {
+          "type": "path",
+          "id": "dome",
+          "d": "M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"
+        },
+        {
+          "type": "path",
+          "id": "clapper",
+          "d": "M10 21h4"
+        }
+      ],
+      "origin": [
+        12,
+        4
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "bell",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": 8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": -6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 322,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "bell",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": 4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": -3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "bell",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.15,
+              "v": 14,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.35,
+              "v": -12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": -4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "clapper",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                -1.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                -0.8,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "bell",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.15,
+              "v": 7,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.35,
+              "v": -6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": -2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "clapper",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                -0.75,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.75,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                -0.4,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

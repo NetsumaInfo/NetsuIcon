@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "name": "fill",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "tint",
+      "x": 3,
+      "y": 9,
+      "width": 12,
+      "height": 12,
+      "rx": 2,
+      "fill": "$accent",
+      "stroke": "none",
+      "opacity": 0
+    },
+    {
+      "type": "rect",
+      "id": "shape",
+      "x": 3,
+      "y": 9,
+      "width": 12,
+      "height": 12,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "drop",
+      "d": "M18.5 3.5s-2.5 3-2.5 4.7a2.5 2.5 0 0 0 5 0c0-1.7-2.5-4.7-2.5-4.7z"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "drop",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "drop",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 750,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "drop",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                -3,
+                -4
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                -9,
+                -2
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -9,
+                -2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                -2
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "drop",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.32,
+              "v": 1
+            },
+            {
+              "t": 0.37,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "tint",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.35,
+              "v": 0
+            },
+            {
+              "t": 0.7,
+              "v": 0.45
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 563,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "drop",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "v": [
+                -3,
+                -4
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                -9,
+                -2
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -9,
+                -2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                -2
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "drop",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.32,
+              "v": 1
+            },
+            {
+              "t": 0.37,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "tint",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.35,
+              "v": 0
+            },
+            {
+              "t": 0.7,
+              "v": 0.45
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

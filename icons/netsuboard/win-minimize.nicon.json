@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "name": "win-minimize",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "line",
+      "id": "bar",
+      "x1": 6,
+      "y1": 12,
+      "x2": 18,
+      "y2": 12
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                1.5
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 240,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0.8999999999999999
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 420,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                3
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 320,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "bar",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                1.7999999999999998
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

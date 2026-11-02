@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "name": "lightbulb",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "bulb",
+      "d": "M9 18h6M10 21h4M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.4.8 2.4h6c0-1 .2-1.8.8-2.4A6 6 0 0 0 12 3z"
+    },
+    {
+      "type": "path",
+      "id": "fil",
+      "d": "M10 12l1-1.5 1 1.5 1-1.5 1 1.5"
+    },
+    {
+      "type": "path",
+      "id": "lit",
+      "d": "M10 12l1-1.5 1 1.5 1-1.5 1 1.5",
+      "stroke": "$accent",
+      "opacity": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "lit",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "lit",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 580,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "lit",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "bulb",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": 0.92,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": 1.06,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 464,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "lit",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "bulb",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": 0.952,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": 1.036,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

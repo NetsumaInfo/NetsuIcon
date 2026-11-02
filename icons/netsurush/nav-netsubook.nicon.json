@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "name": "nav-netsubook",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "book",
+      "x": 3,
+      "y": 3,
+      "width": 12,
+      "height": 18,
+      "rx": 1.5
+    },
+    {
+      "type": "line",
+      "id": "spine",
+      "x1": 6.5,
+      "y1": 3,
+      "x2": 6.5,
+      "y2": 21
+    },
+    {
+      "type": "path",
+      "id": "line1",
+      "d": "M9 8h3"
+    },
+    {
+      "type": "path",
+      "id": "line2",
+      "d": "M9 12h2.5",
+      "stroke": "$accent"
+    },
+    {
+      "type": "group",
+      "id": "pen",
+      "children": [
+        {
+          "type": "path",
+          "id": "pen-body",
+          "d": "M19.5 9.5l2 2-7 7h-2v-2z"
+        }
+      ],
+      "origin": [
+        13.5,
+        17.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 620,
+      "id": "write",
+      "tracks": [
+        {
+          "node": "pen",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                -1,
+                0.6
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.4
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                -1,
+                0.6
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "line2",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 360,
+      "id": "write-s",
+      "tracks": [
+        {
+          "node": "pen",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                -0.5,
+                0.3
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.2
+              ],
+              "ease": "linear"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                -0.5,
+                0.3
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "line2",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "open",
+      "tracks": [
+        {
+          "node": "pen",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": -12,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": 4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "line1",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "line2",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 500,
+      "id": "open-s",
+      "tracks": [
+        {
+          "node": "pen",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": -6,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.6,
+              "v": 2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "line1",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.05,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "line2",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

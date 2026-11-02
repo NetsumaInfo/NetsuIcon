@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "name": "youtube",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "screen",
+      "d": "M2 8l3-3h17v11l-3 3H2z"
+    },
+    {
+      "type": "path",
+      "id": "echo",
+      "d": "M10 9v6l5-3z",
+      "opacity": 0,
+      "strokeWidth": 1.5
+    },
+    {
+      "type": "path",
+      "id": "play",
+      "d": "M10 9v6l5-3z"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                3.3000000000000003,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                -1.6500000000000001,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": [
+                0.8250000000000001,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.12,
+              "v": 0.75,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": [
+                -1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "screen",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.38,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                -0.5,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                1.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 9508,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "screen",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.507362221287337,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.514724442574674,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

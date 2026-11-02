@@ -1,0 +1,279 @@
+{
+  "version": 1,
+  "name": "zoom-out",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "mag",
+      "children": [
+        {
+          "type": "circle",
+          "id": "ring",
+          "cx": 10.5,
+          "cy": 10.5,
+          "r": 6.5
+        },
+        {
+          "type": "path",
+          "id": "handle",
+          "d": "M15.5 15.5L20 20"
+        },
+        {
+          "type": "group",
+          "id": "mark",
+          "children": [
+            {
+              "type": "path",
+              "id": "glyph",
+              "d": "M8 10.5h5"
+            }
+          ],
+          "origin": [
+            10.5,
+            10.5
+          ]
+        }
+      ],
+      "origin": [
+        10.5,
+        10.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0.7,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "mag",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0.96,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 293,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0.85,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "mag",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0.98,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 820,
+      "id": "pull",
+      "tracks": [
+        {
+          "node": "mag",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 1.07,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 1.07,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.45,
+              "v": 0.82,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.62,
+              "v": 0.86,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "mark",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": 1.15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.45,
+              "v": 0.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 533,
+      "id": "pull-s",
+      "tracks": [
+        {
+          "node": "mag",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 1.07,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 1.07,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.45,
+              "v": 0.82,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.62,
+              "v": 0.86,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "mark",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": 1.08,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.45,
+              "v": 0.75,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

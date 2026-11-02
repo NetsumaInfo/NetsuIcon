@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "name": "lock",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "shackle",
+      "d": "M8 11V7.5a4 4 0 0 1 8 0V11",
+      "translate": [
+        0,
+        -2
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "case",
+      "x": 5,
+      "y": 11,
+      "width": 14,
+      "height": 9.5,
+      "rx": 2
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "shackle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -2
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -1.2
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -2
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "shackle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -2
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -1.2
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -2
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 560,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "shackle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -2
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.3
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "case",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0.7
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 450,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "shackle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -2
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.18
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "case",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                0.42
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

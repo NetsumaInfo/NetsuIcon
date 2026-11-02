@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "name": "play",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "echo",
+      "d": "M7 4v16l12-7v-2z",
+      "opacity": 0,
+      "strokeWidth": 1.5
+    },
+    {
+      "type": "path",
+      "id": "triangle",
+      "d": "M7 4v16l12-7v-2z"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "triangle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                3.3000000000000003,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                -1.6500000000000001,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": [
+                0.8250000000000001,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.12,
+              "v": 0.75,
+              "ease": "hold"
+            },
+            {
+              "t": 0.3,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": [
+                -1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "triangle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.15,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                2.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.38,
+              "v": 0.75,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "echo",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 1,
+              "v": [
+                1,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 10155,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "triangle",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5068931560807484,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.517232890201871,
+              "v": 0.5,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5241260462826194,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

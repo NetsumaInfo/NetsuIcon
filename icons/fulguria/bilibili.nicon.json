@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "name": "bilibili",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "ear-l",
+      "d": "M7 2l3 4",
+      "origin": [
+        10,
+        6
+      ]
+    },
+    {
+      "type": "path",
+      "id": "ear-r",
+      "d": "M17 2l-3 4",
+      "origin": [
+        14,
+        6
+      ]
+    },
+    {
+      "type": "group",
+      "id": "tv",
+      "children": [
+        {
+          "type": "path",
+          "id": "screen",
+          "d": "M2 9l3-3h17v11l-3 3H2z"
+        },
+        {
+          "type": "path",
+          "id": "eyes",
+          "d": "M8.5 12v3M15.5 12v3"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "ear-l",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.3,
+              "v": -12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "ear-r",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "eyes",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.32,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 640,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "tv",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.4
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "eyes",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5700000000000001,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "screen",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.30000000000000004,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.4,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5800000000000001,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 11519,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "ear-l",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5182307491969789,
+              "v": 0.35,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5425384147929507,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

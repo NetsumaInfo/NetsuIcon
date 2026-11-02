@@ -1,0 +1,144 @@
+{
+ "version": 1,
+ "name": "times",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "bar-a",
+   "type": "path",
+   "name": "the stroke up to the right",
+   "d": "M19.167 7.7 C19.694 7.172 19.694 6.317 19.167 5.789 L18.211 4.833 C17.683 4.306 16.828 4.306 16.3 4.833 L4.833 16.3 C4.306 16.828 4.306 17.683 4.833 18.211 L5.789 19.167 C6.317 19.694 7.172 19.694 7.7 19.167 Z",
+   "origin": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "bar-b",
+   "type": "path",
+   "name": "the stroke down to the right",
+   "d": "M7.7 4.833 C7.172 4.306 6.317 4.306 5.789 4.833 L4.833 5.789 C4.306 6.317 4.306 7.172 4.833 7.7 L16.3 19.167 C16.828 19.694 17.683 19.694 18.211 19.167 L19.167 18.211 C19.694 17.683 19.694 16.828 19.167 16.3 Z",
+   "origin": [
+    12,
+    12
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 280,
+   "id": "twist",
+   "tracks": [
+    {
+     "node": "bar-a",
+     "prop": "rotate",
+     "keys": [
+      {
+       "t": 0,
+       "v": 0.0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": 15.35,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 0.0
+      }
+     ]
+    },
+    {
+     "node": "bar-b",
+     "prop": "rotate",
+     "keys": [
+      {
+       "t": 0,
+       "v": 0.0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": -15.35,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "click",
+   "duration": 520,
+   "id": "close",
+   "tracks": [
+    {
+     "node": "bar-a",
+     "prop": "rotate",
+     "keys": [
+      {
+       "t": 0,
+       "v": 0.0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.1,
+       "v": -6.32,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.34,
+       "v": 25.28,
+       "ease": "linear"
+      },
+      {
+       "t": 0.6,
+       "v": 25.28,
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": 0.0
+      }
+     ]
+    },
+    {
+     "node": "bar-b",
+     "prop": "rotate",
+     "keys": [
+      {
+       "t": 0,
+       "v": 0.0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.1,
+       "v": 6.32,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.34,
+       "v": -25.28,
+       "ease": "linear"
+      },
+      {
+       "t": 0.6,
+       "v": -25.28,
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": 0.0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

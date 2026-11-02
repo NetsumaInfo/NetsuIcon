@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "name": "copy",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "board",
+      "x": 5,
+      "y": 4,
+      "width": 14,
+      "height": 18,
+      "rx": 2,
+      "origin": [
+        12,
+        13
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "clamp",
+      "x": 9,
+      "y": 2,
+      "width": 6,
+      "height": 4,
+      "rx": 1
+    },
+    {
+      "type": "path",
+      "id": "lines",
+      "d": "M9 12h6M9 16h4"
+    },
+    {
+      "type": "path",
+      "id": "check",
+      "d": "M8.5 14l2.5 2.5 4.5-5",
+      "stroke": "$accent",
+      "draw": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "clamp",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 260,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "clamp",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.5
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1100,
+      "id": "copy",
+      "tracks": [
+        {
+          "node": "clamp",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.08,
+              "v": [
+                0,
+                -0.6
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.32,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "board",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.18,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.26,
+              "v": 0.96,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.38,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lines",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.8,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "check",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.28,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.48,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.86,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.88,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "check",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.72,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.82,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.9,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 660,
+      "id": "copy-s",
+      "tracks": [
+        {
+          "node": "clamp",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.08,
+              "v": [
+                0,
+                -0.3
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0.75
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.32,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "board",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.18,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.26,
+              "v": 0.98,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.38,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lines",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.8,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "check",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.28,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.48,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.86,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.88,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "check",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.72,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.82,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.9,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.92,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "name": "settings-updates",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "arrow",
+      "children": [
+        {
+          "type": "path",
+          "id": "shaft",
+          "d": "M12 3v10"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M8 9.5l4 4 4-4"
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "id": "tray",
+      "d": "M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0.6
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "fetch",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                2
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                -3
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 1
+            },
+            {
+              "t": 0.38,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "tray",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0.7
+              ]
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "fetch-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                2
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                -3
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 1
+            },
+            {
+              "t": 0.38,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "tray",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0.7
+              ]
+            },
+            {
+              "t": 0.65,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

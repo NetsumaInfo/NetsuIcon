@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "name": "sign-out",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "door",
+      "d": "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+    },
+    {
+      "type": "group",
+      "id": "arrow",
+      "children": [
+        {
+          "type": "path",
+          "id": "shaft",
+          "d": "M9 12h11"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M15 7l5 5-5 5"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 420,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 273,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.75,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1100,
+      "id": "sign-out",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                3,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                -4,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.9,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.55,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "door",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -0.6,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 660,
+      "id": "sign-out-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                3,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                -4,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.9,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.55,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "door",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -0.3,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

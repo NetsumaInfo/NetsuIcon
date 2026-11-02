@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "name": "freeze",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "flake",
+      "children": [
+        {
+          "type": "path",
+          "id": "a1",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 0,
+          "origin": [
+            12,
+            12
+          ]
+        },
+        {
+          "type": "path",
+          "id": "a2",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 60,
+          "origin": [
+            12,
+            12
+          ]
+        },
+        {
+          "type": "path",
+          "id": "a3",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 120,
+          "origin": [
+            12,
+            12
+          ]
+        },
+        {
+          "type": "path",
+          "id": "a4",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 180,
+          "origin": [
+            12,
+            12
+          ]
+        },
+        {
+          "type": "path",
+          "id": "a5",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 240,
+          "origin": [
+            12,
+            12
+          ]
+        },
+        {
+          "type": "path",
+          "id": "a6",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 300,
+          "origin": [
+            12,
+            12
+          ]
+        },
+        {
+          "type": "path",
+          "id": "f1",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 0,
+          "origin": [
+            12,
+            12
+          ],
+          "stroke": "$accent",
+          "draw": 0
+        },
+        {
+          "type": "path",
+          "id": "f2",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 60,
+          "origin": [
+            12,
+            12
+          ],
+          "stroke": "$accent",
+          "draw": 0
+        },
+        {
+          "type": "path",
+          "id": "f3",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 120,
+          "origin": [
+            12,
+            12
+          ],
+          "stroke": "$accent",
+          "draw": 0
+        },
+        {
+          "type": "path",
+          "id": "f4",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 180,
+          "origin": [
+            12,
+            12
+          ],
+          "stroke": "$accent",
+          "draw": 0
+        },
+        {
+          "type": "path",
+          "id": "f5",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 240,
+          "origin": [
+            12,
+            12
+          ],
+          "stroke": "$accent",
+          "draw": 0
+        },
+        {
+          "type": "path",
+          "id": "f6",
+          "d": "M12 12V3.5M10.2 4.7L12 6.5l1.8-1.8",
+          "rotate": 300,
+          "origin": [
+            12,
+            12
+          ],
+          "stroke": "$accent",
+          "draw": 0
+        }
+      ],
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "flake",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": -8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "flake",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 1.06,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 312,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "flake",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": -4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 3,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "flake",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 1.03,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 950,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "flake",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": -15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 68,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 60
+            }
+          ]
+        },
+        {
+          "node": "flake",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 0.9,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0.9,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f1",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.62,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f2",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.46,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6799999999999999,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f3",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.52,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.74,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f4",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.5800000000000001,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f5",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.64,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.86,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f6",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.7,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.9199999999999999,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 618,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "flake",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": -15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 68,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 60
+            }
+          ]
+        },
+        {
+          "node": "flake",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 0.9,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0.9,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f1",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.62,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f2",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.46,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6799999999999999,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f3",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.52,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.74,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f4",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.5800000000000001,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f5",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.64,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.86,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "f6",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.7,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.9199999999999999,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

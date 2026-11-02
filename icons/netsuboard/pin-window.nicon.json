@@ -1,0 +1,274 @@
+{
+  "version": 1,
+  "name": "pin-window",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "pin",
+      "children": [
+        {
+          "type": "path",
+          "id": "head",
+          "d": "M9 3h6"
+        },
+        {
+          "type": "path",
+          "id": "body",
+          "d": "M10 3v5.5L7 12.5V14h10v-1.5L14 8.5V3"
+        },
+        {
+          "type": "path",
+          "id": "needle",
+          "d": "M12 14v4.5"
+        }
+      ],
+      "origin": [
+        12,
+        18.5
+      ]
+    },
+    {
+      "type": "path",
+      "id": "surface",
+      "d": "M6 20h12",
+      "stroke": "$accent",
+      "draw": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "pin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.3,
+              "v": -8,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.65,
+              "v": 5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 299,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "pin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.3,
+              "v": -4,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.65,
+              "v": 2.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 720,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "pin",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "ease": "ease-out",
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "ease": "hold",
+              "v": [
+                0,
+                -1
+              ]
+            },
+            {
+              "t": 0.2,
+              "ease": "ease-in",
+              "v": [
+                0,
+                -1
+              ]
+            },
+            {
+              "t": 0.4,
+              "ease": "ease-out",
+              "v": [
+                0,
+                1.5
+              ]
+            },
+            {
+              "t": 0.5,
+              "ease": "ease-in",
+              "v": [
+                0,
+                1.1
+              ]
+            },
+            {
+              "v": [
+                0,
+                1.5
+              ],
+              "t": 0.58
+            },
+            {
+              "v": [
+                0,
+                1.5
+              ],
+              "t": 1
+            }
+          ]
+        },
+        {
+          "node": "surface",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 468,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "pin",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "ease": "ease-out",
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.15,
+              "ease": "hold",
+              "v": [
+                0,
+                -1
+              ]
+            },
+            {
+              "t": 0.2,
+              "ease": "ease-in",
+              "v": [
+                0,
+                -1
+              ]
+            },
+            {
+              "t": 0.4,
+              "ease": "ease-out",
+              "v": [
+                0,
+                1.5
+              ]
+            },
+            {
+              "t": 0.5,
+              "ease": "ease-in",
+              "v": [
+                0,
+                1.1
+              ]
+            },
+            {
+              "v": [
+                0,
+                1.5
+              ],
+              "t": 0.58
+            },
+            {
+              "v": [
+                0,
+                1.5
+              ],
+              "t": 1
+            }
+          ]
+        },
+        {
+          "node": "surface",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

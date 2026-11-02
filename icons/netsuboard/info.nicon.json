@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "name": "info",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "ring",
+      "cx": 12,
+      "cy": 12,
+      "r": 9
+    },
+    {
+      "type": "group",
+      "id": "i",
+      "children": [
+        {
+          "type": "line",
+          "id": "stem",
+          "x1": 12,
+          "y1": 11,
+          "x2": 12,
+          "y2": 16.5
+        },
+        {
+          "type": "line",
+          "id": "dot",
+          "x1": 12,
+          "y1": 7.5,
+          "x2": 12,
+          "y2": 7.5
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "i",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "i",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                -0.6
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "in",
+      "duration": 600,
+      "id": "in",
+      "tracks": [
+        {
+          "node": "ring",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "i",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.4,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

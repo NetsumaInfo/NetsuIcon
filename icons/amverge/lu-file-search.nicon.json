@@ -1,0 +1,175 @@
+{
+ "version": 1,
+ "name": "lu-file-search",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "p1",
+   "type": "path",
+   "d": "M13.833 2.833 V6.5 A1.833 1.833 0 0 0 15.667 8.333 H19.333",
+   "fill": "none",
+   "stroke": "currentColor",
+   "strokeWidth": 1.83,
+   "linecap": "round",
+   "linejoin": "round"
+  },
+  {
+   "id": "p2",
+   "type": "path",
+   "d": "M4.912 20.25 A1.833 1.833 0 0 0 6.495 21.167 H17.5 A1.833 1.833 0 0 0 19.333 19.333 V7.417 L14.75 2.833 H6.5 A1.833 1.833 0 0 0 4.667 4.667 V7.417",
+   "fill": "none",
+   "stroke": "currentColor",
+   "strokeWidth": 1.83,
+   "linecap": "round",
+   "linejoin": "round"
+  },
+  {
+   "id": "glass",
+   "type": "group",
+   "name": "the magnifier",
+   "children": [
+    {
+     "id": "p3",
+     "type": "path",
+     "d": "M9.25 17.5 L7.875 16.125",
+     "fill": "none",
+     "stroke": "currentColor",
+     "strokeWidth": 1.83,
+     "linecap": "round",
+     "linejoin": "round"
+    },
+    {
+     "id": "p4",
+     "type": "circle",
+     "cx": 5.583,
+     "cy": 13.833,
+     "r": 2.75,
+     "fill": "none",
+     "stroke": "currentColor",
+     "strokeWidth": 1.83,
+     "linecap": "round",
+     "linejoin": "round"
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 300,
+   "id": "peer",
+   "tracks": [
+    {
+     "node": "glass",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "t": 0.4,
+       "v": [
+        2.061,
+        -2.061
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "click",
+   "duration": 680,
+   "id": "scan",
+   "tracks": [
+    {
+     "node": "glass",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ]
+      },
+      {
+       "t": 0.08,
+       "v": [
+        -0.517,
+        0.517
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.3,
+       "v": [
+        2.583,
+        -2.583
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": [
+        2.454,
+        -2.454
+       ],
+       "ease": "linear"
+      },
+      {
+       "t": 0.62,
+       "v": [
+        2.454,
+        -2.454
+       ],
+       "ease": "linear"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      }
+     ]
+    },
+    {
+     "node": "p4",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0.56,
+       "v": 1.0
+      },
+      {
+       "t": 0.66,
+       "v": 1.1033,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.8,
+       "v": 1.0,
+       "ease": "ease-out"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

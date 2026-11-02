@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "name": "boost-restart",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "spin",
+      "children": [
+        {
+          "type": "path",
+          "id": "arc",
+          "d": "M20 12a8 8 0 1 1-2.34-5.66"
+        },
+        {
+          "type": "path",
+          "id": "arc-head",
+          "d": "M20 4v4h-4"
+        }
+      ],
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "play",
+      "d": "M10 9l5 3-5 3z",
+      "stroke": "$accent",
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 520,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 45,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 312,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1000,
+      "id": "restart",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": 0.6
+            },
+            {
+              "t": 0.7,
+              "v": 0.6,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": -12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 360
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "restart-s",
+      "tracks": [
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": 0.85
+            },
+            {
+              "t": 0.7,
+              "v": 0.85,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": -6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 360
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

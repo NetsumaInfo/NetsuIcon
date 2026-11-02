@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "name": "import-videos",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "tray",
+      "d": "M3 14v5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-5"
+    },
+    {
+      "type": "path",
+      "id": "lip",
+      "d": "M3 14h5l1 2h6l1-2h5"
+    },
+    {
+      "type": "group",
+      "id": "video",
+      "children": [
+        {
+          "type": "rect",
+          "id": "frame",
+          "x": 7,
+          "y": 3,
+          "width": 10,
+          "height": 7,
+          "rx": 1.5
+        },
+        {
+          "type": "path",
+          "id": "play",
+          "d": "M11 5v3l2.5-1.5z",
+          "stroke": "$accent"
+        }
+      ],
+      "origin": [
+        12,
+        14
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 420,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "video",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                1.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 294,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "video",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "video",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                -0.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.36,
+              "v": [
+                0,
+                3
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "video",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.18,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.36,
+              "v": 0.05,
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "video",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.32,
+              "v": 1
+            },
+            {
+              "t": 0.36,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lip",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.36,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.44,
+              "v": [
+                0,
+                0.8
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "video",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                -0.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.36,
+              "v": [
+                0,
+                3
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "video",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.18,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.36,
+              "v": 0.05,
+              "ease": "hold"
+            },
+            {
+              "t": 0.45,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "video",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.32,
+              "v": 1
+            },
+            {
+              "t": 0.36,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "lip",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.36,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.44,
+              "v": [
+                0,
+                0.4
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

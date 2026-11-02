@@ -1,0 +1,215 @@
+{
+ "version": 1,
+ "name": "fi-database",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "p2",
+   "type": "path",
+   "d": "M20.25 12 C20.25 13.522 16.583 14.75 12 14.75 S3.75 13.522 3.75 12",
+   "fill": "none",
+   "stroke": "currentColor",
+   "strokeWidth": 1.83,
+   "linecap": "round",
+   "linejoin": "round"
+  },
+  {
+   "id": "p3",
+   "type": "path",
+   "d": "M3.75 12 V18.417 C3.75 19.938 7.417 21.167 12 21.167 S20.25 19.938 20.25 18.417 V12",
+   "fill": "none",
+   "stroke": "currentColor",
+   "strokeWidth": 1.83,
+   "linecap": "round",
+   "linejoin": "round"
+  },
+  {
+   "id": "top",
+   "type": "group",
+   "name": "the top drum",
+   "children": [
+    {
+     "id": "wall-top",
+     "type": "path",
+     "name": "the top drum's walls",
+     "d": "M3.75 5.583 V12 M20.25 5.583 V12",
+     "fill": "none",
+     "stroke": "currentColor",
+     "strokeWidth": 1.83,
+     "linecap": "round",
+     "linejoin": "round"
+    },
+    {
+     "id": "p1",
+     "type": "ellipse",
+     "cx": 12,
+     "cy": 5.583,
+     "rx": 8.25,
+     "ry": 2.75,
+     "fill": "none",
+     "stroke": "currentColor",
+     "strokeWidth": 1.83,
+     "linecap": "round",
+     "linejoin": "round"
+    }
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 300,
+   "id": "lift",
+   "tracks": [
+    {
+     "node": "top",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": [
+        0.0,
+        -2.583
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "click",
+   "duration": 720,
+   "id": "seat",
+   "tracks": [
+    {
+     "node": "p2",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0.8444,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.9028,
+       "v": [
+        0.0,
+        0.553
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "p3",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0.8444,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.9028,
+       "v": [
+        0.0,
+        0.553
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "top",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0.0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.0857,
+       "v": [
+        0.0,
+        0.461
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0.0,
+        -2.583
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.65,
+       "v": [
+        0.0,
+        -2.583
+       ],
+       "ease": "ease-in"
+      },
+      {
+       "t": 0.8639,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 1.0,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

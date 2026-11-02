@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "name": "save",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "floppy",
+      "children": [
+        {
+          "type": "path",
+          "id": "disk",
+          "d": "M4 5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"
+        },
+        {
+          "type": "path",
+          "id": "shutter",
+          "d": "M8 3v4h6.5V3"
+        },
+        {
+          "type": "path",
+          "id": "label",
+          "d": "M7 21v-6h10v6"
+        }
+      ],
+      "origin": [
+        12,
+        21
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "shutter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.5,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 293,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "shutter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.75,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 820,
+      "id": "save",
+      "tracks": [
+        {
+          "node": "floppy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 0.9,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0.9,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.06,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.98,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "shutter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 533,
+      "id": "save-s",
+      "tracks": [
+        {
+          "node": "floppy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": 0.9,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0.9,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.06,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.98,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "shutter",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

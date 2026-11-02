@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "name": "file-missing",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "top",
+      "d": "M14 3H7a2 2 0 0 0-2 2v6"
+    },
+    {
+      "type": "path",
+      "id": "rest",
+      "d": "M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5"
+    },
+    {
+      "type": "path",
+      "id": "fold",
+      "d": "M14 3v5h5"
+    },
+    {
+      "type": "group",
+      "id": "mark",
+      "children": [
+        {
+          "type": "path",
+          "id": "bang",
+          "d": "M12 10.5v3"
+        },
+        {
+          "type": "path",
+          "id": "dot",
+          "d": "M12 17h.01"
+        }
+      ],
+      "origin": [
+        12,
+        17
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.25,
+              "v": 10
+            },
+            {
+              "t": 0.6,
+              "v": -8
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.25,
+              "v": 6
+            },
+            {
+              "t": 0.6,
+              "v": -4.8
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "in",
+      "duration": 400,
+      "id": "in",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "mark",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                -2
+              ]
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "name": "draw-marker",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "mark",
+      "d": "M8 20.5h6",
+      "stroke": "$accent",
+      "strokeWidth": 3,
+      "opacity": 0.6,
+      "draw": 0
+    },
+    {
+      "type": "group",
+      "id": "marker",
+      "origin": [
+        8,
+        18
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "body",
+          "d": "M5 3h6a1 1 0 0 1 1 1v8H4V4a1 1 0 0 1 1-1z"
+        },
+        {
+          "type": "path",
+          "id": "band",
+          "d": "M4 8h8"
+        },
+        {
+          "type": "path",
+          "id": "nib",
+          "d": "M5 12l1.5 6h3L11 12"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "marker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                2.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "marker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 950,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "marker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                -0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                6,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                6,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                6,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "mark",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 620,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "marker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                -0.3,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                3,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.8,
+              "v": [
+                3,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                3,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "mark",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 0.5
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

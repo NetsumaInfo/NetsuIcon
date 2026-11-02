@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "name": "layout-carousel",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "pl",
+      "d": "M2 3v18"
+    },
+    {
+      "type": "rect",
+      "id": "card",
+      "x": 6,
+      "y": 3,
+      "width": 12,
+      "height": 18,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "pr",
+      "d": "M22 3v18"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 285,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -0.6,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 560,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                -2,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "card",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "currentColor",
+              "ease": "hold"
+            },
+            {
+              "t": 0.01,
+              "v": "$accent"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 420,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                -1.2,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "card",
+          "prop": "stroke",
+          "keys": [
+            {
+              "t": 0,
+              "v": "currentColor",
+              "ease": "hold"
+            },
+            {
+              "t": 0.01,
+              "v": "$accent"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

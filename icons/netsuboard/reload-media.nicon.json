@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "name": "reload-media",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "spin",
+      "children": [
+        {
+          "type": "path",
+          "id": "ring",
+          "d": "M20 12 A8 8 0 1 1 17.66 6.34"
+        },
+        {
+          "type": "path",
+          "id": "ring-head",
+          "d": "M17.7 2.6 v3.8 h-3.8"
+        }
+      ],
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "play",
+      "d": "M10.5 9.5 v5 l4 -2.5 z",
+      "fill": "$ink",
+      "strokeWidth": 1.5,
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 40
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 20
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1000,
+      "id": "click-x",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.15,
+              "v": -15
+            },
+            {
+              "t": 0.75,
+              "v": 370
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.85
+            },
+            {
+              "t": 0.75,
+              "v": 1.2
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.15,
+              "v": -15
+            },
+            {
+              "t": 0.75,
+              "v": 370
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.925
+            },
+            {
+              "t": 0.75,
+              "v": 1.1
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "loop",
+      "duration": 1400,
+      "id": "work",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "play",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 0.4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

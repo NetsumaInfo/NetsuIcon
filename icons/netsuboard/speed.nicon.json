@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "name": "speed",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "dial",
+      "d": "M3.34 19a10 10 0 1 1 17.32 0"
+    },
+    {
+      "type": "path",
+      "id": "needle",
+      "d": "m12 14 4-4",
+      "origin": [
+        12,
+        14
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "needle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 20,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 285,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "needle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 12,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "needle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.25,
+              "v": -60,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": 25,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 450,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "needle",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.25,
+              "v": -36,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": 15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

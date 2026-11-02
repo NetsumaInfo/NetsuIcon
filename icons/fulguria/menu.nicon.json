@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "name": "menu",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "top",
+      "d": "M3 6h18"
+    },
+    {
+      "type": "path",
+      "id": "mid",
+      "d": "M3 12h12"
+    },
+    {
+      "type": "path",
+      "id": "bottom",
+      "d": "M9 18h12"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "mid",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                3.5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                -1.75,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": [
+                0.875,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "top",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.05,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.15000000000000002,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.25,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.35,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.43,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "top",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "mid",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bottom",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 9454,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "top",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5074042733234609,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5185106833086525,
+              "v": 0.5,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5259149566321134,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

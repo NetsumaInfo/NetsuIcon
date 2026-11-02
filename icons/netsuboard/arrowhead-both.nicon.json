@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "name": "arrowhead-both",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "line",
+      "d": "M4 12h16"
+    },
+    {
+      "type": "path",
+      "id": "hs",
+      "d": "M9 7l-5 5 5 5",
+      "origin": [
+        4,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "he",
+      "d": "M15 7l5 5-5 5",
+      "origin": [
+        20,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "hs",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -1,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "he",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "hs",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                -0.6,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "he",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.6,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "set",
+      "tracks": [
+        {
+          "node": "hs",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.7
+            },
+            {
+              "t": 0.4,
+              "v": 1.2
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "he",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.7
+            },
+            {
+              "t": 0.4,
+              "v": 1.2
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 488,
+      "id": "set-s",
+      "tracks": [
+        {
+          "node": "hs",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.7
+            },
+            {
+              "t": 0.4,
+              "v": 1.2
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "he",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.15,
+              "v": 0.7
+            },
+            {
+              "t": 0.4,
+              "v": 1.2
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

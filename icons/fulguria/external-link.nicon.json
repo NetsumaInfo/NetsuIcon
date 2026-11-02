@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "name": "external-link",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "box",
+      "d": "M10 4H7L4 7v13h13l3-3v-3"
+    },
+    {
+      "type": "group",
+      "id": "arrow",
+      "children": [
+        {
+          "type": "path",
+          "id": "head",
+          "d": "M14 4h6v6"
+        },
+        {
+          "type": "path",
+          "id": "shaft",
+          "d": "M20 4l-9 9"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                2.64,
+                -2.64
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.24,
+              "v": [
+                -1.32,
+                1.32
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": [
+                0.66,
+                -0.66
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": [
+                3,
+                -3
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.32,
+              "v": [
+                -2,
+                2
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.28,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "box",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.4,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.6799999999999999,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 8117,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "box",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0.2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5086238758161883,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5215596895404706,
+              "v": 0.5,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5301835653566589,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

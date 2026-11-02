@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "name": "flask",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "glass",
+      "d": "M10 2v7.5L4.5 19A2 2 0 0 0 6.3 22h11.4a2 2 0 0 0 1.8-3L14 9.5V2M8.5 2h7"
+    },
+    {
+      "type": "path",
+      "id": "liquid",
+      "d": "M7 16h10"
+    },
+    {
+      "type": "circle",
+      "id": "bub1",
+      "cx": 10.5,
+      "cy": 19,
+      "r": 0.6
+    },
+    {
+      "type": "circle",
+      "id": "bub2",
+      "cx": 13.5,
+      "cy": 18.5,
+      "r": 0.6
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "bub1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -5
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bub1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "bub2",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -4
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bub2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.6,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 304,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "bub1",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -3
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bub1",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "bub2",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.15,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                -2.4
+              ]
+            }
+          ]
+        },
+        {
+          "node": "bub2",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.6,
+              "v": 1
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

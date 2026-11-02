@@ -1,0 +1,384 @@
+{
+  "version": 1,
+  "name": "proxy-generate",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "source",
+      "x": 3,
+      "y": 3,
+      "width": 12,
+      "height": 9,
+      "rx": 1.5
+    },
+    {
+      "type": "path",
+      "id": "flow",
+      "d": "M9 14v3a2 2 0 0 0 2 2h1"
+    },
+    {
+      "type": "rect",
+      "id": "copy",
+      "x": 3,
+      "y": 3,
+      "width": 12,
+      "height": 9,
+      "rx": 1.5,
+      "stroke": "$accent",
+      "opacity": 0,
+      "origin": [
+        9,
+        7.5
+      ]
+    },
+    {
+      "type": "rect",
+      "id": "proxy",
+      "x": 14,
+      "y": 15,
+      "width": 7,
+      "height": 5,
+      "rx": 1,
+      "stroke": "$accent",
+      "origin": [
+        17.5,
+        17.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "proxy",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 280,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "proxy",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                0,
+                -1
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 900,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "copy",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "copy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.58
+            }
+          ]
+        },
+        {
+          "node": "copy",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                8.5,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "node": "proxy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.55,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.65,
+              "v": 1.12,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 675,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "copy",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "copy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.79
+            }
+          ]
+        },
+        {
+          "node": "copy",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                4.25,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "node": "proxy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.55,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.65,
+              "v": 1.06,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "loop",
+      "duration": 1400,
+      "id": "busy",
+      "tracks": [
+        {
+          "node": "copy",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": 1
+            },
+            {
+              "t": 0.55,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "copy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": 0.58
+            }
+          ]
+        },
+        {
+          "node": "copy",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                8.5,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "node": "proxy",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.55,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.65,
+              "v": 1.12,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

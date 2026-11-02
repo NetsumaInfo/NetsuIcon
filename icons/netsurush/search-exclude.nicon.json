@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "name": "search-exclude",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "term",
+      "origin": [
+        12,
+        12
+      ],
+      "children": [
+        {
+          "type": "rect",
+          "id": "pill",
+          "x": 2.5,
+          "y": 7.5,
+          "width": 19,
+          "height": 9,
+          "rx": 4.5
+        },
+        {
+          "type": "path",
+          "id": "word",
+          "d": "M7 12h10"
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "id": "ban",
+      "d": "M4 20L20 4",
+      "stroke": "$accent",
+      "strokeWidth": 2,
+      "draw": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "term",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 0.95,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 260,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "term",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 0.975,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 850,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "term",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 0.94,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "term",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 0.4
+            }
+          ]
+        },
+        {
+          "node": "ban",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "ban",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 510,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "term",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 0.94,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "term",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 0.4
+            }
+          ]
+        },
+        {
+          "node": "ban",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 0,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "ban",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+ "version": 1,
+ "name": "columns",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "shell",
+   "type": "path",
+   "d": "M20.938 2.375 H3.062 C1.923 2.375 1 3.298 1 4.438 V19.562 C1 20.702 1.923 21.625 3.062 21.625 H20.938 C22.077 21.625 23 20.702 23 19.562 V4.438 C23 3.298 22.077 2.375 20.938 2.375 Z M3.75 7.875 H20.25 V18.875 H3.75 Z",
+   "fillRule": "evenodd"
+  },
+  {
+   "id": "divider",
+   "type": "rect",
+   "x": 10.625,
+   "y": 7.875,
+   "width": 2.75,
+   "height": 11
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 300,
+   "id": "peek",
+   "tracks": [
+    {
+     "node": "divider",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.45,
+       "v": [
+        2.914,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "on",
+   "duration": 640,
+   "id": "collapse",
+   "tracks": [
+    {
+     "node": "divider",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.12,
+       "v": [
+        -0.506,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.84,
+       "v": [
+        4.971,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        4.971,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "name": "volume",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "speaker",
+      "d": "M3 9h4l5-5v16l-5-5H3z"
+    },
+    {
+      "type": "path",
+      "id": "near",
+      "d": "M15.5 9l1.5 3-1.5 3"
+    },
+    {
+      "type": "path",
+      "id": "far",
+      "d": "M18.5 6l3 6-3 6"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "speaker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.04,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.14,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "near",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.06,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.22,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.42,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "near",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.22,
+              "v": 0.3,
+              "ease": "hold"
+            },
+            {
+              "t": 0.32,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "far",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.18,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.36,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.58,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "far",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.36,
+              "v": 0.2,
+              "ease": "hold"
+            },
+            {
+              "t": 0.46,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "speaker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.04,
+              "v": [
+                -1.5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.14,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.44,
+              "v": [
+                -1.5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.54,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "near",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.04,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.22,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.44,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.62,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "far",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.32,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.52,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.72,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 7169,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "speaker",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5097642627981588,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5195285255963175,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

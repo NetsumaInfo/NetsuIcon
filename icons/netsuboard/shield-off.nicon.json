@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "name": "shield-off",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "sl",
+      "d": "M5 5a1 1 0 0 0-1 1v7c0 5 3.5 7.5 7.67 8.94a1 1 0 0 0 .67.01c2.35-.82 4.48-1.97 5.9-3.71"
+    },
+    {
+      "type": "path",
+      "id": "sr",
+      "d": "M9.31 3.65a12.25 12.25 0 0 0 1.93-1.37a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1v7a9.78 9.78 0 0 1-.08 1.26"
+    },
+    {
+      "type": "path",
+      "id": "cut",
+      "d": "m2 2 20 20"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "cut",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.1,
+                0.9
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 285,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "cut",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.1,
+                0.9
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "in",
+      "duration": 480,
+      "id": "in",
+      "tracks": [
+        {
+          "node": "cut",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.19,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 0
+            },
+            {
+              "t": 0.9,
+              "v": 1,
+              "ease": "ease-out"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

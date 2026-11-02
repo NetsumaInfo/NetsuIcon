@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "name": "eye",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "outline",
+      "d": "M2 12l5-6h10l5 6-5 6H7z"
+    },
+    {
+      "type": "path",
+      "id": "pupil",
+      "d": "M12 9l3 3-3 3-3-3z",
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "pupil",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.12,
+              "v": [
+                -2,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.26,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "outline",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.26,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.36,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.46,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.56,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.64,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "outline",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.08,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.2,
+              "v": 0.4,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 1.2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 11450,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "outline",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.506113537117904,
+              "v": [
+                -1,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.5122270742358078,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

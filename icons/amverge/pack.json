@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "name": "amverge",
+  "mode": "micro",
+  "size": 24,
+  "style": {
+    "fill": "currentColor",
+    "stroke": "none",
+    "strokeWidth": 0,
+    "linecap": "round",
+    "linejoin": "round"
+  },
+  "palette": {
+    "accent": "#22c55e",
+    "ink": "currentColor"
+  },
+  "motion": {
+    "ease": "ease-out",
+    "hover": {
+      "duration": [
+        180,
+        400
+      ],
+      "maxTranslate": 1.5,
+      "maxRotate": 12,
+      "scale": [
+        0.96,
+        1.12
+      ]
+    },
+    "click": {
+      "duration": [
+        420,
+        800
+      ],
+      "maxTranslate": 3,
+      "maxRotate": 360,
+      "scale": [
+        0.9,
+        1.2
+      ]
+    },
+    "expressive": {
+      "hover": {
+        "duration": [
+          250,
+          500
+        ],
+        "maxTranslate": 2,
+        "maxRotate": 20,
+        "scale": [
+          0.94,
+          1.16
+        ]
+      },
+      "click": {
+        "duration": [
+          900,
+          1500
+        ],
+        "maxTranslate": 6,
+        "maxRotate": 720,
+        "scale": [
+          0.85,
+          1.3
+        ]
+      }
+    },
+    "feel": "Tools in a cutting room: quick and mechanical. Metal and glass stop dead with no bounce; anything hinged or moved by a hand settles once and stops. Nothing floats, nothing drifts.",
+    "manner": "subtle"
+  },
+  "brief": "The icon set of AMVerge, a desktop app that cuts an episode into clips and exports them. Dark window, green accent, icons drawn small - 12 to 35 px - in dense side panels, on clip tiles and in the player bar. The shapes are the Font Awesome solid glyphs the app already draws, kept exactly as they are; only the movement is new."
+}

@@ -1,0 +1,176 @@
+{
+ "version": 1,
+ "name": "minus",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "bar-l",
+   "type": "rect",
+   "name": "left half",
+   "x": 2.375,
+   "y": 9.938,
+   "width": 12,
+   "height": 4.125,
+   "rx": 1.375
+  },
+  {
+   "id": "bar-r",
+   "type": "rect",
+   "name": "right half",
+   "x": 9.625,
+   "y": 9.938,
+   "width": 12,
+   "height": 4.125,
+   "rx": 1.375
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 280,
+   "id": "dip",
+   "tracks": [
+    {
+     "node": "bar-l",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": [
+        2.125,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "bar-r",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": [
+        -2.125,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "click",
+   "duration": 540,
+   "id": "less",
+   "tracks": [
+    {
+     "node": "bar-l",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.3,
+       "v": [
+        2.125,
+        0.0
+       ],
+       "ease": "linear"
+      },
+      {
+       "t": 0.6,
+       "v": [
+        2.125,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "bar-r",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.3,
+       "v": [
+        -2.125,
+        0.0
+       ],
+       "ease": "linear"
+      },
+      {
+       "t": 0.6,
+       "v": [
+        -2.125,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

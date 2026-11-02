@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "name": "palette-studio",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "wheel",
+      "children": [
+        {
+          "type": "circle",
+          "id": "sw1",
+          "cx": 12,
+          "cy": 7.5,
+          "r": 3.5,
+          "fill": "$accent",
+          "origin": [
+            12,
+            7.5
+          ]
+        },
+        {
+          "type": "circle",
+          "id": "sw2",
+          "cx": 16.33,
+          "cy": 15,
+          "r": 3.5,
+          "origin": [
+            16.33,
+            15
+          ]
+        },
+        {
+          "type": "circle",
+          "id": "sw3",
+          "cx": 7.67,
+          "cy": 15,
+          "r": 3.5,
+          "origin": [
+            7.67,
+            15
+          ]
+        }
+      ],
+      "origin": [
+        12,
+        12.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 600,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "wheel",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -10,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": 40,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 390,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "wheel",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -5,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.55,
+              "v": 20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1150,
+      "id": "spin",
+      "tracks": [
+        {
+          "node": "wheel",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -20,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": -20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 372,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "sw1",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.65,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.75,
+              "v": 1.2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "sw2",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1.2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.95,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "sw3",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1.2,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "spin-s",
+      "tracks": [
+        {
+          "node": "wheel",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -20,
+              "ease": "hold"
+            },
+            {
+              "t": 0.2,
+              "v": -20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": 372,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "sw1",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.65,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.75,
+              "v": 1.1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "sw2",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1.1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.95,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "sw3",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.85,
+              "v": 1.1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

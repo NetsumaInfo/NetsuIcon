@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "name": "eye",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "lid",
+      "d": "M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"
+    },
+    {
+      "type": "circle",
+      "id": "pupil",
+      "cx": 12,
+      "cy": 12,
+      "r": 2.5,
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "line",
+      "id": "slash",
+      "x1": 4,
+      "y1": 4,
+      "x2": 20,
+      "y2": 20,
+      "draw": 0
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "pupil",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                1.2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                -1.2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "pupil",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0.72,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                -0.72,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 560,
+      "id": "on",
+      "tracks": [
+        {
+          "node": "pupil",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": 0.4
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.25,
+              "v": 1
+            },
+            {
+              "t": 0.45,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 450,
+      "id": "on-s",
+      "tracks": [
+        {
+          "node": "pupil",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.4,
+              "v": 0.4
+            }
+          ]
+        },
+        {
+          "node": "pupil",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.25,
+              "v": 1
+            },
+            {
+              "t": 0.45,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "slash",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.2,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

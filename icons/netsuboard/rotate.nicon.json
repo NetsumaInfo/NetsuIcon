@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "name": "rotate",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "card",
+      "x": 7,
+      "y": 8,
+      "width": 10,
+      "height": 10,
+      "rx": 1.5,
+      "origin": [
+        12,
+        13
+      ]
+    },
+    {
+      "type": "group",
+      "id": "arc",
+      "children": [
+        {
+          "type": "path",
+          "id": "curve",
+          "d": "M6 5a9 9 0 0 1 12.5 1.5"
+        },
+        {
+          "type": "path",
+          "id": "head",
+          "d": "M19 2.5v4h-4"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 12
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 7.2
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "turn",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": -5
+            },
+            {
+              "t": 0.55,
+              "v": 96
+            },
+            {
+              "t": 0.75,
+              "v": 90
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "turn-s",
+      "tracks": [
+        {
+          "node": "card",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.1,
+              "v": -5
+            },
+            {
+              "t": 0.55,
+              "v": 96
+            },
+            {
+              "t": 0.75,
+              "v": 90
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

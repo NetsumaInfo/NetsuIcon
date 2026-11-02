@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "name": "error-report",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "sheet",
+      "origin": [
+        19,
+        5
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "page",
+          "d": "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6"
+        },
+        {
+          "type": "path",
+          "id": "bang",
+          "d": "M12 12.5v3M12 18.5h.01",
+          "stroke": "$accent",
+          "strokeWidth": 2
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "sheet",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.8,
+                -0.8
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 260,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "sheet",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.4,
+                -0.4
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1100,
+      "id": "send",
+      "tracks": [
+        {
+          "node": "sheet",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": [
+                -0.5,
+                0.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                2.5,
+                -2.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                -2,
+                2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "sheet",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 0.6,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": 0.8,
+              "ease": "hold"
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "sheet",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.25,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 660,
+      "id": "send-s",
+      "tracks": [
+        {
+          "node": "sheet",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": [
+                -0.5,
+                0.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": [
+                2.5,
+                -2.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                -2,
+                2
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.85,
+              "v": [
+                0,
+                0
+              ],
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "sheet",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": 0.6,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5,
+              "v": 0.8,
+              "ease": "hold"
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "node": "sheet",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.25,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.45,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

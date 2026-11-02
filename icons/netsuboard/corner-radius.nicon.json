@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "name": "corner-radius",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "small",
+      "d": "M4 20V10a6 6 0 0 1 6-6h10"
+    },
+    {
+      "type": "path",
+      "id": "big",
+      "d": "M4 20v-4A12 12 0 0 1 16 4h4",
+      "opacity": 0
+    },
+    {
+      "type": "circle",
+      "id": "handle",
+      "cx": 5.8,
+      "cy": 5.8,
+      "r": 1.5,
+      "fill": "$accent",
+      "stroke": "none"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "handle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.8,
+                0.8
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "handle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.48,
+                0.48
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 900,
+      "id": "round",
+      "tracks": [
+        {
+          "node": "small",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "big",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "handle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.7,
+                1.7
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                1.7,
+                1.7
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.87,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "handle",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            },
+            {
+              "t": 0.85,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.87,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "round-s",
+      "tracks": [
+        {
+          "node": "small",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.4,
+              "v": 0
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "big",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "handle",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1.7,
+                1.7
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": [
+                1.7,
+                1.7
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.87,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "handle",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            },
+            {
+              "t": 0.85,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.87,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

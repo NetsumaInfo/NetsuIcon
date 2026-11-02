@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "name": "settings-interface",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "win",
+      "x": 3,
+      "y": 4,
+      "width": 18,
+      "height": 16,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "bar",
+      "d": "M3 9h18"
+    },
+    {
+      "type": "rect",
+      "id": "track",
+      "x": 7,
+      "y": 12.5,
+      "width": 10,
+      "height": 5,
+      "rx": 2.5
+    },
+    {
+      "type": "circle",
+      "id": "knob",
+      "cx": 9.5,
+      "cy": 15,
+      "r": 1.2,
+      "fill": "currentColor"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "knob",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                1,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 266,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "knob",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.4,
+              "v": [
+                0.6,
+                0
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 750,
+      "id": "open",
+      "tracks": [
+        {
+          "node": "knob",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                5,
+                0
+              ]
+            },
+            {
+              "t": 0.82,
+              "v": [
+                5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.84,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "knob",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.72,
+              "v": 1
+            },
+            {
+              "t": 0.82,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.84,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 563,
+      "id": "open-s",
+      "tracks": [
+        {
+          "node": "knob",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ]
+            },
+            {
+              "t": 0.35,
+              "v": [
+                5,
+                0
+              ]
+            },
+            {
+              "t": 0.82,
+              "v": [
+                5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.84,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "knob",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.72,
+              "v": 1
+            },
+            {
+              "t": 0.82,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.84,
+              "v": 0
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

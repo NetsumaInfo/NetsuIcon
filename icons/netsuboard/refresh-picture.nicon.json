@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "name": "refresh-picture",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "picture",
+      "d": "M12 17 H5 a2 2 0 0 1 -2 -2 V5 a2 2 0 0 1 2 -2 h10 a2 2 0 0 1 2 2 v6"
+    },
+    {
+      "type": "group",
+      "id": "scene",
+      "children": [
+        {
+          "type": "path",
+          "id": "hill",
+          "d": "M3.5 14 l4 -4 3.5 3.5"
+        },
+        {
+          "type": "circle",
+          "id": "sun",
+          "cx": 12.5,
+          "cy": 7.5,
+          "r": 1.5
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "spin",
+      "children": [
+        {
+          "type": "path",
+          "id": "ring",
+          "d": "M21 17.5 A3.5 3.5 0 1 1 19.97 15.03"
+        },
+        {
+          "type": "path",
+          "id": "ring-head",
+          "d": "M20 12.3 v2.7 h-2.7"
+        }
+      ],
+      "origin": [
+        17.5,
+        17.5
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover-x",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 45
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.5,
+              "v": 22.5
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1100,
+      "id": "click-x",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.12,
+              "v": -15
+            },
+            {
+              "t": 0.7,
+              "v": 375
+            },
+            {
+              "t": 0.85,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "hill",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "sun",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.12,
+              "v": -15
+            },
+            {
+              "t": 0.7,
+              "v": 375
+            },
+            {
+              "t": 0.85,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "hill",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.7,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "sun",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "loop",
+      "duration": 1600,
+      "id": "work",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "scene",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.25,
+              "v": 0.3
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "hill",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0.25,
+              "v": 0
+            },
+            {
+              "t": 0.65,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

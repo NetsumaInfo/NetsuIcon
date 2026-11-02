@@ -1,0 +1,266 @@
+{
+ "version": 1,
+ "name": "arrows-alt-h",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "head-l",
+   "type": "path",
+   "d": "M13.5 10.281 H6.76 V8.302 C6.76 7.383 5.65 6.923 5 7.573 L1.302 11.271 C0.899 11.674 0.899 12.326 1.302 12.729 L5 16.427 C5.65 17.077 6.76 16.617 6.76 15.698 V13.719 H13.5 Z"
+  },
+  {
+   "id": "head-r",
+   "type": "path",
+   "d": "M10.5 13.719 H17.24 V15.698 C17.24 16.617 18.35 17.077 19 16.427 L22.698 12.729 C23.101 12.326 23.101 11.674 22.698 11.271 L19 7.573 C18.35 6.923 17.24 7.383 17.24 8.302 V10.281 H10.5 Z"
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 300,
+   "id": "pinch",
+   "tracks": [
+    {
+     "node": "head-l",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": [
+        0.649,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "head-r",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.4,
+       "v": [
+        -0.649,
+        0.0
+       ],
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "head-l",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.45,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "node": "head-r",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.45,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "click",
+   "duration": 560,
+   "id": "flip",
+   "tracks": [
+    {
+     "node": "head-l",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.3,
+       "v": [
+        0.649,
+        0.0
+       ],
+       "ease": "linear"
+      },
+      {
+       "t": 0.55,
+       "v": [
+        0.649,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "head-r",
+     "prop": "translate",
+     "keys": [
+      {
+       "t": 0,
+       "v": [
+        0.0,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.3,
+       "v": [
+        -0.649,
+        0.0
+       ],
+       "ease": "linear"
+      },
+      {
+       "t": 0.55,
+       "v": [
+        -0.649,
+        0.0
+       ],
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "node": "head-l",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.1,
+       "v": 1.03,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.38,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 0.66,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "node": "head-r",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.1,
+       "v": 1.03,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.38,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 0.66,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

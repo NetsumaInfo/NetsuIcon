@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "name": "reverse-edge",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "da",
+      "cx": 4,
+      "cy": 12,
+      "r": 2
+    },
+    {
+      "type": "circle",
+      "id": "db",
+      "cx": 20,
+      "cy": 12,
+      "r": 2
+    },
+    {
+      "type": "circle",
+      "id": "la",
+      "cx": 4,
+      "cy": 12,
+      "r": 2,
+      "stroke": "$accent",
+      "opacity": 0
+    },
+    {
+      "type": "group",
+      "id": "arrow",
+      "origin": [
+        12,
+        12
+      ],
+      "children": [
+        {
+          "type": "path",
+          "id": "shaft",
+          "d": "M8 12h8"
+        },
+        {
+          "type": "path",
+          "id": "tip",
+          "d": "M13 9l3 3-3 3"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 450,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": -15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 293,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": -7.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1300,
+      "id": "reverse",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": -12,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 185,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 180,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.72,
+              "v": 180,
+              "ease": "hold"
+            },
+            {
+              "t": 0.76,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.72,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.78,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "la",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "reverse-s",
+      "tracks": [
+        {
+          "node": "arrow",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": -12,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 185,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 180,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.72,
+              "v": 180,
+              "ease": "hold"
+            },
+            {
+              "t": 0.76,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "arrow",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.6,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.72,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.78,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "la",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.35,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.7,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.85,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

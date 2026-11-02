@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "name": "boost-rescan",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "spin",
+      "children": [
+        {
+          "type": "path",
+          "id": "arc",
+          "d": "M20 12a8 8 0 1 1-2.34-5.66"
+        },
+        {
+          "type": "path",
+          "id": "arc-head",
+          "d": "M20 4v4h-4"
+        }
+      ],
+      "origin": [
+        12,
+        12
+      ]
+    },
+    {
+      "type": "path",
+      "id": "bars",
+      "d": "M9 13v-2M12 14v-4M15 13v-2",
+      "stroke": "$accent",
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 560,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 40,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 336,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1100,
+      "id": "start",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.15,
+              "v": -15,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 360
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "bars",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.8,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.9,
+              "v": 1.25,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "loop",
+      "duration": 1200,
+      "id": "busy",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "bars",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "linear"
+            },
+            {
+              "t": 0.5,
+              "v": 0.3,
+              "ease": "linear"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 700,
+      "id": "start-s",
+      "tracks": [
+        {
+          "node": "spin",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.12,
+              "v": -6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.85,
+              "v": 360
+            },
+            {
+              "t": 1,
+              "v": 360
+            }
+          ]
+        },
+        {
+          "node": "bars",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1
+            },
+            {
+              "t": 0.75,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.86,
+              "v": 1.1,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

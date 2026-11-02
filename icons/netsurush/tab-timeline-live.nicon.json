@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "name": "tab-timeline-live",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "r1",
+      "x": 3,
+      "y": 7,
+      "width": 10,
+      "height": 4,
+      "rx": 1
+    },
+    {
+      "type": "rect",
+      "id": "r2",
+      "x": 9,
+      "y": 14,
+      "width": 12,
+      "height": 4,
+      "rx": 1
+    },
+    {
+      "type": "group",
+      "id": "head",
+      "children": [
+        {
+          "type": "line",
+          "id": "stem",
+          "x1": 7,
+          "y1": 5,
+          "x2": 7,
+          "y2": 21,
+          "stroke": "$accent"
+        },
+        {
+          "type": "circle",
+          "id": "knob",
+          "cx": 7,
+          "cy": 3.5,
+          "r": 1.5,
+          "stroke": "$accent",
+          "fill": "$accent"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                2,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 322,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                10,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.62,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "head",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.7,
+              "v": 0
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "head",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                5,
+                0
+              ],
+              "ease": "hold"
+            },
+            {
+              "t": 0.62,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "head",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 1
+            },
+            {
+              "t": 0.6,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.7,
+              "v": 0
+            },
+            {
+              "t": 0.9,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

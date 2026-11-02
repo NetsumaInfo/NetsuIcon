@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "name": "chat-empty",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "group",
+      "id": "bot",
+      "children": [
+        {
+          "type": "rect",
+          "id": "face",
+          "x": 4,
+          "y": 8,
+          "width": 16,
+          "height": 12,
+          "rx": 3
+        },
+        {
+          "type": "line",
+          "id": "eye-l",
+          "x1": 9,
+          "y1": 13.5,
+          "x2": 9.01,
+          "y2": 13.5
+        },
+        {
+          "type": "line",
+          "id": "eye-r",
+          "x1": 15,
+          "y1": 13.5,
+          "x2": 15.01,
+          "y2": 13.5
+        },
+        {
+          "type": "path",
+          "id": "mouth",
+          "d": "M10 17h4"
+        },
+        {
+          "type": "line",
+          "id": "ear-l",
+          "x1": 2,
+          "y1": 13,
+          "x2": 2,
+          "y2": 16
+        },
+        {
+          "type": "line",
+          "id": "ear-r",
+          "x1": 22,
+          "y1": 13,
+          "x2": 22,
+          "y2": 16
+        },
+        {
+          "type": "group",
+          "id": "antenna",
+          "children": [
+            {
+              "type": "line",
+              "id": "stem",
+              "x1": 12,
+              "y1": 8,
+              "x2": 12,
+              "y2": 5
+            },
+            {
+              "type": "circle",
+              "id": "tip",
+              "cx": 12,
+              "cy": 3.5,
+              "r": 1.5,
+              "stroke": "$accent",
+              "fill": "$accent"
+            }
+          ],
+          "origin": [
+            12,
+            8
+          ]
+        }
+      ],
+      "origin": [
+        12,
+        20
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 600,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "antenna",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": 12,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": -8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 420,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "antenna",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.3,
+              "v": 6,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.65,
+              "v": -4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "bot",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                -1.5
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0.3
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "antenna",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": -14,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "bot",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0.25
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.35,
+              "v": [
+                0,
+                -0.75
+              ],
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.6,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.75,
+              "v": [
+                0,
+                0.15
+              ]
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "antenna",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": -7,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 4,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

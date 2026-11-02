@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "name": "check",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "tick",
+      "d": "M4 12.5l5 5L20 6.5"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 480,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "tick",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "click",
+      "duration": 560,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "tick",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "tick",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.45,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.55,
+              "v": 0.15,
+              "ease": "hold"
+            },
+            {
+              "t": 0.65,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.75,
+              "v": 0.35,
+              "ease": "hold"
+            },
+            {
+              "t": 0.8300000000000001,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trigger": "loop",
+      "duration": 8137,
+      "id": "idle",
+      "tracks": [
+        {
+          "node": "tick",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "hold"
+            },
+            {
+              "t": 0.5,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.5258080373602064,
+              "v": 0.35,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5602187538404817,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+ "version": 1,
+ "name": "check",
+ "mode": "micro",
+ "size": 24,
+ "nodes": [
+  {
+   "id": "mark",
+   "type": "group",
+   "name": "mark",
+   "children": [
+    {
+     "id": "p1",
+     "type": "path",
+     "d": "M8.472 19.881 L1.322 12.731 C0.893 12.301 0.893 11.605 1.322 11.175 L2.878 9.619 C3.307 9.19 4.004 9.19 4.433 9.619 L9.25 14.436 L19.567 4.119 C19.996 3.69 20.693 3.69 21.122 4.119 L22.678 5.675 C23.107 6.105 23.107 6.801 22.678 7.231 L10.028 19.881 C9.598 20.31 8.902 20.31 8.472 19.881 Z",
+     "origin": [
+      1.1,
+      11.95
+     ]
+    },
+    {
+     "id": "tw",
+     "type": "path",
+     "name": "drawn twin",
+     "d": "M2.1 11.175 L9.25 17.5475 L21.9 5.675",
+     "fill": "none",
+     "stroke": "$ink",
+     "strokeWidth": 4.4,
+     "linecap": "butt",
+     "linejoin": "miter",
+     "opacity": 0
+    }
+   ],
+   "origin": [
+    12,
+    11.8
+   ]
+  }
+ ],
+ "clips": [
+  {
+   "trigger": "hover",
+   "duration": 320,
+   "id": "trace",
+   "tracks": [
+    {
+     "node": "p1",
+     "prop": "opacity",
+     "keys": [
+      {
+       "t": 0,
+       "v": 0,
+       "ease": "hold"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "node": "tw",
+     "prop": "opacity",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "hold"
+      },
+      {
+       "t": 1,
+       "v": 0
+      }
+     ]
+    },
+    {
+     "node": "tw",
+     "prop": "draw",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 0.32,
+       "v": 0.65,
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "node": "mark",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1.0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.45,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 1.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "trigger": "click",
+   "duration": 600,
+   "id": "strike",
+   "tracks": [
+    {
+     "node": "p1",
+     "prop": "opacity",
+     "keys": [
+      {
+       "t": 0,
+       "v": 0,
+       "ease": "hold"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "node": "tw",
+     "prop": "opacity",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "hold"
+      },
+      {
+       "t": 1,
+       "v": 0
+      }
+     ]
+    },
+    {
+     "node": "tw",
+     "prop": "draw",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1,
+       "ease": "ease-in"
+      },
+      {
+       "t": 0.2,
+       "v": 0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 1,
+       "v": 1
+      }
+     ]
+    },
+    {
+     "node": "mark",
+     "prop": "scale",
+     "keys": [
+      {
+       "t": 0,
+       "v": 1.0,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.1,
+       "v": 1.04,
+       "ease": "ease-out"
+      },
+      {
+       "t": 0.38,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 0.66,
+       "v": 0.95,
+       "ease": "ease-in-out"
+      },
+      {
+       "t": 1,
+       "v": 1.0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

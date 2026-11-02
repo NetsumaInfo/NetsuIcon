@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "name": "chat-new",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "bubble",
+      "d": "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h7",
+      "origin": [
+        3,
+        21
+      ]
+    },
+    {
+      "type": "path",
+      "id": "plus",
+      "d": "M19 3v6M16 6h6",
+      "stroke": "$accent",
+      "origin": [
+        19,
+        6
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 400,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "bubble",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.05,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 260,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "bubble",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": 1.025,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 1
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1100,
+      "id": "new",
+      "tracks": [
+        {
+          "node": "bubble",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.18,
+              "v": 0.93,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.03,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "plus",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.62,
+              "v": 1.35,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "plus",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.34,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 180,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 660,
+      "id": "new-s",
+      "tracks": [
+        {
+          "node": "bubble",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.18,
+              "v": 0.965,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.015,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "plus",
+          "prop": "scale",
+          "keys": [
+            {
+              "t": 0.12,
+              "v": 1,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.3,
+              "v": 0,
+              "ease": "hold"
+            },
+            {
+              "t": 0.34,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.62,
+              "v": 1.35,
+              "ease": [
+                0.34,
+                1.56,
+                0.64,
+                1
+              ]
+            },
+            {
+              "t": 0.85,
+              "v": 1,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "plus",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0.34,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": 180,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

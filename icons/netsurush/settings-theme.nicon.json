@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "name": "settings-theme",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "circle",
+      "id": "disc",
+      "cx": 12,
+      "cy": 12,
+      "r": 8
+    },
+    {
+      "type": "path",
+      "id": "half",
+      "d": "M12 4a8 8 0 0 1 0 16z",
+      "fill": "currentColor",
+      "origin": [
+        12,
+        12
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "half",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 20,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 322,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "half",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 10,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "on",
+      "duration": 700,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "half",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": -10,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 185,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 180
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "on",
+      "duration": 525,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "half",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": -5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": 92.5,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 90
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}

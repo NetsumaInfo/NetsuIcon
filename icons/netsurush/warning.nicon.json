@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "name": "warning",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "tri",
+      "d": "M10.3 4.2L2.9 17.5a2 2 0 0 0 1.7 3h14.8a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"
+    },
+    {
+      "type": "group",
+      "id": "mark",
+      "children": [
+        {
+          "type": "line",
+          "id": "stem",
+          "x1": 12,
+          "y1": 9.5,
+          "x2": 12,
+          "y2": 13.5
+        },
+        {
+          "type": "line",
+          "id": "dot",
+          "x1": 12,
+          "y1": 17,
+          "x2": 12,
+          "y2": 17
+        }
+      ],
+      "origin": [
+        12,
+        17
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 380,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": -8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": 8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 300,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "mark",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.25,
+              "v": -4.8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.6,
+              "v": 4.8,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "in",
+      "duration": 600,
+      "id": "in",
+      "tracks": [
+        {
+          "node": "tri",
+          "prop": "draw",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.6,
+              "v": 1
+            }
+          ]
+        },
+        {
+          "node": "mark",
+          "prop": "opacity",
+          "keys": [
+            {
+              "t": 0.5,
+              "v": 0
+            },
+            {
+              "t": 0.8,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

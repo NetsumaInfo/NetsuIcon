@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "name": "settings-system",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "body",
+      "x": 3,
+      "y": 11,
+      "width": 18,
+      "height": 9,
+      "rx": 2
+    },
+    {
+      "type": "group",
+      "id": "lid",
+      "children": [
+        {
+          "type": "path",
+          "id": "top",
+          "d": "M3 11V9a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2"
+        },
+        {
+          "type": "path",
+          "id": "grip",
+          "d": "M9 8V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"
+        }
+      ],
+      "origin": [
+        3,
+        11
+      ]
+    },
+    {
+      "type": "path",
+      "id": "latch",
+      "d": "M11 14h2",
+      "stroke": "$accent"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 420,
+      "id": "hint",
+      "tracks": [
+        {
+          "node": "lid",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": -5,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "hover",
+      "duration": 294,
+      "id": "hint-s",
+      "tracks": [
+        {
+          "node": "lid",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.45,
+              "v": -4,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 800,
+      "id": "press",
+      "tracks": [
+        {
+          "node": "lid",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": 1,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": -14,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": -14,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.85,
+              "v": 0.8
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "body",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.88,
+              "v": [
+                0,
+                0.5
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 600,
+      "id": "press-s",
+      "tracks": [
+        {
+          "node": "lid",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.1,
+              "v": 0.5,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.4,
+              "v": -7,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.7,
+              "v": -7,
+              "ease": "ease-in"
+            },
+            {
+              "t": 0.85,
+              "v": 0.4
+            },
+            {
+              "t": 1,
+              "v": 0
+            }
+          ]
+        },
+        {
+          "node": "body",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0.8,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.88,
+              "v": [
+                0,
+                0.25
+              ],
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    }
+  ]
+}
