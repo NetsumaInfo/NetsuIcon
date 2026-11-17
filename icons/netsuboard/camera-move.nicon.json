@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "name": "camera-move",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "rect",
+      "id": "frame",
+      "x": 3,
+      "y": 6,
+      "width": 12,
+      "height": 9,
+      "rx": 2
+    },
+    {
+      "type": "path",
+      "id": "track",
+      "d": "M8 19.5h12",
+      "stroke": "$accent"
+    },
+    {
+      "type": "path",
+      "id": "tip",
+      "d": "M17.5 17l2.5 2.5-2.5 2.5",
+      "stroke": "$accent"
+    },
+    {
+      "type": "path",
+      "id": "lens",
+      "d": "M15 9l5-2v7l-5-2"
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 320,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "track",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                0.3,
+                1
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "frame",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": [
+                1,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 650,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "track",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 1000,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "frame",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                2.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "lens",
+          "prop": "translate",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.55,
+              "v": [
+                2.5,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "node": "track",
+          "prop": "trim",
+          "keys": [
+            {
+              "t": 0,
+              "v": [
+                0,
+                1
+              ]
+            },
+            {
+              "t": 0.1,
+              "v": [
+                0,
+                0
+              ],
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.7,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    }
+  ]
+}
