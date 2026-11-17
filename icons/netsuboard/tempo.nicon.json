@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "name": "tempo",
+  "mode": "micro",
+  "size": 24,
+  "nodes": [
+    {
+      "type": "path",
+      "id": "body",
+      "d": "M9.5 3h5l4.5 18h-14z"
+    },
+    {
+      "type": "line",
+      "id": "face",
+      "x1": 7,
+      "y1": 16,
+      "x2": 17,
+      "y2": 16
+    },
+    {
+      "type": "group",
+      "id": "arm",
+      "origin": [
+        12,
+        16
+      ],
+      "rotate": 28,
+      "children": [
+        {
+          "type": "line",
+          "id": "rod",
+          "x1": 12,
+          "y1": 16,
+          "x2": 12,
+          "y2": 6
+        },
+        {
+          "type": "line",
+          "id": "weight",
+          "x1": 10.5,
+          "y1": 9,
+          "x2": 13.5,
+          "y2": 9
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "trigger": "hover",
+      "duration": 360,
+      "id": "hover-s",
+      "tracks": [
+        {
+          "node": "arm",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 28
+            },
+            {
+              "t": 0.45,
+              "v": 14,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 28,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "click",
+      "duration": 640,
+      "id": "click-s",
+      "tracks": [
+        {
+          "node": "arm",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 28
+            },
+            {
+              "t": 0.45,
+              "v": -14,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 28,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "subtle"
+    },
+    {
+      "trigger": "hover",
+      "duration": 460,
+      "id": "hover",
+      "tracks": [
+        {
+          "node": "arm",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 28
+            },
+            {
+              "t": 0.45,
+              "v": 4,
+              "ease": "ease-out"
+            },
+            {
+              "t": 1,
+              "v": 28,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    },
+    {
+      "trigger": "click",
+      "duration": 1400,
+      "id": "click",
+      "tracks": [
+        {
+          "node": "arm",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 28
+            },
+            {
+              "t": 0.25,
+              "v": -28,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.5,
+              "v": 28,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": -28,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 28,
+              "ease": "ease-in-out"
+            }
+          ]
+        },
+        {
+          "node": "body",
+          "prop": "rotate",
+          "keys": [
+            {
+              "t": 0,
+              "v": 0
+            },
+            {
+              "t": 0.25,
+              "v": -1.5,
+              "ease": "ease-out"
+            },
+            {
+              "t": 0.5,
+              "v": 1.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 0.75,
+              "v": -1.5,
+              "ease": "ease-in-out"
+            },
+            {
+              "t": 1,
+              "v": 0,
+              "ease": "ease-in-out"
+            }
+          ]
+        }
+      ],
+      "manner": "expressive"
+    }
+  ]
+}
